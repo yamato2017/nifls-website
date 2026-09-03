@@ -1,13 +1,14 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const navItems = [
-  ["ホーム", "#"],
-  ["学校紹介", "#about"],
-  ["コース", "#courses"],
-  ["入学案内", "#admission"],
-  ["学費", "#tuition"],
-  ["学生生活", "#life"],
-  ["情報公開", "#information"],
+  ["ホーム", "/"],
+  ["学校紹介", "/about"],
+  ["コース", "/courses"],
+  ["入学案内", "/admission"],
+  ["学費", "/tuition"],
+  ["学生生活", "/student-life"],
+  ["情報公開", "/information"],
   ["資料DL", "/#documents"],
 ];
 
@@ -17,7 +18,7 @@ export default function Header() {
       <div className="mx-auto flex min-h-[96px] max-w-[1760px] items-center gap-5 px-7">
 
         {/* BRAND */}
-        <a href="/" className="flex shrink-0 items-center gap-4">
+        <Link href="/" className="flex shrink-0 items-center gap-4">
           <div className="flex h-[65px] w-[65px] items-center justify-center rounded-full bg-white">
             <Image
               src="/logo.jpg"
@@ -38,12 +39,12 @@ export default function Header() {
               NAGOYA INTERNATIONAL FOREIGN LANGUAGE SCHOOL
             </div>
           </div>
-        </a>
+        </Link>
 
         {/* NAVIGATION */}
         <nav className="ml-auto hidden h-[58px] items-center rounded-[12px] border border-[#537EAE] bg-[#0B376F] px-2 xl:flex">
           {navItems.map(([label, href], index) => (
-            <a
+            <Link
               key={label}
               href={href}
               className={`relative flex h-full items-center whitespace-nowrap px-[15px] text-[13px] font-bold transition ${
@@ -57,7 +58,7 @@ export default function Header() {
               {index === 0 && (
                 <span className="absolute bottom-0 left-[15px] right-[15px] h-[3px] rounded-full bg-[#F0BA3C]" />
               )}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -67,19 +68,19 @@ export default function Header() {
             ◎ 日本語⌄
           </button>
 
-          <a
-            href="#application"
+          <Link
+            href="/application"
             className="hidden h-[50px] items-center justify-center whitespace-nowrap rounded-[10px] border border-[#527DAD] bg-[#0B376F] px-5 text-[13px] font-bold text-white lg:flex"
           >
             ✎&nbsp; 申込み
-          </a>
+          </Link>
 
-          <a
-            href="#contact"
+          <Link
+            href="/contact"
             className="flex h-[50px] items-center justify-center whitespace-nowrap rounded-[10px] bg-[#F0BD46] px-6 text-[13px] font-extrabold text-[#082F69] shadow-[0_5px_14px_rgba(0,0,0,0.14)] transition hover:bg-[#F5C95F]"
           >
             ✉&nbsp; お問い合わせ
-          </a>
+          </Link>
         </div>
       </div>
     </header>
