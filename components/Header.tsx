@@ -21,10 +21,10 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-[#082F69] text-white shadow-[0_5px_22px_rgba(4,31,67,0.20)]">
       <div className="mx-auto flex min-h-[78px] max-w-[1760px] items-center gap-4 px-4 sm:min-h-[88px] sm:px-6 lg:min-h-[96px] lg:px-7">
-
         {/* BRAND */}
         <Link
           href="/"
+          prefetch={false}
           className="flex min-w-0 flex-1 items-center gap-3 sm:gap-4 xl:flex-none"
         >
           <div className="flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-full bg-white sm:h-[60px] sm:w-[60px] lg:h-[65px] lg:w-[65px]">
@@ -55,6 +55,7 @@ export default function Header() {
             <Link
               key={label}
               href={href}
+              prefetch={false}
               className={`relative flex h-full items-center whitespace-nowrap px-[15px] text-[13px] font-bold transition ${
                 index === 0
                   ? "text-[#F0BA3C]"
@@ -72,12 +73,16 @@ export default function Header() {
 
         {/* DESKTOP RIGHT BUTTONS */}
         <div className="hidden shrink-0 items-center gap-3 lg:flex">
-          <button className="hidden h-[50px] whitespace-nowrap rounded-[10px] border border-[#527DAD] bg-[#0B376F] px-4 text-[13px] font-bold text-white xl:block">
+          <button
+            type="button"
+            className="hidden h-[50px] whitespace-nowrap rounded-[10px] border border-[#527DAD] bg-[#0B376F] px-4 text-[13px] font-bold text-white xl:block"
+          >
             ◎ 日本語⌄
           </button>
 
           <Link
             href="/application"
+            prefetch={false}
             className="hidden h-[50px] items-center justify-center whitespace-nowrap rounded-[10px] border border-[#527DAD] bg-[#0B376F] px-5 text-[13px] font-bold text-white xl:flex"
           >
             ✎&nbsp; 申込み
@@ -85,13 +90,14 @@ export default function Header() {
 
           <Link
             href="/contact"
+            prefetch={false}
             className="flex h-[50px] items-center justify-center whitespace-nowrap rounded-[10px] bg-[#F0BD46] px-5 text-[13px] font-extrabold text-[#082F69] shadow-[0_5px_14px_rgba(0,0,0,0.14)] transition hover:bg-[#F5C95F]"
           >
             ✉&nbsp; お問い合わせ
           </Link>
         </div>
 
-        {/* MOBILE MENU BUTTON */}
+        {/* MOBILE / TABLET MENU BUTTON */}
         <button
           type="button"
           aria-label="メニュー"
@@ -105,11 +111,13 @@ export default function Header() {
                 menuOpen ? "translate-y-[7px] rotate-45" : ""
               }`}
             />
+
             <span
               className={`h-[2px] w-5 rounded-full bg-white transition ${
                 menuOpen ? "opacity-0" : ""
               }`}
             />
+
             <span
               className={`h-[2px] w-5 rounded-full bg-white transition ${
                 menuOpen ? "-translate-y-[7px] -rotate-45" : ""
@@ -128,6 +136,7 @@ export default function Header() {
                 <Link
                   key={label}
                   href={href}
+                  prefetch={false}
                   onClick={() => setMenuOpen(false)}
                   className="flex min-h-[48px] items-center justify-between rounded-[10px] border border-white/10 bg-white/[0.04] px-4 text-[13px] font-bold text-white transition hover:border-[#F0BA3C]/40 hover:bg-white/[0.07] hover:text-[#F0BA3C]"
                 >
@@ -140,6 +149,7 @@ export default function Header() {
             <div className="mt-3 grid gap-2 sm:grid-cols-2">
               <Link
                 href="/application"
+                prefetch={false}
                 onClick={() => setMenuOpen(false)}
                 className="flex min-h-[50px] items-center justify-center rounded-[10px] border border-[#527DAD] bg-[#0B376F] px-4 text-[13px] font-bold text-white"
               >
@@ -148,6 +158,7 @@ export default function Header() {
 
               <Link
                 href="/contact"
+                prefetch={false}
                 onClick={() => setMenuOpen(false)}
                 className="flex min-h-[50px] items-center justify-center rounded-[10px] bg-[#F0BD46] px-4 text-[13px] font-extrabold text-[#082F69]"
               >
