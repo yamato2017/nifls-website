@@ -503,14 +503,14 @@ export default function ContactPage() {
                     </span>
 
                     <div>
-                      <p className="text-[18px] font-bold text-[#07366F]">
-                        Facebook
-                      </p>
+  <p className="text-[18px] font-bold text-[#07366F]">
+    Facebook
+  </p>
 
-                      <p className="mt-1 text-[11px] text-[#6D8294]">
-                        NIFLS School
-                      </p>
-                    </div>
+  <p className="mt-1 text-[11px] text-[#6D8294]">
+    NIFLS School
+  </p>
+</div>
                   </div>
                 </div>
 
@@ -518,6 +518,231 @@ export default function ContactPage() {
                   ↗
                 </span>
               </a>
+            </div>
+          </div>
+        </section>
+
+        {/* =====================================================
+            ACCESS / GOOGLE MAP
+        ====================================================== */}
+        <section className="relative overflow-hidden bg-[#EEF7FC] px-5 py-12 sm:px-8 lg:px-10 lg:py-14">
+          {/* BACKGROUND DECORATION */}
+          <div className="pointer-events-none absolute -right-[140px] -top-[170px] h-[430px] w-[430px] rounded-full border border-[#E2B33E]/25" />
+
+          <div className="pointer-events-none absolute -left-[170px] bottom-[-210px] h-[420px] w-[420px] rounded-full border border-[#55BFE2]/20" />
+
+          <div
+            className="pointer-events-none absolute left-[3%] top-[45px] h-[95px] w-[135px] opacity-[0.16]"
+            style={{
+              backgroundImage:
+                "radial-gradient(circle,#43B4D9 1.5px,transparent 1.5px)",
+              backgroundSize: "14px 14px",
+            }}
+          />
+
+          <div className="relative z-10 mx-auto max-w-[1450px]">
+            {/* =================================================
+                SECTION TITLE
+            ================================================== */}
+            <div className="mb-8 text-center lg:mb-10">
+              <div className="flex items-center justify-center gap-3">
+                <span className="h-px w-9 bg-[#D6A22E]" />
+
+                <p className="text-[10px] font-black tracking-[0.26em] text-[#C58B18] sm:text-[11px]">
+                  ACCESS
+                </p>
+
+                <span className="h-px w-9 bg-[#D6A22E]" />
+              </div>
+
+              <h2
+                className="mt-3 text-[32px] font-semibold tracking-[0.04em] text-[#07366F] sm:text-[38px] lg:text-[42px]"
+                style={{
+                  fontFamily:
+                    '"Yu Mincho","Hiragino Mincho ProN","Noto Serif JP",serif',
+                }}
+              >
+                アクセス
+              </h2>
+
+              <p className="mx-auto mt-3 max-w-[650px] text-[12px] font-medium leading-[1.8] text-[#61798B] sm:text-[13px]">
+                名古屋国際外語学院 本校・千年校へのアクセスをご案内します。
+              </p>
+            </div>
+
+            {/* =================================================
+                MAP CARDS
+                PC = 2 columns
+                MOBILE = stacked
+            ================================================== */}
+            <div className="grid gap-6 lg:grid-cols-2">
+              {/* =================================================
+                  本校
+              ================================================== */}
+              <div className="relative overflow-hidden rounded-[24px] border border-[#C9DFEA] bg-white shadow-[0_16px_38px_rgba(7,54,111,0.10)]">
+                {/* TOP BRAND LINE */}
+                <div className="absolute left-0 top-0 z-20 h-[4px] w-full bg-gradient-to-r from-[#EFB62E] via-[#53C0E3] to-[#07366F]" />
+
+                {/* HEADER */}
+                <div className="relative px-5 pb-4 pt-6 sm:px-6">
+                  <div className="absolute -left-[22px] -top-[20px] h-[72px] w-[72px] rounded-full bg-[#07366F]/[0.04]" />
+
+                  <div className="relative flex items-end gap-3">
+                    <h3
+                      className="text-[27px] font-semibold tracking-[0.05em] text-[#07366F]"
+                      style={{
+                        fontFamily:
+                          '"Yu Mincho","Hiragino Mincho ProN","Noto Serif JP",serif',
+                      }}
+                    >
+                      本校
+                    </h3>
+
+                    <span className="pb-1 text-[9px] font-black tracking-[0.25em] text-[#C58B18]">
+                      HONKO
+                    </span>
+                  </div>
+                </div>
+
+                {/* MAP */}
+                <div className="mx-4 overflow-hidden rounded-[17px] border border-[#D5E4EC] bg-[#EAF4F9] sm:mx-5">
+                  <iframe
+                    title="名古屋国際外語学院 本校 Google Map"
+                    src="https://www.google.com/maps?q=%E6%84%9B%E7%9F%A5%E7%9C%8C%E5%90%8D%E5%8F%A4%E5%B1%8B%E5%B8%82%E6%B8%AF%E5%8C%BA%E8%BE%B0%E5%B7%B3%E7%94%BA30-18&output=embed"
+                    width="100%"
+                    height="100%"
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="h-[230px] w-full border-0 sm:h-[280px] lg:h-[300px]"
+                  />
+                </div>
+
+                {/* INFO */}
+                <div className="px-5 py-5 sm:px-6 sm:py-6">
+                  <div className="flex items-start gap-3">
+                    <div className="mt-[2px] flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#EAF4FA] text-[#07366F]">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.8"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="h-4 w-4"
+                      >
+                        <path d="M12 21s6-5.1 6-11a6 6 0 1 0-12 0c0 5.9 6 11 6 11Z" />
+                        <circle cx="12" cy="10" r="2" />
+                      </svg>
+                    </div>
+
+                    <div>
+                      <p className="text-[9px] font-black tracking-[0.14em] text-[#A77A17]">
+                        ADDRESS
+                      </p>
+
+                      <p className="mt-1 text-[12px] font-bold leading-[1.8] text-[#365873] sm:text-[13px]">
+                        〒455-0003
+                        <br />
+                        愛知県名古屋市港区辰巳町30-18
+                      </p>
+                    </div>
+                  </div>
+
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=%E6%84%9B%E7%9F%A5%E7%9C%8C%E5%90%8D%E5%8F%A4%E5%B1%8B%E5%B8%82%E6%B8%AF%E5%8C%BA%E8%BE%B0%E5%B7%B3%E7%94%BA30-18"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-5 flex min-h-[43px] items-center justify-center rounded-[11px] bg-[#07366F] px-5 text-[12px] font-black text-white transition hover:bg-[#0B4A87]"
+                  >
+                    Google Mapsで見る
+                    <span className="ml-2 text-[#F0BD46]">↗</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* =================================================
+                  千年校
+              ================================================== */}
+              <div className="relative overflow-hidden rounded-[24px] border border-[#C9DFEA] bg-white shadow-[0_16px_38px_rgba(7,54,111,0.10)]">
+                {/* TOP BRAND LINE */}
+                <div className="absolute left-0 top-0 z-20 h-[4px] w-full bg-gradient-to-r from-[#EFB62E] via-[#53C0E3] to-[#07366F]" />
+
+                {/* HEADER */}
+                <div className="relative px-5 pb-4 pt-6 sm:px-6">
+                  <div className="absolute -left-[22px] -top-[20px] h-[72px] w-[72px] rounded-full bg-[#1199A7]/[0.05]" />
+
+                  <div className="relative flex items-end gap-3">
+                    <h3
+                      className="text-[27px] font-semibold tracking-[0.05em] text-[#07366F]"
+                      style={{
+                        fontFamily:
+                          '"Yu Mincho","Hiragino Mincho ProN","Noto Serif JP",serif',
+                      }}
+                    >
+                      千年校
+                    </h3>
+
+                    <span className="pb-1 text-[9px] font-black tracking-[0.25em] text-[#C58B18]">
+                      CHITOSE
+                    </span>
+                  </div>
+                </div>
+
+                {/* MAP */}
+                <div className="mx-4 overflow-hidden rounded-[17px] border border-[#D5E4EC] bg-[#EAF4F9] sm:mx-5">
+                  <iframe
+                    title="名古屋国際外語学院 千年校 Google Map"
+                    src="https://www.google.com/maps?q=%E6%84%9B%E7%9F%A5%E7%9C%8C%E5%90%8D%E5%8F%A4%E5%B1%8B%E5%B8%82%E6%B8%AF%E5%8C%BA%E8%BE%B0%E5%B7%B3%E7%94%BA1-45&output=embed"
+                    width="100%"
+                    height="100%"
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="h-[230px] w-full border-0 sm:h-[280px] lg:h-[300px]"
+                  />
+                </div>
+
+                {/* INFO */}
+                <div className="px-5 py-5 sm:px-6 sm:py-6">
+                  <div className="flex items-start gap-3">
+                    <div className="mt-[2px] flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#EAF4FA] text-[#1199A7]">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.8"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="h-4 w-4"
+                      >
+                        <path d="M12 21s6-5.1 6-11a6 6 0 1 0-12 0c0 5.9 6 11 6 11Z" />
+                        <circle cx="12" cy="10" r="2" />
+                      </svg>
+                    </div>
+
+                    <div>
+                      <p className="text-[9px] font-black tracking-[0.14em] text-[#A77A17]">
+                        ADDRESS
+                      </p>
+
+                      <p className="mt-1 text-[12px] font-bold leading-[1.8] text-[#365873] sm:text-[13px]">
+                        〒455-0003
+                        <br />
+                        愛知県名古屋市港区辰巳町1-45
+                      </p>
+                    </div>
+                  </div>
+
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=%E6%84%9B%E7%9F%A5%E7%9C%8C%E5%90%8D%E5%8F%A4%E5%B1%8B%E5%B8%82%E6%B8%AF%E5%8C%BA%E8%BE%B0%E5%B7%B3%E7%94%BA1-45"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-5 flex min-h-[43px] items-center justify-center rounded-[11px] bg-[#07366F] px-5 text-[12px] font-black text-white transition hover:bg-[#0B4A87]"
+                  >
+                    Google Mapsで見る
+                    <span className="ml-2 text-[#F0BD46]">↗</span>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </section>

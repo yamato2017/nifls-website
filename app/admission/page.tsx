@@ -137,69 +137,331 @@ export default function AdmissionPage() {
         }}
       >
         {/* =====================================================
-            HERO
-        ===================================================== */}
-        <section className="relative overflow-hidden bg-[#EEF8FD]">
-          <div className="mx-auto grid h-[300px] max-w-[1760px] lg:grid-cols-[43%_57%]">
-            {/* LEFT */}
-            <div className="relative flex items-center overflow-hidden px-6 sm:px-10 lg:px-16 xl:px-20">
-              <div className="pointer-events-none absolute -left-6 top-[-10px] select-none text-[115px] font-black leading-none tracking-[-0.05em] text-[#DCECF6]/60">
-                ADMISSION
-              </div>
+    HERO
+===================================================== */}
+<section className="relative overflow-hidden bg-[#EEF8FD]">
+  <div
+    className="
+      relative mx-auto
+      h-[265px]
+      max-w-[1760px]
+      overflow-hidden
 
-              <div className="pointer-events-none absolute -left-28 -top-40 h-[370px] w-[370px] rounded-full border border-[#B7DBEC]/35" />
+      sm:h-[285px]
+      md:h-[300px]
+      lg:h-[300px]
+    "
+  >
+    {/* =====================================================
+        PHOTO
+    ====================================================== */}
+    <div
+      className="
+        absolute inset-y-0 right-0
+        w-[57%]
 
-              <div
-                className="pointer-events-none absolute bottom-5 right-[9%] h-[75px] w-[110px] opacity-20"
-                style={{
-                  backgroundImage:
-                    "radial-gradient(circle,#D5A52C 1.5px,transparent 1.5px)",
-                  backgroundSize: "14px 14px",
-                }}
-              />
+        sm:w-[59%]
+        md:w-[60%]
+        lg:w-[57%]
+      "
+    >
+      <Image
+        src="/class1.jpg"
+        alt="名古屋国際外語学院 授業風景"
+        fill
+        priority
+        sizes="(max-width:1023px) 60vw, 57vw"
+        className="
+          object-cover
+          object-[54%_50%]
 
-              <div className="relative z-10">
-                <div className="flex items-center gap-4">
-                  <span className="h-[2px] w-11 bg-[#DBA82A]" />
+          sm:object-[53%_50%]
+          md:object-center
+        "
+      />
 
-                  <p className="text-[12px] font-black tracking-[0.3em] text-[#BD8511]">
-                    ADMISSIONS
-                  </p>
-                </div>
+      {/* PHOTO DEPTH */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#EEF8FD]/5 via-transparent to-[#062D5C]/8" />
+    </div>
 
-                <h1 className="mt-5 text-[50px] font-black tracking-[0.05em] text-[#07366F] sm:text-[58px] lg:text-[62px]">
-                  入学案内
-                </h1>
+    {/* =====================================================
+        LEFT MAIN PANEL
+    ====================================================== */}
+    <div
+      className="
+        absolute inset-y-0 left-0 z-10
+        w-[62%]
+        bg-[#EEF8FD]
 
-                <div className="mt-5 flex items-center gap-3">
-                  <span className="h-[4px] w-[56px] rounded-full bg-[#07366F]" />
-                  <span className="h-[4px] w-[24px] rounded-full bg-[#61C5E7]" />
-                  <span className="h-[4px] w-[12px] rounded-full bg-[#EDB833]" />
-                </div>
-              </div>
-            </div>
+        [clip-path:polygon(0_0,100%_0,79%_100%,0_100%)]
 
-            {/* RIGHT PHOTO */}
-            <div className="relative hidden overflow-hidden lg:block">
-              <div className="absolute inset-0 [clip-path:polygon(11%_0,100%_0,100%_100%,0_100%)]">
-                <Image
-                  src="/class1.jpg"
-                  alt="名古屋国際外語学院 授業風景"
-                  fill
-                  priority
-                  sizes="57vw"
-                  className="object-cover object-center"
-                />
+        sm:w-[59%]
+        sm:[clip-path:polygon(0_0,100%_0,81%_100%,0_100%)]
 
-                <div className="absolute inset-0 bg-gradient-to-r from-[#EEF8FD]/25 via-transparent to-[#062D5C]/5" />
-              </div>
+        md:w-[56%]
+        md:[clip-path:polygon(0_0,100%_0,82%_100%,0_100%)]
 
-              <div className="absolute bottom-0 left-[9%] top-0 w-[5px] -skew-x-[18deg] bg-[#EDB833]" />
-            </div>
-          </div>
+        lg:w-[48%]
+        lg:[clip-path:polygon(0_0,100%_0,82%_100%,0_100%)]
+      "
+    />
 
-          <div className="h-[4px] bg-gradient-to-r from-[#EDB833] via-[#5FC4E6] to-[#07366F]" />
-        </section>
+    {/* =====================================================
+        SOFT BLUE DIAGONAL LAYER
+    ====================================================== */}
+    <div
+      className="
+        pointer-events-none
+        absolute inset-y-0 z-[11]
+
+        left-[53%]
+        w-[11%]
+        bg-[#78B9D7]/25
+
+        [clip-path:polygon(32%_0,100%_0,68%_100%,0_100%)]
+
+        sm:left-[52%]
+        sm:w-[10%]
+
+        md:left-[50%]
+        md:w-[9%]
+
+        lg:left-[44%]
+        lg:w-[7%]
+      "
+    />
+
+    {/* LIGHT GLASS LINE */}
+    <div
+      className="
+        pointer-events-none
+        absolute inset-y-0 z-[12]
+
+        left-[55%]
+        w-[5%]
+        bg-white/18
+
+        [clip-path:polygon(35%_0,100%_0,65%_100%,0_100%)]
+
+        sm:left-[54%]
+        md:left-[52%]
+
+        lg:left-[46%]
+        lg:w-[4%]
+      "
+    />
+
+    {/* =====================================================
+        GOLD DIAGONAL
+    ====================================================== */}
+    <div
+      className="
+        pointer-events-none
+        absolute
+        inset-y-[-12%]
+        z-[14]
+
+        left-[57%]
+        w-[4px]
+        rotate-[13deg]
+        bg-[#EDB833]
+
+        sm:left-[56%]
+        sm:w-[5px]
+
+        md:left-[54%]
+
+        lg:left-[48%]
+      "
+    />
+
+    {/* LARGE ADMISSION BACKGROUND */}
+<div
+  className="
+    pointer-events-none
+    absolute
+    left-0
+    top-[8px]
+    z-[15]
+
+    select-none
+    whitespace-nowrap
+
+    text-[48px]
+    font-black
+    leading-none
+    tracking-[-0.055em]
+    text-[#DCECF6]/65
+
+    min-[390px]:text-[52px]
+
+    sm:text-[68px]
+    md:text-[82px]
+
+    lg:-left-6
+    lg:top-[-10px]
+    lg:text-[115px]
+  "
+>
+  ADMISSION
+</div>
+
+    {/* =====================================================
+        LARGE ARC
+    ====================================================== */}
+    <div
+      className="
+        pointer-events-none
+        absolute z-[15]
+
+        -left-[145px]
+        -top-[220px]
+
+        h-[430px]
+        w-[430px]
+
+        rounded-full
+        border
+        border-[#B7DBEC]/35
+
+        sm:h-[470px]
+        sm:w-[470px]
+
+        lg:-left-28
+        lg:-top-40
+        lg:h-[370px]
+        lg:w-[370px]
+      "
+    />
+
+    {/* =====================================================
+        DOTS
+    ====================================================== */}
+    <div
+      className="
+        pointer-events-none
+        absolute z-[16]
+
+        bottom-[24px]
+        left-[36%]
+
+        h-[60px]
+        w-[82px]
+        opacity-20
+
+        sm:left-[34%]
+        sm:h-[70px]
+        sm:w-[98px]
+
+        md:left-[32%]
+
+        lg:bottom-5
+        lg:left-[31%]
+        lg:h-[75px]
+        lg:w-[110px]
+      "
+      style={{
+        backgroundImage:
+          "radial-gradient(circle,#D5A52C 1.4px,transparent 1.4px)",
+        backgroundSize: "12px 12px",
+      }}
+    />
+
+    {/* =====================================================
+        TEXT
+    ====================================================== */}
+    <div
+      className="
+        absolute inset-y-0 left-0
+        z-20
+
+        flex
+        w-[55%]
+        flex-col
+        justify-center
+
+        pl-5
+
+        sm:w-[51%]
+        sm:pl-8
+
+        md:w-[48%]
+        md:pl-10
+
+        lg:w-[43%]
+        lg:pl-16
+
+        xl:pl-20
+      "
+    >
+      {/* ADMISSIONS */}
+      <div className="flex items-center gap-2 sm:gap-3 lg:gap-4">
+        <span className="h-[2px] w-7 bg-[#DBA82A] sm:w-9 lg:w-11" />
+
+        <p
+          className="
+            whitespace-nowrap
+            text-[8px]
+            font-black
+            tracking-[0.22em]
+            text-[#BD8511]
+
+            min-[390px]:text-[8.5px]
+
+            sm:text-[9px]
+            md:text-[10px]
+
+            lg:text-[12px]
+            lg:tracking-[0.3em]
+          "
+        >
+          ADMISSIONS
+        </p>
+      </div>
+
+      {/* TITLE */}
+      <h1
+        className="
+          mt-4
+          whitespace-nowrap
+
+          text-[30px]
+          font-black
+          leading-none
+          tracking-[0.03em]
+          text-[#07366F]
+
+          min-[390px]:text-[33px]
+
+          sm:text-[40px]
+          md:text-[47px]
+
+          lg:mt-5
+          lg:text-[62px]
+          lg:tracking-[0.05em]
+        "
+      >
+        入学案内
+      </h1>
+
+      {/* THREE ACCENT LINES */}
+      <div className="mt-5 flex items-center gap-1.5 sm:gap-2 lg:gap-3">
+        <span className="h-[3px] w-[38px] rounded-full bg-[#07366F] sm:w-[46px] lg:h-[4px] lg:w-[56px]" />
+
+        <span className="h-[3px] w-[18px] rounded-full bg-[#61C5E7] sm:w-[21px] lg:h-[4px] lg:w-[24px]" />
+
+        <span className="h-[3px] w-[9px] rounded-full bg-[#EDB833] lg:h-[4px] lg:w-[12px]" />
+      </div>
+    </div>
+  </div>
+
+  {/* =====================================================
+      BOTTOM ACCENT
+  ====================================================== */}
+  <div className="relative h-[5px] overflow-hidden">
+    <div className="absolute inset-0 bg-gradient-to-r from-[#EDB833] via-[#5FC4E6] to-[#07366F]" />
+  </div>
+</section>
 
         {/* =====================================================
             REQUIREMENTS

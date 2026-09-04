@@ -122,65 +122,212 @@ export default function TuitionPage() {
       <Header />
 
       <main className="min-h-screen bg-[#F7FBFE] text-[#082F69]">
-        {/* HERO */}
-        <section className="relative overflow-hidden bg-[#EEF7FC]">
-          <div className="relative mx-auto h-[370px] max-w-[1760px] overflow-hidden">
-            <Image
-              src="/bunka2.jpg"
-              alt="名古屋国際外語学院 授業風景"
-              fill
-              priority
-              sizes="100vw"
-              className="object-cover object-center"
-            />
+        {/* =====================================================
+    HERO
+===================================================== */}
+<section className="relative overflow-hidden bg-[#EEF7FC]">
+  <div
+    className="
+      relative mx-auto
+      h-[270px]
+      max-w-[1760px]
+      overflow-hidden
 
-            <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(248,252,255,0.98)_0%,rgba(247,252,255,0.96)_27%,rgba(241,249,254,0.78)_45%,rgba(239,248,253,0.28)_68%,rgba(239,248,253,0)_100%)]" />
+      sm:h-[295px]
+      md:h-[320px]
+      lg:h-[370px]
+    "
+  >
+    {/* =====================================================
+        BACKGROUND PHOTO
+    ====================================================== */}
+    <Image
+      src="/bunka2.jpg"
+      alt="名古屋国際外語学院 学生生活"
+      fill
+      priority
+      sizes="100vw"
+      className="
+        object-cover
+        object-[62%_50%]
 
-            <div className="absolute left-[-100px] top-[-150px] h-[330px] w-[330px] rounded-full border-[22px] border-white/45" />
+        sm:object-[60%_50%]
+        md:object-[58%_50%]
+        lg:object-center
+      "
+    />
 
-            <div
-              className="absolute left-[39%] top-[35px] h-[105px] w-[145px] opacity-20"
-              style={{
-                backgroundImage:
-                  "radial-gradient(circle, #D6A22E 1.5px, transparent 1.5px)",
-                backgroundSize: "14px 14px",
-              }}
-            />
+    {/* =====================================================
+        LEFT GRADIENT
+        MOBILE STRONGER / PC ORIGINAL FEEL
+    ====================================================== */}
+    <div
+      className="
+        absolute inset-0
 
-            <div className="absolute bottom-0 left-0 h-[5px] w-full bg-gradient-to-r from-[#F0BD46] via-[#65C9F6] to-[#082F69]" />
+        bg-[linear-gradient(90deg,rgba(248,252,255,1)_0%,rgba(248,252,255,0.98)_36%,rgba(243,250,254,0.90)_51%,rgba(238,248,253,0.46)_66%,rgba(238,248,253,0.05)_82%)]
 
-            <div className="relative z-10 flex h-full items-center px-[6%]">
-              <div className="max-w-[620px]">
-                <div className="flex items-center gap-4">
-                  <span className="h-px w-10 bg-[#D6A22E]" />
+        sm:bg-[linear-gradient(90deg,rgba(248,252,255,1)_0%,rgba(248,252,255,0.97)_34%,rgba(243,250,254,0.84)_50%,rgba(238,248,253,0.35)_68%,rgba(238,248,253,0)_86%)]
 
-                  <p className="text-[12px] font-bold tracking-[0.28em] text-[#C58B18]">
-                    TUITION & FEES
-                  </p>
-                </div>
+        lg:bg-[linear-gradient(90deg,rgba(248,252,255,0.98)_0%,rgba(247,252,255,0.96)_27%,rgba(241,249,254,0.78)_45%,rgba(239,248,253,0.28)_68%,rgba(239,248,253,0)_100%)]
+      "
+    />
 
-                <h1
-                  className="mt-4 text-[52px] font-semibold tracking-[0.06em] text-[#07366F]"
-                  style={{
-                    fontFamily:
-                      '"Yu Mincho","Hiragino Mincho ProN","Noto Serif JP",serif',
-                  }}
-                >
-                  学費のご案内
-                </h1>
+    {/* =====================================================
+        DECORATIVE LARGE CIRCLE
+    ====================================================== */}
+    <div
+      className="
+        pointer-events-none
+        absolute
 
-                <div className="mt-4 h-[2px] w-12 bg-[#D6A22E]" />
+        -left-[120px]
+        -top-[175px]
+        h-[300px]
+        w-[300px]
 
-                <p className="mt-5 text-[16px] font-semibold leading-[1.9] text-[#31526F]">
-                  入学時期により、コース期間と学費が異なります。
-                  <br />
-                  各コースの費用をご確認ください。
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+        rounded-full
+        border-[18px]
+        border-white/40
 
+        sm:-left-[110px]
+        sm:-top-[170px]
+        sm:h-[320px]
+        sm:w-[320px]
+
+        lg:-left-[100px]
+        lg:-top-[150px]
+        lg:h-[330px]
+        lg:w-[330px]
+        lg:border-[22px]
+      "
+    />
+
+    {/* =====================================================
+        DOT PATTERN
+    ====================================================== */}
+    <div
+      className="
+        pointer-events-none
+        absolute
+
+        left-[37%]
+        top-[28px]
+
+        h-[72px]
+        w-[95px]
+        opacity-20
+
+        sm:left-[38%]
+        sm:h-[85px]
+        sm:w-[115px]
+
+        lg:left-[39%]
+        lg:top-[35px]
+        lg:h-[105px]
+        lg:w-[145px]
+      "
+      style={{
+        backgroundImage:
+          "radial-gradient(circle,#D6A22E 1.4px,transparent 1.4px)",
+        backgroundSize: "13px 13px",
+      }}
+    />
+
+    {/* =====================================================
+        CONTENT
+    ====================================================== */}
+    <div
+      className="
+        relative z-10
+        flex h-full
+        items-center
+
+        px-5
+
+        sm:px-8
+        md:px-10
+
+        lg:px-[6%]
+      "
+    >
+      <div className="max-w-[620px]">
+        {/* ENGLISH LABEL */}
+        <div className="flex items-center gap-3 lg:gap-4">
+          <span
+            className="
+              h-px
+              w-8
+              bg-[#D6A22E]
+
+              sm:w-9
+              lg:w-10
+            "
+          />
+
+          <p
+            className="
+              whitespace-nowrap
+              text-[9px]
+              font-black
+              tracking-[0.24em]
+              text-[#C58B18]
+
+              sm:text-[10px]
+
+              lg:text-[12px]
+              lg:tracking-[0.28em]
+            "
+          >
+            TUITION & FEES
+          </p>
+        </div>
+
+        {/* JAPANESE TITLE */}
+        <h1
+          className="
+            mt-4
+            whitespace-nowrap
+
+            text-[34px]
+            font-semibold
+            leading-[1.15]
+            tracking-[0.015em]
+            text-[#07366F]
+
+            min-[390px]:text-[36px]
+
+            sm:text-[42px]
+            md:text-[47px]
+
+            lg:text-[52px]
+            lg:tracking-[0.06em]
+          "
+          style={{
+            fontFamily:
+              '"Yu Mincho","Hiragino Mincho ProN","Noto Serif JP",serif',
+          }}
+        >
+          学費のご案内
+        </h1>
+
+        {/* ACCENT */}
+        <div className="mt-5 flex items-center gap-2">
+          <span className="h-[3px] w-[42px] rounded-full bg-[#07366F] sm:w-[48px]" />
+
+          <span className="h-[3px] w-[20px] rounded-full bg-[#65C9F6]" />
+
+          <span className="h-[3px] w-[10px] rounded-full bg-[#F0BD46]" />
+        </div>
+      </div>
+    </div>
+
+    {/* =====================================================
+        BOTTOM ACCENT
+    ====================================================== */}
+    <div className="absolute bottom-0 left-0 z-20 h-[5px] w-full bg-gradient-to-r from-[#F0BD46] via-[#65C9F6] to-[#082F69]" />
+  </div>
+</section>
         {/* SCHOOL FEES */}
         <section className="relative overflow-hidden bg-[linear-gradient(180deg,#F8FCFF_0%,#EEF7FC_55%,#F8FCFF_100%)] px-5 py-12 sm:px-8 lg:px-10">
           {/* BACKGROUND DECOR */}
@@ -397,81 +544,50 @@ export default function TuitionPage() {
             </div>
 
             {/* IMPORTANT NOTICE */}
-            <div className="relative mt-7 overflow-hidden rounded-[18px] border-2 border-[#F0BD46] bg-[#082F69] shadow-[0_15px_34px_rgba(7,54,111,0.20)]">
-              <div className="absolute left-0 top-0 h-full w-[7px] bg-[#F0BD46]" />
+<div className="relative mt-7 overflow-hidden rounded-[18px] border-2 border-[#F0BD46] bg-[#082F69] shadow-[0_15px_34px_rgba(7,54,111,0.20)]">
+  {/* LEFT GOLD ACCENT */}
+  <div className="absolute left-0 top-0 h-full w-[7px] bg-[#F0BD46]" />
 
-              <div className="flex flex-col gap-4 px-6 py-5 md:flex-row md:items-center">
-                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#F0BD46] text-[25px] font-black text-[#082F69] shadow-[0_6px_16px_rgba(0,0,0,0.18)]">
-                  !
-                </div>
+  <div className="relative px-6 py-5 sm:px-7 sm:py-6">
+    {/* TOP IMPORTANT ROW */}
+    <div className="flex flex-wrap items-center gap-2.5 sm:gap-3">
+      {/* BLINKING ! */}
+      <div className="relative flex h-[34px] w-[34px] shrink-0 items-center justify-center sm:h-[38px] sm:w-[38px]">
+        {/* SOFT BLINK RING */}
+        <span className="absolute inset-0 animate-ping rounded-full bg-[#F0BD46]/25" />
 
-                <div className="flex-1">
-                  <div className="flex flex-wrap items-center gap-3">
-                    <span className="rounded-full bg-[#D9423A] px-3 py-1 text-[10px] font-extrabold tracking-[0.08em] text-white">
-                      重要
-                    </span>
+        {/* MAIN CIRCLE */}
+        <span className="relative flex h-full w-full items-center justify-center rounded-full bg-[#F0BD46] text-[18px] font-black leading-none text-[#082F69] shadow-[0_5px_14px_rgba(0,0,0,0.18)] sm:text-[20px]">
+          !
+        </span>
+      </div>
 
-                    <p className="text-[9px] font-bold tracking-[0.17em] text-[#65C9F6]">
-                      IMPORTANT PAYMENT INFORMATION
-                    </p>
-                  </div>
+      {/* IMPORTANT */}
+      <span className="rounded-full bg-[#D9423A] px-3.5 py-[7px] text-[10px] font-extrabold leading-none tracking-[0.08em] text-white sm:text-[11px]">
+        重要
+      </span>
 
-                  <p className="mt-2 text-[18px] font-bold leading-[1.7] text-white md:text-[21px]">
-                    学費および学生寮費は
-                    <span className="mx-1 text-[#F0BD46]">
-                      年払いのみ
-                    </span>
-                    となります。
-                  </p>
+      {/* ENGLISH */}
+      <p className="text-[8px] font-bold tracking-[0.13em] text-[#65C9F6] min-[390px]:text-[9px] sm:text-[10px] sm:tracking-[0.17em]">
+        IMPORTANT PAYMENT INFORMATION
+      </p>
+    </div>
 
-                  <p className="mt-1 text-[12px] font-semibold text-[#D8E7F4]">
-                    月払い・分割払いには対応しておりません。
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+    {/* MAIN MESSAGE */}
+    <p className="mt-4 text-[17px] font-bold leading-[1.75] text-white sm:text-[19px] md:text-[21px]">
+      学費および学生寮費は
+      <span className="mx-1 text-[#F0BD46]">
+        年払いのみ
+      </span>
+      となります。
+    </p>
 
-        {/* DORMITORY FEES */}
-        <section className="relative overflow-hidden bg-white px-5 py-12 sm:px-8 lg:px-10">
-          <div
-            className="pointer-events-none absolute right-[2%] top-[40px] h-[110px] w-[150px] opacity-20"
-            style={{
-              backgroundImage:
-                "radial-gradient(circle, #49AEE7 1.5px, transparent 1.5px)",
-              backgroundSize: "14px 14px",
-            }}
-          />
-
-          <div className="relative z-10 mx-auto max-w-[1350px]">
-            {/* TITLE */}
-            <div className="mb-8 text-center">
-              <div className="flex items-center justify-center gap-4">
-                <span className="h-px w-9 bg-[#D6A22E]" />
-
-                <p className="text-[11px] font-bold tracking-[0.24em] text-[#C58D18]">
-                  DORMITORY FEES
-                </p>
-
-                <span className="h-px w-9 bg-[#D6A22E]" />
-              </div>
-
-              <h2
-                className="mt-2 text-[36px] font-semibold tracking-[0.08em] text-[#07366F]"
-                style={{
-                  fontFamily:
-                    '"Yu Mincho","Hiragino Mincho ProN","Noto Serif JP",serif',
-                }}
-              >
-                学生寮費
-              </h2>
-
-              <p className="mt-3 text-[13px] font-semibold text-[#61798B]">
-                学費とは別に、学生寮をご利用の場合は下記費用が必要です。
-              </p>
-            </div>
-
+    {/* SUB MESSAGE */}
+    <p className="mt-1.5 text-[11px] font-semibold leading-[1.7] text-[#D8E7F4] sm:text-[12px]">
+      月払い・分割払いには対応しておりません。
+    </p>
+  </div>
+</div>
             {/* MAIN DORM FEE PANEL */}
             <div className="overflow-hidden rounded-[22px] border border-[#416C99] bg-[#082F69] shadow-[0_16px_36px_rgba(7,54,111,0.18)]">
               <div className="h-[4px] w-full bg-gradient-to-r from-[#F0BD46] via-[#65C9F6] to-[#F0BD46]" />
@@ -539,9 +655,15 @@ export default function TuitionPage() {
                       寮費には1日3食の食事代が含まれています。
                     </p>
 
-                    <p className="mt-1 text-[11px] font-semibold text-[#506980]">
-                      朝食・昼食・夕食
-                    </p>
+                    <div className="mt-2">
+  <p className="text-[12px] font-semibold text-[#61798B]">
+    朝食・昼食・夕食
+  </p>
+
+  <p className="mt-2 text-[11px] font-semibold leading-[1.6] text-[#7A8C99]">
+    ※ 食事の提供は、学校の授業がある日のみとなります。
+  </p>
+</div>
                   </div>
                 </div>
               </div>

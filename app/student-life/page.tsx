@@ -35,276 +35,687 @@ export default function StudentLifePage() {
       <Header />
 
       <main className="min-h-screen bg-[#F7FBFE] text-[#082F69]">
-                {/* HERO */}
-        <section className="relative overflow-hidden bg-[#082F69]">
-          <div className="relative mx-auto h-[430px] max-w-[1760px] overflow-hidden">
-            <Image
-              src="/sports4.jpg"
-              alt="名古屋国際外語学院 学生生活"
-              fill
-              priority
-              sizes="100vw"
-              className="object-cover object-[62%_48%]"
-            />
+                {/* =====================================================
+    HERO
+===================================================== */}
+<section className="relative overflow-hidden bg-[#EAF6FC]">
+  <div
+    className="
+      relative mx-auto
+      h-[270px]
+      max-w-[1760px]
+      overflow-hidden
 
-            {/* DARK PHOTO TONE */}
-            <div className="absolute inset-0 bg-[#082F69]/10" />
+      sm:h-[295px]
+      md:h-[315px]
+      lg:h-[350px]
+    "
+  >
+    {/* =====================================================
+        RIGHT PHOTO
+    ====================================================== */}
+    <div
+      className="
+        absolute inset-y-0 right-0
+        w-[57%]
 
-            {/* LEFT PREMIUM GRADIENT */}
-            <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(247,251,254,0.98)_0%,rgba(239,248,252,0.96)_21%,rgba(232,246,252,0.84)_34%,rgba(218,240,248,0.48)_46%,rgba(8,47,105,0.04)_67%,transparent_100%)]" />
+        sm:w-[59%]
+        md:w-[61%]
+        lg:w-[62%]
+      "
+    >
+      <Image
+        src="/sports4.jpg"
+        alt="名古屋国際外語学院 学生生活"
+        fill
+        priority
+        sizes="(max-width:1023px) 61vw, 62vw"
+        className="
+          object-cover
+          object-[65%_50%]
 
-            {/* BOTTOM DEPTH */}
-            <div className="absolute inset-x-0 bottom-0 h-[95px] bg-gradient-to-t from-[#062F62]/18 to-transparent" />
+          sm:object-[62%_50%]
+          md:object-[60%_50%]
+          lg:object-[58%_50%]
+        "
+      />
 
-            {/* DECORATION */}
-            <div className="pointer-events-none absolute -left-[145px] -top-[170px] h-[420px] w-[420px] rounded-full border border-[#4DBEE5]/15" />
-            <div className="pointer-events-none absolute -left-[70px] -top-[95px] h-[270px] w-[270px] rounded-full border border-[#EFB62E]/15" />
+      <div className="absolute inset-0 bg-[#082F69]/[0.04]" />
+    </div>
 
-            <div
-              className="pointer-events-none absolute left-[3%] bottom-[34px] h-[88px] w-[120px] opacity-[0.13]"
-              style={{
-                backgroundImage:
-                  "radial-gradient(circle,#168EBF 1.5px,transparent 1.5px)",
-                backgroundSize: "14px 14px",
-              }}
-            />
+    {/* =====================================================
+        LEFT PANEL
+    ====================================================== */}
+    <div
+      className="
+        absolute inset-y-0 left-0 z-10
+        w-[63%]
+        bg-[#EAF6FC]
 
-            {/* TEXT */}
-            <div className="relative z-10 flex h-full items-center px-6 sm:px-10 lg:px-16 xl:px-20">
-              <div className="max-w-[620px]">
-                <div className="flex items-center gap-4">
-                  <span className="h-[2px] w-11 bg-[#D8A52B]" />
+        [clip-path:polygon(0_0,100%_0,80%_100%,0_100%)]
 
-                  <p className="text-[11px] font-black tracking-[0.28em] text-[#B97E0D]">
-                    STUDENT LIFE
-                  </p>
-                </div>
+        sm:w-[60%]
+        sm:[clip-path:polygon(0_0,100%_0,81%_100%,0_100%)]
 
-                <h1
-                  className="mt-5 text-[48px] font-black tracking-[0.04em] text-[#07366F] sm:text-[58px]"
-                  style={{
-                    fontFamily:
-                      '"Yu Mincho","Hiragino Mincho ProN","Noto Serif JP",serif',
-                  }}
-                >
-                  学生生活
-                </h1>
+        md:w-[57%]
+        md:[clip-path:polygon(0_0,100%_0,82%_100%,0_100%)]
 
-                <div className="mt-6 flex items-center gap-5">
-                  <span
-                    className="text-[23px] font-semibold tracking-[0.08em] text-[#0C477D]"
-                    style={{
-                      fontFamily:
-                        '"Yu Mincho","Hiragino Mincho ProN","Noto Serif JP",serif',
-                    }}
-                  >
-                    学ぶ
-                  </span>
+        lg:w-[47%]
+        lg:[clip-path:polygon(0_0,100%_0,82%_100%,0_100%)]
+      "
+    />
 
-                  <span className="h-7 w-px bg-[#E2AA2C]" />
+    {/* =====================================================
+        SOFT CYAN TRANSITION
+    ====================================================== */}
+    <div
+      className="
+        pointer-events-none
+        absolute inset-y-0 z-[11]
 
-                  <span
-                    className="text-[23px] font-semibold tracking-[0.08em] text-[#0C477D]"
-                    style={{
-                      fontFamily:
-                        '"Yu Mincho","Hiragino Mincho ProN","Noto Serif JP",serif',
-                    }}
-                  >
-                    暮らす
-                  </span>
+        left-[54%]
+        w-[11%]
 
-                  <span className="h-7 w-px bg-[#E2AA2C]" />
+        bg-[#72C5E4]/25
 
-                  <span
-                    className="text-[23px] font-semibold tracking-[0.08em] text-[#0C477D]"
-                    style={{
-                      fontFamily:
-                        '"Yu Mincho","Hiragino Mincho ProN","Noto Serif JP",serif',
-                    }}
-                  >
-                    つながる
-                  </span>
-                </div>
+        [clip-path:polygon(35%_0,100%_0,65%_100%,0_100%)]
 
-                <p className="mt-7 max-w-[520px] text-[13px] font-bold leading-[2] text-[#355A76]">
-                  名古屋で始まる新しい毎日。
-                  <br />
-                  学習から生活まで、安心できる環境を整えています。
-                </p>
+        sm:left-[53%]
+        sm:w-[10%]
 
-                <div className="mt-7 flex h-[3px] w-[115px]">
-                  <span className="flex-1 bg-[#1BBBD2]" />
-                  <span className="w-[34px] bg-[#E5AD2C]" />
-                </div>
-              </div>
-            </div>
+        md:left-[51%]
+        md:w-[9%]
 
-            {/* RIGHT CORNER ACCENT */}
-            <div className="absolute right-8 top-7 h-[70px] w-[70px] border-r-[3px] border-t-[3px] border-white/40" />
-          </div>
+        lg:left-[43%]
+        lg:w-[7%]
+      "
+    />
 
-          <div className="h-[4px] bg-gradient-to-r from-[#EFB62E] via-[#4DBEE5] to-[#07366F]" />
-        </section>
-        {/* THREE POINTS */}
-        <section className="relative bg-[#F7FBFE] px-5 py-8 sm:px-8 lg:px-10">
-          <div className="mx-auto grid max-w-[1380px] gap-4 md:grid-cols-3">
-            {[
-              {
-                no: "01",
-                en: "LEARN",
-                title: "学ぶ",
-                text: "日本語力と進学に必要な力を身につける。",
-              },
-              {
-                no: "02",
-                en: "LIVE",
-                title: "暮らす",
-                text: "学生寮と生活環境で新生活をサポート。",
-              },
-              {
-                no: "03",
-                en: "CONNECT",
-                title: "楽しむ",
-                text: "学校行事や交流を通して日本を体験。",
-              },
-            ].map((item) => (
-              <div
-                key={item.no}
-                className="relative overflow-hidden rounded-[18px] border border-[#D4E4EE] bg-white px-6 py-5 shadow-[0_9px_22px_rgba(21,76,115,0.07)]"
-              >
-                <span className="absolute right-4 top-0 font-serif text-[56px] font-bold text-[#EDF4F9]">
-                  {item.no}
-                </span>
+    {/* LIGHT GLASS STRIP */}
+    <div
+      className="
+        pointer-events-none
+        absolute inset-y-0 z-[12]
 
-                <div className="relative z-10">
-                  <p className="text-[10px] font-bold tracking-[0.18em] text-[#C58D18]">
-                    {item.en}
-                  </p>
+        left-[56%]
+        w-[5%]
 
-                  <p
-                    className="mt-1 text-[25px] font-semibold text-[#07366F]"
-                    style={{
-                      fontFamily:
-                        '"Yu Mincho","Hiragino Mincho ProN","Noto Serif JP",serif',
-                    }}
-                  >
-                    {item.title}
-                  </p>
+        bg-white/20
 
-                  <div className="mt-3 h-[2px] w-9 bg-[#D6A22E]" />
+        [clip-path:polygon(35%_0,100%_0,65%_100%,0_100%)]
 
-                  <p className="mt-3 text-[12px] font-medium leading-[1.8] text-[#587185]">
-                    {item.text}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
+        sm:left-[55%]
+        md:left-[53%]
 
-        {/* SCHOOL LIFE */}
-        <section className="relative overflow-hidden bg-[#EEF7FC] px-5 py-14 sm:px-8 lg:px-10">
-          <div className="pointer-events-none absolute -right-28 -top-32 h-[390px] w-[390px] rounded-full border border-[#D9AD3D]/25" />
+        lg:left-[45%]
+        lg:w-[4%]
+      "
+    />
 
-          <div
-            className="pointer-events-none absolute left-[3%] top-[45px] h-[100px] w-[145px] opacity-20"
+    {/* =====================================================
+        GOLD DIAGONAL
+    ====================================================== */}
+    <div
+      className="
+        pointer-events-none
+        absolute
+        inset-y-[-12%]
+        z-[14]
+
+        left-[58%]
+        w-[4px]
+        rotate-[13deg]
+        bg-[#EFB62E]
+
+        sm:left-[57%]
+        sm:w-[5px]
+
+        md:left-[55%]
+
+        lg:left-[47%]
+      "
+    />
+
+    {/* =====================================================
+        LARGE BACKGROUND TEXT
+    ====================================================== */}
+    <div
+      className="
+        pointer-events-none
+        absolute
+        -left-3
+        -top-1
+        z-[15]
+
+        select-none
+        whitespace-nowrap
+
+        text-[57px]
+        font-black
+        leading-none
+        tracking-[-0.05em]
+        text-[#D8ECF7]/70
+
+        min-[390px]:text-[61px]
+
+        sm:text-[74px]
+        md:text-[86px]
+
+        lg:-left-5
+        lg:-top-3
+        lg:text-[105px]
+      "
+    >
+      STUDENT LIFE
+    </div>
+
+    {/* =====================================================
+        DECORATIVE ARC
+    ====================================================== */}
+    <div
+      className="
+        pointer-events-none
+        absolute z-[15]
+
+        -left-[155px]
+        -top-[230px]
+
+        h-[440px]
+        w-[440px]
+
+        rounded-full
+        border
+        border-[#4DBEE5]/20
+
+        lg:-left-[145px]
+        lg:-top-[180px]
+        lg:h-[420px]
+        lg:w-[420px]
+      "
+    />
+
+    {/* =====================================================
+        DOTS
+    ====================================================== */}
+    <div
+      className="
+        pointer-events-none
+        absolute z-[16]
+
+        bottom-[20px]
+        left-[35%]
+
+        h-[55px]
+        w-[80px]
+        opacity-[0.14]
+
+        sm:left-[33%]
+        sm:h-[65px]
+        sm:w-[92px]
+
+        lg:bottom-[24px]
+        lg:left-[30%]
+        lg:h-[76px]
+        lg:w-[108px]
+      "
+      style={{
+        backgroundImage:
+          "radial-gradient(circle,#168EBF 1.4px,transparent 1.4px)",
+        backgroundSize: "13px 13px",
+      }}
+    />
+
+    {/* =====================================================
+        TEXT CONTENT
+    ====================================================== */}
+    <div
+      className="
+        absolute inset-y-0 left-0
+        z-20
+
+        flex
+        w-[56%]
+        flex-col
+        justify-center
+
+        pl-5
+
+        sm:w-[53%]
+        sm:pl-8
+
+        md:w-[50%]
+        md:pl-10
+
+        lg:w-[43%]
+        lg:pl-16
+
+        xl:pl-20
+      "
+    >
+      {/* PAGE LABEL */}
+      <div className="flex items-center gap-2 sm:gap-3 lg:gap-4">
+        <span className="h-[2px] w-7 shrink-0 bg-[#D8A52B] sm:w-9 lg:w-11" />
+
+        <p
+          className="
+            whitespace-nowrap
+            text-[8px]
+            font-black
+            tracking-[0.20em]
+            text-[#B97E0D]
+
+            sm:text-[9px]
+            md:text-[10px]
+
+            lg:text-[11px]
+            lg:tracking-[0.28em]
+          "
+        >
+          STUDENT LIFE
+        </p>
+      </div>
+
+      {/* TITLE */}
+      <h1
+        className="
+          mt-4
+          whitespace-nowrap
+          text-[32px]
+          font-black
+          leading-none
+          tracking-[0.035em]
+          text-[#07366F]
+
+          min-[390px]:text-[35px]
+
+          sm:text-[41px]
+          md:text-[47px]
+
+          lg:mt-5
+          lg:text-[58px]
+          lg:tracking-[0.04em]
+        "
+        style={{
+          fontFamily:
+            '"Yu Mincho","Hiragino Mincho ProN","Noto Serif JP",serif',
+        }}
+      >
+        学生生活
+      </h1>
+
+      {/* =====================================================
+          LEARN / LIVE / CONNECT
+      ====================================================== */}
+      <div className="mt-5 flex items-start gap-2 sm:gap-3 lg:mt-6 lg:gap-5">
+
+        {/* LEARN */}
+        <div className="text-center">
+          <p className="mb-1 whitespace-nowrap text-[6px] font-black tracking-[0.16em] text-[#C58B18] sm:text-[7px] lg:text-[8px]">
+            LEARN
+          </p>
+
+          <span
+            className="
+              whitespace-nowrap
+              text-[13px]
+              font-semibold
+              tracking-[0.03em]
+              text-[#0C477D]
+
+              sm:text-[16px]
+
+              lg:text-[21px]
+              lg:tracking-[0.07em]
+            "
             style={{
-              backgroundImage:
-                "radial-gradient(circle, #48A8DC 1.5px, transparent 1.5px)",
-              backgroundSize: "14px 14px",
+              fontFamily:
+                '"Yu Mincho","Hiragino Mincho ProN","Noto Serif JP",serif',
             }}
+          >
+            学ぶ
+          </span>
+        </div>
+
+        <span className="mt-[14px] h-5 w-px shrink-0 bg-[#E2AA2C] sm:mt-[16px] lg:mt-[18px] lg:h-7" />
+
+        {/* LIVE */}
+        <div className="text-center">
+          <p className="mb-1 whitespace-nowrap text-[6px] font-black tracking-[0.16em] text-[#C58B18] sm:text-[7px] lg:text-[8px]">
+            LIVE
+          </p>
+
+          <span
+            className="
+              whitespace-nowrap
+              text-[13px]
+              font-semibold
+              tracking-[0.03em]
+              text-[#0C477D]
+
+              sm:text-[16px]
+
+              lg:text-[21px]
+              lg:tracking-[0.07em]
+            "
+            style={{
+              fontFamily:
+                '"Yu Mincho","Hiragino Mincho ProN","Noto Serif JP",serif',
+            }}
+          >
+            暮らす
+          </span>
+        </div>
+
+        <span className="mt-[14px] h-5 w-px shrink-0 bg-[#E2AA2C] sm:mt-[16px] lg:mt-[18px] lg:h-7" />
+
+        {/* CONNECT */}
+        <div className="text-center">
+          <p className="mb-1 whitespace-nowrap text-[6px] font-black tracking-[0.16em] text-[#C58B18] sm:text-[7px] lg:text-[8px]">
+            CONNECT
+          </p>
+
+          <span
+            className="
+              whitespace-nowrap
+              text-[13px]
+              font-semibold
+              tracking-[0.03em]
+              text-[#0C477D]
+
+              sm:text-[16px]
+
+              lg:text-[21px]
+              lg:tracking-[0.07em]
+            "
+            style={{
+              fontFamily:
+                '"Yu Mincho","Hiragino Mincho ProN","Noto Serif JP",serif',
+            }}
+          >
+            つながる
+          </span>
+        </div>
+      </div>
+
+      {/* ACCENT */}
+      <div className="mt-5 flex h-[3px] w-[88px] lg:mt-6 lg:w-[110px]">
+        <span className="flex-1 bg-[#1BBBD2]" />
+        <span className="w-[27px] bg-[#E5AD2C] lg:w-[33px]" />
+      </div>
+    </div>
+
+    {/* RIGHT CORNER ACCENT */}
+    <div className="pointer-events-none absolute right-7 top-6 hidden h-[62px] w-[62px] border-r-[3px] border-t-[3px] border-white/35 sm:block lg:h-[70px] lg:w-[70px]" />
+  </div>
+
+  {/* BOTTOM BRAND LINE */}
+  <div className="h-[4px] bg-gradient-to-r from-[#EFB62E] via-[#4DBEE5] to-[#07366F]" />
+</section>
+        {/* SCHOOL LIFE */}
+<section className="relative overflow-hidden bg-[#EEF7FC] px-5 py-10 sm:px-8 sm:py-12 lg:px-10 lg:py-14">
+  {/* DECORATION */}
+  <div className="pointer-events-none absolute -right-28 -top-32 h-[390px] w-[390px] rounded-full border border-[#D9AD3D]/25" />
+
+  <div
+    className="pointer-events-none absolute left-[3%] top-[45px] h-[100px] w-[145px] opacity-20"
+    style={{
+      backgroundImage:
+        "radial-gradient(circle, #48A8DC 1.5px, transparent 1.5px)",
+      backgroundSize: "14px 14px",
+    }}
+  />
+
+  <div className="relative z-10 mx-auto max-w-[1450px]">
+    <div className="grid items-center gap-8 lg:grid-cols-[1.08fr_0.92fr]">
+      {/* =====================================================
+          PHOTO
+          MOBILE = compact landscape
+          PC = original large layout
+      ====================================================== */}
+      <div
+        className="
+          relative
+          h-[270px]
+
+          min-[390px]:h-[290px]
+          sm:h-[350px]
+
+          lg:h-auto
+          lg:min-h-[430px]
+        "
+      >
+        {/* NAVY BACK PLATE */}
+        <div
+          className="
+            absolute
+            bottom-[-8px]
+            left-0
+            top-[-8px]
+            w-[72px]
+            rounded-l-[22px]
+            bg-[#082F69]
+
+            sm:w-[90px]
+
+            lg:bottom-[-10px]
+            lg:top-[-10px]
+            lg:w-[105px]
+            lg:rounded-l-[26px]
+          "
+        />
+
+        {/* GOLD FRAME */}
+        <div
+          className="
+            absolute
+            bottom-[10px]
+            left-[30px]
+            right-[5px]
+            top-[10px]
+            rounded-[20px]
+            border-2
+            border-[#E0B13C]
+
+            sm:left-[40px]
+            sm:right-[8px]
+            sm:rounded-[23px]
+
+            lg:bottom-[14px]
+            lg:left-[48px]
+            lg:right-[12px]
+            lg:top-[14px]
+            lg:rounded-[26px]
+          "
+        />
+
+        {/* PHOTO */}
+        <div
+          className="
+            absolute
+            bottom-[15px]
+            left-[39px]
+            right-[2px]
+            top-[5px]
+            overflow-hidden
+            rounded-[18px]
+            bg-white
+            shadow-[0_14px_32px_rgba(7,54,111,0.14)]
+
+            sm:left-[52px]
+            sm:right-[4px]
+            sm:rounded-[21px]
+
+            lg:bottom-[19px]
+            lg:left-[62px]
+            lg:right-[8px]
+            lg:top-[8px]
+            lg:rounded-[23px]
+            lg:shadow-[0_18px_42px_rgba(7,54,111,0.14)]
+          "
+        >
+          <Image
+            src="/bbq1.jpg"
+            alt="名古屋国際外語学院 学生生活"
+            fill
+            sizes="(max-width: 1023px) 100vw, 55vw"
+            className="
+              object-cover
+              object-[50%_48%]
+
+              sm:object-center
+              lg:object-center
+            "
           />
+        </div>
+      </div>
 
-          <div className="relative z-10 mx-auto max-w-[1450px]">
-            <div className="grid items-center gap-8 lg:grid-cols-[1.08fr_0.92fr]">
-              <div className="relative min-h-[430px]">
-                <div className="absolute bottom-[-10px] left-0 top-[-10px] w-[105px] rounded-l-[26px] bg-[#082F69]" />
+      {/* =====================================================
+          TEXT
+      ====================================================== */}
+      <div>
+        <p className="text-[10px] font-bold tracking-[0.24em] text-[#C58D18] sm:text-[11px]">
+          SCHOOL LIFE
+        </p>
 
-                <div className="absolute bottom-[14px] left-[48px] right-[12px] top-[14px] rounded-[26px] border-2 border-[#E0B13C]" />
+        <h2
+          className="
+            mt-2
+            text-[34px]
+            font-semibold
+            tracking-[0.05em]
+            text-[#07366F]
 
-                <div className="absolute bottom-[19px] left-[62px] right-[8px] top-[8px] overflow-hidden rounded-[23px] bg-white shadow-[0_18px_42px_rgba(7,54,111,0.14)]">
-                  <Image
-                    src="/bbq1.jpg"
-                    alt="授業風景"
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 55vw"
-                    className="object-cover object-center"
-                  />
-                </div>
-              </div>
+            sm:mt-3
+            sm:text-[38px]
 
-              <div>
-                <p className="text-[11px] font-bold tracking-[0.24em] text-[#C58D18]">
-                  SCHOOL LIFE
-                </p>
+            lg:text-[40px]
+            lg:tracking-[0.06em]
+          "
+          style={{
+            fontFamily:
+              '"Yu Mincho","Hiragino Mincho ProN","Noto Serif JP",serif',
+          }}
+        >
+          学校での毎日
+        </h2>
 
-                <h2
-                  className="mt-3 text-[40px] font-semibold tracking-[0.06em] text-[#07366F]"
-                  style={{
-                    fontFamily:
-                      '"Yu Mincho","Hiragino Mincho ProN","Noto Serif JP",serif',
-                  }}
-                >
-                  学校での毎日
-                </h2>
+        <p
+          className="
+            mt-3
+            text-[15px]
+            font-bold
+            leading-[1.8]
+            text-[#244B6B]
 
-                <p className="mt-4 text-[17px] font-bold text-[#244B6B]">
-                  日本語を学び、進学に向けて準備する毎日。
-                </p>
+            sm:mt-4
+            sm:text-[16px]
 
-                <div className="mt-4 h-[2px] w-12 bg-[#D6A22E]" />
+            lg:text-[17px]
+          "
+        >
+          日本語を学び、進学に向けて準備する毎日。
+        </p>
 
-                <p className="mt-5 text-[14px] font-medium leading-[2] text-[#4E687D]">
-                  授業では日本語の基礎から応用まで段階的に学び、
-                  大学・大学院・専門学校への進学に必要な力を身につけます。
-                </p>
+        <div className="mt-4 h-[2px] w-12 bg-[#D6A22E]" />
 
-                <div className="mt-6 grid gap-3 sm:grid-cols-3">
-                  {["日本語授業", "進学指導", "自習・学習支援"].map((item) => (
-                    <div
-                      key={item}
-                      className="rounded-[13px] border border-[#D5E4EE] bg-white px-4 py-4 text-center shadow-[0_6px_16px_rgba(20,77,115,0.06)]"
-                    >
-                      <span className="mx-auto block h-2 w-2 rounded-full bg-[#F0BD46]" />
-                      <p className="mt-2 text-[12px] font-bold text-[#07366F]">
-                        {item}
-                      </p>
-                    </div>
-                  ))}
-                </div>
+        <p
+          className="
+            mt-4
+            text-[13px]
+            font-medium
+            leading-[1.9]
+            text-[#4E687D]
 
-                <div className="mt-5 grid overflow-hidden rounded-[16px] border border-[#D4E4EE] bg-white shadow-[0_8px_22px_rgba(21,76,115,0.07)] sm:grid-cols-[150px_1fr]">
-                  <div className="relative min-h-[115px]">
-                    <Image
-                      src="/library1.jpg"
-                      alt="学習環境"
-                      fill
-                      sizes="150px"
-                      className="object-cover object-center"
-                    />
-                  </div>
+            sm:mt-5
+            sm:text-[14px]
+            sm:leading-[2]
+          "
+        >
+          授業では日本語の基礎から応用まで段階的に学び、
+          大学・大学院・専門学校への進学に必要な力を身につけます。
+        </p>
 
-                  <div className="flex items-center p-5">
-                    <div>
-                      <p className="text-[10px] font-bold tracking-[0.16em] text-[#C58D18]">
-                        STUDY SPACE
-                      </p>
+        {/* =====================================================
+            THREE FEATURES
+        ====================================================== */}
+        <div className="mt-5 grid grid-cols-3 gap-2 sm:mt-6 sm:gap-3">
+          {["日本語授業", "進学指導", "自習・学習支援"].map((item) => (
+            <div
+              key={item}
+              className="
+                rounded-[12px]
+                border
+                border-[#D5E4EE]
+                bg-white
+                px-2
+                py-3
+                text-center
+                shadow-[0_6px_16px_rgba(20,77,115,0.06)]
 
-                      <p className="mt-1 text-[16px] font-bold text-[#07366F]">
-                        学習環境
-                      </p>
+                sm:rounded-[13px]
+                sm:px-4
+                sm:py-4
+              "
+            >
+              <span className="mx-auto block h-2 w-2 rounded-full bg-[#F0BD46]" />
 
-                      <p className="mt-2 text-[11px] font-medium leading-[1.7] text-[#637A8C]">
-                        授業以外の時間も、自分の目標に向けて学習できます。
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <p className="mt-2 text-[10px] font-bold text-[#07366F] sm:text-[12px]">
+                {item}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* =====================================================
+            STUDY SPACE
+        ====================================================== */}
+        <div
+          className="
+            mt-4
+            grid
+            grid-cols-[105px_1fr]
+            overflow-hidden
+            rounded-[14px]
+            border
+            border-[#D4E4EE]
+            bg-white
+            shadow-[0_8px_22px_rgba(21,76,115,0.07)]
+
+            sm:mt-5
+            sm:grid-cols-[150px_1fr]
+            sm:rounded-[16px]
+          "
+        >
+          <div className="relative min-h-[105px] sm:min-h-[115px]">
+            <Image
+              src="/library1.jpg"
+              alt="学習環境"
+              fill
+              sizes="(max-width: 639px) 105px, 150px"
+              className="object-cover object-center"
+            />
+          </div>
+
+          <div className="flex items-center p-4 sm:p-5">
+            <div>
+              <p className="text-[8px] font-bold tracking-[0.15em] text-[#C58D18] sm:text-[10px] sm:tracking-[0.16em]">
+                STUDY SPACE
+              </p>
+
+              <p className="mt-1 text-[14px] font-bold text-[#07366F] sm:text-[16px]">
+                学習環境
+              </p>
+
+              <p className="mt-2 text-[10px] font-medium leading-[1.7] text-[#637A8C] sm:text-[11px]">
+                授業以外の時間も、自分の目標に向けて学習できます。
+              </p>
             </div>
           </div>
-        </section>
-
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
         {/* DORMITORY */}
         <section
           id="dormitory"

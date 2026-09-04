@@ -287,21 +287,40 @@ export default function ApplicationPage() {
           />
 
           <div className="absolute right-[-100px] top-[-120px] h-[360px] w-[360px] rounded-full border border-[#2BC8DF]/15" />
-          <div className="absolute right-[3%] top-[-35px] h-[220px] w-[220px] rounded-full border border-[#E4AA21]/15" />
+<div className="absolute right-[3%] top-[-35px] h-[220px] w-[220px] rounded-full border border-[#E4AA21]/15" />
 
-          <div className="relative mx-auto max-w-[1500px] px-5 py-12 sm:px-8 lg:px-12 lg:py-14">
-            <div className="max-w-[820px]">
-              <div className="flex items-center gap-3">
-                <span className="h-[2px] w-9 bg-[#2CC7DF]" />
+<div className="relative mx-auto max-w-[1500px] px-5 py-12 sm:px-8 lg:px-12 lg:py-14">
+  <div className="max-w-[900px]">
+    <div className="flex items-center gap-3">
+      <span className="h-[2px] w-9 shrink-0 bg-[#2CC7DF]" />
 
-                <span className="text-[10px] font-black tracking-[0.3em] text-[#50D9EA]">
-                  INTERVIEW PRE-APPLICATION
-                </span>
-              </div>
+      <span className="whitespace-nowrap text-[9px] font-black tracking-[0.24em] text-[#50D9EA] sm:text-[10px] sm:tracking-[0.3em]">
+        INTERVIEW PRE-APPLICATION
+      </span>
+    </div>
 
-              <h1 className="mt-5 text-[38px] font-black leading-[1.35] text-white sm:text-[48px]">
-                面接事前申込みフォーム
-              </h1>
+    <h1
+      className="
+        mt-5
+        whitespace-nowrap
+        text-[31px]
+        font-black
+        leading-[1.15]
+        tracking-[-0.035em]
+        text-white
+
+        min-[380px]:text-[33px]
+        min-[420px]:text-[35px]
+
+        sm:text-[42px]
+        md:text-[48px]
+
+        lg:text-[54px]
+        lg:tracking-[-0.02em]
+      "
+    >
+      面接事前申込みフォーム
+    </h1>
 
               <p className="mt-5 max-w-[700px] text-[12.5px] font-medium leading-[2] text-white/65">
                 名古屋国際外語学院の入学面接を希望する方は、

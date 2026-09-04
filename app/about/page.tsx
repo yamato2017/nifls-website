@@ -87,7 +87,7 @@ function TeacherCard({ name }: { name: string }) {
           <span className="h-px w-5 bg-[#E2A82A]" />
 
           <span className="text-[8px] font-black tracking-[0.17em] text-[#B98414]">
-            SENNIN
+            FULL-TIME TEACHER
           </span>
 
           <span className="h-px w-5 bg-[#E2A82A]" />
@@ -125,68 +125,332 @@ export default function AboutPage() {
             '"Noto Sans JP","Yu Gothic","YuGothic","Hiragino Kaku Gothic ProN",sans-serif',
         }}
       >
-        {/* HERO */}
-        <section className="relative overflow-hidden bg-[#EAF6FC]">
-          <div className="mx-auto grid h-[315px] max-w-[1760px] lg:grid-cols-[43%_57%]">
-            <div className="relative flex items-center overflow-hidden px-6 sm:px-10 lg:px-16 xl:px-20">
-              <div className="pointer-events-none absolute -left-4 -top-5 select-none text-[125px] font-black leading-none tracking-[-0.06em] text-[#D8ECF7]/70">
-                ABOUT
-              </div>
+        {/* =====================================================
+    HERO
+====================================================== */}
+<section className="relative overflow-hidden bg-[#EAF6FC]">
+  <div
+    className="
+      relative mx-auto
+      h-[270px]
+      max-w-[1760px]
+      overflow-hidden
 
-              <div className="pointer-events-none absolute -left-32 -top-44 h-[420px] w-[420px] rounded-full border border-[#8DCEE8]/25" />
+      sm:h-[295px]
+      md:h-[305px]
+      lg:h-[315px]
+    "
+  >
+    {/* =====================================================
+        PHOTO BACKGROUND
+    ====================================================== */}
+    <div
+      className="
+        absolute inset-y-0 right-0
+        w-[56%]
 
-              <div
-                className="pointer-events-none absolute bottom-5 right-[8%] h-[88px] w-[120px] opacity-20"
-                style={{
-                  backgroundImage:
-                    "radial-gradient(circle,#D5A029 1.5px,transparent 1.5px)",
-                  backgroundSize: "14px 14px",
-                }}
-              />
+        sm:w-[59%]
+        md:w-[61%]
+        lg:w-[57%]
+      "
+    >
+      <Image
+        src="/hero.jpg"
+        alt="名古屋国際外語学院"
+        fill
+        priority
+        sizes="(max-width:1023px) 61vw, 57vw"
+        className="
+          object-cover
+          object-[58%_50%]
 
-              <div className="relative z-10">
-                <div className="flex items-center gap-4">
-                  <span className="h-[2px] w-11 bg-[#D5A029]" />
+          sm:object-[56%_50%]
+          md:object-[55%_50%]
+          lg:object-center
+        "
+      />
 
-                  <p className="text-[12px] font-black tracking-[0.3em] text-[#B87D0A]">
-                    ABOUT NIFLS
-                  </p>
-                </div>
+      {/* subtle photo depth */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#EAF6FC]/5 via-transparent to-[#062F62]/10" />
+    </div>
 
-                <h1 className="mt-5 text-[50px] font-black tracking-[0.05em] text-[#07366F] sm:text-[58px]">
-                  学校紹介
-                </h1>
+    {/* =====================================================
+        LEFT PALE BLUE PANEL
+        Large diagonal cut
+    ====================================================== */}
+    <div
+      className="
+        absolute inset-y-0 left-0 z-10
+        w-[61%]
+        bg-[#EAF6FC]
 
-                <div className="mt-5 flex items-center gap-2">
-                  <span className="h-[4px] w-[55px] rounded-full bg-[#07366F]" />
-                  <span className="h-[4px] w-[26px] rounded-full bg-[#48B7DF]" />
-                  <span className="h-[4px] w-[13px] rounded-full bg-[#EFB62E]" />
-                </div>
-              </div>
-            </div>
+        [clip-path:polygon(0_0,100%_0,78%_100%,0_100%)]
 
-            <div className="relative hidden overflow-hidden lg:block">
-              <div className="absolute inset-0 [clip-path:polygon(11%_0,100%_0,100%_100%,0_100%)]">
-                <Image
-                  src="/hero.jpg"
-                  alt="名古屋国際外語学院"
-                  fill
-                  priority
-                  sizes="57vw"
-                  className="object-cover object-center"
-                />
+        sm:w-[58%]
+        sm:[clip-path:polygon(0_0,100%_0,80%_100%,0_100%)]
 
-                <div className="absolute inset-0 bg-gradient-to-r from-[#EAF6FC]/20 via-transparent to-[#062F62]/8" />
-              </div>
+        md:w-[55%]
+        md:[clip-path:polygon(0_0,100%_0,82%_100%,0_100%)]
 
-              <div className="absolute bottom-0 left-[9%] top-0 w-[5px] -skew-x-[18deg] bg-[#EFB62E]" />
-            </div>
-          </div>
+        lg:w-[48%]
+        lg:[clip-path:polygon(0_0,100%_0,82%_100%,0_100%)]
+      "
+    />
 
-          <div className="h-[4px] bg-gradient-to-r from-[#EFB62E] via-[#4DBEE5] to-[#07366F]" />
-        </section>
+    {/* =====================================================
+        TRANSLUCENT BLUE DIAGONAL LAYER
+        Gives premium layered transition
+    ====================================================== */}
+    <div
+      className="
+        pointer-events-none
+        absolute inset-y-0 z-[11]
+        left-[53%]
+        w-[11%]
+        bg-[#80BEDA]/28
 
-        {/* PRINCIPAL MESSAGE */}
+        [clip-path:polygon(30%_0,100%_0,70%_100%,0_100%)]
+
+        sm:left-[51%]
+        sm:w-[10%]
+
+        md:left-[49%]
+        md:w-[9%]
+
+        lg:left-[44%]
+        lg:w-[7%]
+      "
+    />
+
+    {/* second subtle glass diagonal */}
+    <div
+      className="
+        pointer-events-none
+        absolute inset-y-0 z-[12]
+        left-[55%]
+        w-[5%]
+        bg-white/16
+
+        [clip-path:polygon(40%_0,100%_0,60%_100%,0_100%)]
+
+        sm:left-[54%]
+        md:left-[52%]
+
+        lg:left-[46%]
+        lg:w-[4%]
+      "
+    />
+
+    {/* =====================================================
+        GOLD DIAGONAL
+    ====================================================== */}
+    <div
+      className="
+        pointer-events-none
+        absolute
+        inset-y-[-10%]
+        z-[14]
+
+        left-[57%]
+        w-[4px]
+        rotate-[13deg]
+        bg-[#EFB62E]
+
+        sm:left-[56%]
+        sm:w-[5px]
+
+        md:left-[54%]
+
+        lg:left-[48%]
+        lg:w-[5px]
+      "
+    />
+
+    {/* =====================================================
+        LARGE ABOUT BACKGROUND
+    ====================================================== */}
+    <div
+      className="
+        pointer-events-none
+        absolute
+        -left-2
+        -top-2
+        z-[15]
+        select-none
+        whitespace-nowrap
+
+        text-[78px]
+        font-black
+        leading-none
+        tracking-[-0.07em]
+        text-[#D8ECF7]/75
+
+        sm:text-[92px]
+        md:text-[106px]
+
+        lg:-left-4
+        lg:-top-5
+        lg:text-[125px]
+      "
+    >
+      ABOUT
+    </div>
+
+    {/* =====================================================
+        DECORATIVE ARC
+    ====================================================== */}
+    <div
+      className="
+        pointer-events-none
+        absolute
+        z-[15]
+
+        -left-[150px]
+        -top-[230px]
+        h-[450px]
+        w-[450px]
+
+        rounded-full
+        border
+        border-[#8DCEE8]/28
+
+        sm:h-[480px]
+        sm:w-[480px]
+
+        lg:-left-32
+        lg:-top-44
+        lg:h-[420px]
+        lg:w-[420px]
+      "
+    />
+
+    {/* =====================================================
+        DOT PATTERN
+    ====================================================== */}
+    <div
+      className="
+        pointer-events-none
+        absolute
+        z-[16]
+
+        bottom-[25px]
+        left-[36%]
+        h-[62px]
+        w-[84px]
+        opacity-20
+
+        sm:left-[34%]
+        sm:h-[74px]
+        sm:w-[100px]
+
+        md:left-[32%]
+
+        lg:bottom-5
+        lg:left-[31%]
+        lg:h-[88px]
+        lg:w-[120px]
+      "
+      style={{
+        backgroundImage:
+          "radial-gradient(circle,#D5A029 1.4px,transparent 1.4px)",
+        backgroundSize: "12px 12px",
+      }}
+    />
+
+    {/* =====================================================
+        TITLE CONTENT
+    ====================================================== */}
+    <div
+      className="
+        absolute inset-y-0 left-0
+        z-20
+        flex
+        w-[55%]
+        flex-col
+        justify-center
+
+        pl-5
+
+        sm:w-[50%]
+        sm:pl-8
+
+        md:w-[47%]
+        md:pl-10
+
+        lg:w-[43%]
+        lg:pl-16
+
+        xl:pl-20
+      "
+    >
+      {/* ABOUT NIFLS */}
+      <div className="flex items-center gap-2 sm:gap-3 lg:gap-4">
+        <span className="h-[2px] w-7 bg-[#D5A029] sm:w-9 lg:w-11" />
+
+        <p
+          className="
+            whitespace-nowrap
+            text-[8px]
+            font-black
+            tracking-[0.22em]
+            text-[#B87D0A]
+
+            sm:text-[9px]
+            md:text-[10px]
+
+            lg:text-[12px]
+            lg:tracking-[0.3em]
+          "
+        >
+          ABOUT NIFLS
+        </p>
+      </div>
+
+      {/* TITLE */}
+      <h1
+        className="
+          mt-4
+          whitespace-nowrap
+          text-[31px]
+          font-black
+          leading-none
+          tracking-[0.03em]
+          text-[#07366F]
+
+          min-[390px]:text-[34px]
+
+          sm:text-[40px]
+          md:text-[46px]
+
+          lg:mt-5
+          lg:text-[58px]
+          lg:tracking-[0.05em]
+        "
+      >
+        学校紹介
+      </h1>
+
+      {/* DECORATIVE LINES */}
+      <div className="mt-5 flex items-center gap-1.5 lg:gap-2">
+        <span className="h-[3px] w-[38px] rounded-full bg-[#07366F] sm:w-[46px] lg:h-[4px] lg:w-[55px]" />
+
+        <span className="h-[3px] w-[18px] rounded-full bg-[#48B7DF] sm:w-[22px] lg:h-[4px] lg:w-[26px]" />
+
+        <span className="h-[3px] w-[10px] rounded-full bg-[#EFB62E] lg:h-[4px] lg:w-[13px]" />
+      </div>
+    </div>
+  </div>
+
+  {/* =====================================================
+      BOTTOM ACCENT
+  ====================================================== */}
+  <div className="relative h-[5px] overflow-hidden">
+    <div className="absolute inset-0 bg-gradient-to-r from-[#EFB62E] via-[#43BDE4] to-[#07366F]" />
+  </div>
+</section>
+        {/* =====================================================
+            PRINCIPAL MESSAGE
+        ====================================================== */}
         <section className="relative overflow-hidden bg-[linear-gradient(135deg,#F8FCFF_0%,#EAF6FC_48%,#F8FCFF_100%)] px-5 py-11 sm:px-8">
           <div className="pointer-events-none absolute -right-32 -top-32 h-[420px] w-[420px] rounded-full border border-[#E1B341]/25" />
 
@@ -707,7 +971,7 @@ export default function AboutPage() {
               </p>
 
               <p className="mt-1 text-[19px] font-black">
-                名古屋国際外語学院で学びませんか。
+                名古屋国際外語学院で学びませんか?
               </p>
             </div>
 
