@@ -4,9 +4,9 @@ import Link from "next/link";
 const dormitoryPoints = [
   {
     number: "01",
-    title: "通学に便利",
-    main: "学院から",
-    highlight: "7～15分",
+    title: "Convenient Commute",
+    main: "From the school",
+    highlight: "7–15 min.",
     icon: (
       <svg
         viewBox="0 0 24 24"
@@ -25,9 +25,9 @@ const dormitoryPoints = [
   },
   {
     number: "02",
-    title: "無料Wi-Fi完備",
-    main: "快適な",
-    highlight: "ネット環境",
+    title: "Free Wi-Fi",
+    main: "Comfortable",
+    highlight: "Internet Access",
     icon: (
       <svg
         viewBox="0 0 24 24"
@@ -46,9 +46,9 @@ const dormitoryPoints = [
   },
   {
     number: "03",
-    title: "1日3食を提供",
-    main: "朝・昼・夕",
-    highlight: "3食",
+    title: "Three Meals a Day",
+    main: "Breakfast, lunch & dinner",
+    highlight: "3 Meals",
     icon: (
       <svg
         viewBox="0 0 24 24"
@@ -68,9 +68,9 @@ const dormitoryPoints = [
   },
   {
     number: "04",
-    title: "毎食2種類から選べる",
-    main: "毎日の食事を",
-    highlight: "2種類",
+    title: "Two Meal Options Each Time",
+    main: "Choose from",
+    highlight: "2 Options",
     icon: (
       <svg
         viewBox="0 0 24 24"
@@ -99,6 +99,7 @@ export default function Dormitory() {
     >
       {/* BACKGROUND */}
       <div className="pointer-events-none absolute -right-32 -top-32 h-[420px] w-[420px] rounded-full border border-[#ddb24c]/30" />
+
       <div className="pointer-events-none absolute -right-20 -top-20 h-[310px] w-[310px] rounded-full border-[18px] border-white/50" />
 
       <div
@@ -124,13 +125,13 @@ export default function Dormitory() {
           </div>
 
           <h2
-            className="mt-3 text-[42px] font-semibold tracking-[0.1em] text-[#07366f]"
+            className="mt-3 text-[42px] font-semibold tracking-[0.04em] text-[#07366f]"
             style={{
               fontFamily:
-                '"Yu Mincho","Hiragino Mincho ProN","Noto Serif JP",serif',
+                '"Georgia","Times New Roman","Noto Serif",serif',
             }}
           >
-            学生寮
+            Student Dormitory
           </h2>
 
           <div className="mx-auto mt-3 h-[2px] w-10 bg-[#d6a22e]" />
@@ -143,7 +144,7 @@ export default function Dormitory() {
             <div className="relative min-h-[440px] overflow-hidden bg-[#dcecf5] lg:min-h-[500px]">
               <Image
                 src="/hostel1.jpg"
-                alt="名古屋国際外語学院 学生寮"
+                alt="Student dormitory of Nagoya International Foreign Language School"
                 fill
                 sizes="(max-width: 1024px) 100vw, 46vw"
                 className="object-cover object-center"
@@ -162,15 +163,15 @@ export default function Dormitory() {
                 <div className="mb-3 h-[3px] w-12 rounded-full bg-[#efb83a]" />
 
                 <p
-                  className="text-[27px] font-semibold tracking-[0.06em] text-white"
+                  className="text-[27px] font-semibold tracking-[0.02em] text-white"
                   style={{
                     fontFamily:
-                      '"Yu Mincho","Hiragino Mincho ProN","Noto Serif JP",serif',
+                      '"Georgia","Times New Roman","Noto Serif",serif',
                   }}
                 >
-                  安心できる住環境で
+                  Start Your New Life in Japan
                   <br />
-                  日本での新生活を。
+                  in a Safe and Comfortable Environment.
                 </p>
               </div>
             </div>
@@ -212,7 +213,7 @@ export default function Dormitory() {
                         className="mt-1 text-[25px] font-bold leading-none text-[#c78d1b]"
                         style={{
                           fontFamily:
-                            '"Georgia","Yu Mincho","Hiragino Mincho ProN",serif',
+                            '"Georgia","Times New Roman","Noto Serif",serif',
                         }}
                       >
                         {item.highlight}
@@ -226,7 +227,7 @@ export default function Dormitory() {
 
               {/* CTA */}
               <Link
-                href="/student-life#dormitory"
+                href="/en/student-life#dormitory"
                 prefetch={false}
                 className="group relative z-10 mt-5 flex w-full items-center justify-between rounded-[13px] bg-[#07366f] px-7 py-[15px] text-white shadow-[0_9px_20px_rgba(7,54,111,0.18)] transition duration-300 hover:-translate-y-[2px] hover:bg-[#0b4587]"
               >
@@ -235,8 +236,8 @@ export default function Dormitory() {
                     MORE INFORMATION
                   </p>
 
-                  <p className="mt-1 text-[15px] font-bold tracking-[0.08em]">
-                    詳しくはこちら
+                  <p className="mt-1 text-[15px] font-bold tracking-[0.04em]">
+                    View Dormitory Details
                   </p>
                 </div>
 

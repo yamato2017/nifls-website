@@ -26,7 +26,10 @@ function CourseInfo({
         </div>
 
         <div>
-          <p className="text-[10px] font-bold text-[#55728d]">修業期間</p>
+          <p className="text-[10px] font-bold text-[#55728d]">
+            Course Duration
+          </p>
+
           <p className="mt-0.5 text-[17px] font-bold text-[#c88e19]">
             {period}
           </p>
@@ -51,7 +54,10 @@ function CourseInfo({
         </div>
 
         <div>
-          <p className="text-[10px] font-bold text-[#55728d]">授業時間</p>
+          <p className="text-[10px] font-bold text-[#55728d]">
+            Total Class Hours
+          </p>
+
           <p className="mt-0.5 text-[17px] font-bold text-[#c88e19]">
             {hours}
           </p>
@@ -68,7 +74,7 @@ function CourseButton({
 }) {
   return (
     <Link
-      href="/courses"
+      href="/en/courses"
       prefetch={false}
       className="group mt-5 inline-flex min-w-[210px] items-center justify-between gap-5 rounded-[10px] bg-[#07366f] px-5 py-3 text-[14px] font-bold tracking-[0.08em] text-white shadow-[0_8px_18px_rgba(7,54,111,0.16)] transition duration-300 hover:-translate-y-[2px] hover:bg-[#0a4488]"
     >
@@ -78,7 +84,9 @@ function CourseButton({
         </span>
       )}
 
-      <span className="flex-1 text-center">詳しく見る</span>
+      <span className="flex-1 text-center">
+        View Details
+      </span>
 
       {!reverse && (
         <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#efb938] text-[17px] font-bold text-[#07366f] transition duration-300 group-hover:translate-x-1">
@@ -101,6 +109,7 @@ export default function Courses() {
       </div>
 
       <div className="absolute right-[-160px] top-[-190px] h-[520px] w-[520px] rounded-full border border-[#e3bd59]/40" />
+
       <div className="absolute right-[-105px] top-[-145px] h-[430px] w-[430px] rounded-full border-[18px] border-[#e6f5fd]/70" />
 
       <div
@@ -117,24 +126,26 @@ export default function Courses() {
         <div className="relative mb-10 text-center">
           <div className="flex items-center justify-center gap-4">
             <span className="h-px w-9 bg-[#d5a02a]" />
+
             <p className="text-[13px] font-bold tracking-[0.24em] text-[#c58d18]">
               COURSES
             </p>
+
             <span className="h-px w-9 bg-[#d5a02a]" />
           </div>
 
           <h2
-            className="mt-3 text-[40px] font-semibold tracking-[0.08em] text-[#07366f] sm:text-[46px]"
+            className="mt-3 text-[40px] font-semibold tracking-[0.04em] text-[#07366f] sm:text-[46px]"
             style={{
               fontFamily:
-                '"Yu Mincho","Hiragino Mincho ProN","Noto Serif JP",serif',
+                '"Georgia","Times New Roman","Noto Serif",serif',
             }}
           >
-            コース紹介
+            Our Courses
           </h2>
 
-          <p className="mt-2 text-[15px] font-semibold tracking-[0.14em] text-[#174777]">
-            未来につながる日本語を学ぶ
+          <p className="mt-2 text-[15px] font-semibold tracking-[0.08em] text-[#174777]">
+            Learn Japanese for Your Future
           </p>
 
           <div className="mx-auto mt-3 h-[2px] w-10 bg-[#d9a22a]" />
@@ -144,12 +155,13 @@ export default function Courses() {
         <div className="relative grid items-stretch lg:grid-cols-2">
           <div className="relative z-10 min-h-[330px]">
             <div className="absolute bottom-[-8px] left-0 top-[-12px] w-[105px] rounded-l-[24px] bg-[#07366f]" />
+
             <div className="absolute bottom-[13px] left-[50px] right-[18px] top-[12px] rounded-[24px] border-2 border-[#e3b642]" />
 
             <div className="absolute bottom-[18px] left-[64px] right-[14px] top-[8px] overflow-hidden rounded-[22px] bg-white shadow-[0_16px_36px_rgba(7,54,111,0.14)]">
               <Image
                 src="/hero.jpg"
-                alt="名古屋国際外語学院 授業風景"
+                alt="Class at Nagoya International Foreign Language School"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover object-center"
@@ -181,13 +193,13 @@ export default function Courses() {
 
               <div className="mt-1 flex flex-wrap items-end gap-x-6 gap-y-2">
                 <h3
-                  className="text-[34px] font-semibold tracking-[0.04em] text-[#07366f]"
+                  className="text-[34px] font-semibold tracking-[0.02em] text-[#07366f]"
                   style={{
                     fontFamily:
-                      '"Yu Mincho","Hiragino Mincho ProN","Noto Serif JP",serif',
+                      '"Georgia","Times New Roman","Noto Serif",serif',
                   }}
                 >
-                  4月入学
+                  April Entry
                 </h3>
 
                 <div className="mb-1 h-[36px] w-px bg-[#bad7ea]" />
@@ -196,21 +208,27 @@ export default function Courses() {
                   className="text-[24px] font-semibold text-[#07366f]"
                   style={{
                     fontFamily:
-                      '"Yu Mincho","Hiragino Mincho ProN","Noto Serif JP",serif',
+                      '"Georgia","Times New Roman","Noto Serif",serif',
                   }}
                 >
-                  2年コース
+                  2-Year Course
                 </p>
               </div>
 
               <div className="mt-2 h-[2px] w-9 bg-[#dda62d]" />
 
               <p className="mt-4 max-w-[620px] text-[14px] font-medium leading-[1.85] text-[#334e68]">
-                しっかりとした学習期間で日本語力を段階的に高め、
-                大学・大学院・専門学校への進学を目指すコースです。
+                This course provides a solid period of study to help students
+                develop their Japanese language ability step by step and prepare
+                for further education at universities, graduate schools, or
+                vocational schools.
               </p>
 
-              <CourseInfo period="2年" hours="1,600時間" />
+              <CourseInfo
+                period="2 Years"
+                hours="1,600 Hours"
+              />
+
               <CourseButton />
             </div>
           </div>
@@ -233,13 +251,13 @@ export default function Courses() {
 
               <div className="mt-1 flex flex-wrap items-end gap-x-6 gap-y-2 lg:justify-end">
                 <h3
-                  className="text-[34px] font-semibold tracking-[0.04em] text-[#07366f]"
+                  className="text-[34px] font-semibold tracking-[0.02em] text-[#07366f]"
                   style={{
                     fontFamily:
-                      '"Yu Mincho","Hiragino Mincho ProN","Noto Serif JP",serif',
+                      '"Georgia","Times New Roman","Noto Serif",serif',
                   }}
                 >
-                  7月入学
+                  July Entry
                 </h3>
 
                 <div className="mb-1 hidden h-[36px] w-px bg-[#bad7ea] sm:block" />
@@ -248,22 +266,26 @@ export default function Courses() {
                   className="text-[24px] font-semibold text-[#07366f]"
                   style={{
                     fontFamily:
-                      '"Yu Mincho","Hiragino Mincho ProN","Noto Serif JP",serif',
+                      '"Georgia","Times New Roman","Noto Serif",serif',
                   }}
                 >
-                  1年9ヶ月コース
+                  1-Year 9-Month Course
                 </p>
               </div>
 
               <div className="mt-2 h-[2px] w-9 bg-[#dda62d] lg:ml-auto" />
 
               <p className="mt-4 text-[14px] font-medium leading-[1.85] text-[#334e68]">
-                日本語を効率的に学びながら、進学に必要な力を
-                バランスよく身につけるコースです。
+                This course enables students to study Japanese efficiently
+                while developing, in a balanced way, the skills required for
+                further education.
               </p>
 
               <div className="lg:ml-auto">
-                <CourseInfo period="1年9ヶ月" hours="1,400時間" />
+                <CourseInfo
+                  period="1 Year 9 Months"
+                  hours="1,400 Hours"
+                />
               </div>
 
               <div className="lg:flex lg:justify-end">
@@ -274,12 +296,13 @@ export default function Courses() {
 
           <div className="relative order-1 min-h-[330px] lg:order-2">
             <div className="absolute bottom-[-8px] right-0 top-[-12px] w-[105px] rounded-r-[24px] bg-[#07366f]" />
+
             <div className="absolute bottom-[13px] left-[18px] right-[50px] top-[12px] rounded-[24px] border-2 border-[#e3b642]" />
 
             <div className="absolute bottom-[18px] left-[14px] right-[64px] top-[8px] overflow-hidden rounded-[22px] bg-white shadow-[0_16px_36px_rgba(7,54,111,0.14)]">
               <Image
                 src="/class2.jpg"
-                alt="名古屋国際外語学院 授業風景"
+                alt="Class at Nagoya International Foreign Language School"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover object-center"
@@ -301,12 +324,13 @@ export default function Courses() {
         <div className="relative mt-5 grid items-stretch lg:grid-cols-2">
           <div className="relative z-10 min-h-[330px]">
             <div className="absolute bottom-[-8px] left-0 top-[-12px] w-[105px] rounded-l-[24px] bg-[#07366f]" />
+
             <div className="absolute bottom-[13px] left-[50px] right-[18px] top-[12px] rounded-[24px] border-2 border-[#e3b642]" />
 
             <div className="absolute bottom-[18px] left-[64px] right-[14px] top-[8px] overflow-hidden rounded-[22px] bg-white shadow-[0_16px_36px_rgba(7,54,111,0.14)]">
               <Image
                 src="/class1.jpg"
-                alt="名古屋国際外語学院 授業風景"
+                alt="Class at Nagoya International Foreign Language School"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover object-[center_65%]"
@@ -338,13 +362,13 @@ export default function Courses() {
 
               <div className="mt-1 flex flex-wrap items-end gap-x-6 gap-y-2">
                 <h3
-                  className="text-[34px] font-semibold tracking-[0.04em] text-[#07366f]"
+                  className="text-[34px] font-semibold tracking-[0.02em] text-[#07366f]"
                   style={{
                     fontFamily:
-                      '"Yu Mincho","Hiragino Mincho ProN","Noto Serif JP",serif',
+                      '"Georgia","Times New Roman","Noto Serif",serif',
                   }}
                 >
-                  10月入学
+                  October Entry
                 </h3>
 
                 <div className="mb-1 h-[36px] w-px bg-[#bad7ea]" />
@@ -353,21 +377,26 @@ export default function Courses() {
                   className="text-[24px] font-semibold text-[#07366f]"
                   style={{
                     fontFamily:
-                      '"Yu Mincho","Hiragino Mincho ProN","Noto Serif JP",serif',
+                      '"Georgia","Times New Roman","Noto Serif",serif',
                   }}
                 >
-                  1年6ヶ月コース
+                  1-Year 6-Month Course
                 </p>
               </div>
 
               <div className="mt-2 h-[2px] w-9 bg-[#dda62d]" />
 
               <p className="mt-4 max-w-[620px] text-[14px] font-medium leading-[1.85] text-[#334e68]">
-                短期間で日本語力を伸ばしながら、
-                大学・大学院・専門学校への進学を目指すコースです。
+                This course is designed for students who wish to improve their
+                Japanese ability in a shorter period while preparing to enter a
+                university, graduate school, or vocational school.
               </p>
 
-              <CourseInfo period="1年6ヶ月" hours="1,200時間" />
+              <CourseInfo
+                period="1 Year 6 Months"
+                hours="1,200 Hours"
+              />
+
               <CourseButton />
             </div>
           </div>
@@ -378,8 +407,8 @@ export default function Courses() {
           <div className="flex items-center gap-3 rounded-full border border-[#d8e8f3] bg-white px-7 py-3 shadow-[0_6px_18px_rgba(34,86,125,0.06)]">
             <span className="h-2 w-2 rounded-full bg-[#d8a22d]" />
 
-            <p className="text-[12px] font-medium tracking-[0.04em] text-[#48677f]">
-              コースの詳細・出願条件についてはお問い合わせください。
+            <p className="text-[12px] font-medium tracking-[0.02em] text-[#48677f]">
+              Please contact us for details about each course and application requirements.
             </p>
           </div>
         </div>

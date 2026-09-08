@@ -2,14 +2,14 @@ import Link from "next/link";
 
 export default function Footer() {
   const navigation = [
-    ["ホーム", "/"],
-    ["学校紹介", "/about"],
-    ["コース", "/courses"],
-    ["学生生活", "/student-life"],
-    ["学費", "/tuition"],
-    ["資料DL", "/#documents"],
-    ["主な進学先", "/student-life#career"],
-    ["お問い合わせ", "/contact"],
+    ["Home", "/en"],
+    ["About Us", "/en/about"],
+    ["Courses", "/en/courses"],
+    ["Student Life", "/en/student-life"],
+    ["Tuition", "/en/tuition"],
+    ["Downloads", "/en#documents"],
+    ["Further Education", "/en/student-life#career"],
+    ["Contact", "/en/contact"],
   ];
 
   return (
@@ -29,7 +29,7 @@ export default function Footer() {
               <div className="flex h-[74px] w-[74px] shrink-0 items-center justify-center overflow-hidden rounded-full border-[5px] border-white bg-white shadow-[0_6px_18px_rgba(0,0,0,0.2)]">
                 <img
                   src="/logo.jpg"
-                  alt="名古屋国際外語学院"
+                  alt="Nagoya International Foreign Language School"
                   className="h-full w-full rounded-full object-contain"
                 />
               </div>
@@ -41,19 +41,22 @@ export default function Footer() {
                 </p>
 
                 <h2
-                  className="mt-1 whitespace-nowrap text-[23px] font-bold tracking-[0.05em] text-white sm:text-[25px]"
+                  className="mt-1 text-[20px] font-bold leading-[1.25] tracking-[0.02em] text-white sm:text-[22px]"
                   style={{
                     fontFamily:
-                      '"Yu Mincho","Hiragino Mincho ProN","Noto Serif JP",serif',
+                      '"Georgia","Times New Roman","Noto Serif",serif',
                   }}
                 >
-                  名古屋国際外語学院
+                  Nagoya International
+                  <br />
+                  Foreign Language School
                 </h2>
               </div>
             </div>
 
             <p className="mt-4 text-[12px] leading-[1.8] text-[#B8CCE0]">
-              日本語を学び、進学と未来への一歩をサポートします。
+              Supporting students as they learn Japanese and take the next step
+              toward further education and their future.
             </p>
 
             {/* FACEBOOK */}
@@ -87,16 +90,16 @@ export default function Footer() {
                   </span>
 
                   <span className="rounded-full border border-[#F0BD46]/60 bg-[#F0BD46]/10 px-2 py-[2px] text-[8px] font-bold text-[#F0BD46]">
-                    姉妹校
+                    PARTNER SCHOOL
                   </span>
                 </div>
 
                 <p className="mt-1.5 text-[16px] font-bold text-white">
-                  大和外語学院
+                  Yamato Foreign Language School
                 </p>
 
                 <p className="mt-0.5 text-[9px] text-[#AFC5D9]">
-                  Yamato Foreign Language School
+                  Yamato, Kanagawa
                 </p>
               </div>
 
@@ -115,7 +118,7 @@ export default function Footer() {
             </p>
 
             <h3 className="mt-2 text-[18px] font-bold">
-              ページメニュー
+              Page Menu
             </h3>
 
             <div className="mt-5 grid grid-cols-2 gap-x-7">
@@ -145,20 +148,20 @@ export default function Footer() {
             </p>
 
             <h3 className="mt-2 text-[18px] font-bold">
-              お問い合わせ
+              Contact Us
             </h3>
 
             <div className="mt-5 space-y-2.5">
               {/* ADDRESS */}
               <div className="rounded-[11px] border border-[#4D76A1] bg-[#0B376F] px-4 py-3">
                 <p className="text-[9px] font-bold text-[#65C9F6]">
-                  住所
+                  ADDRESS
                 </p>
 
                 <p className="mt-1 text-[12px] leading-[1.6] text-[#E2EBF4]">
-                  〒455-0003
+                  30-18 Tatsumi-cho, Minato-ku,
                   <br />
-                  愛知県名古屋市港区辰巳町30-18
+                  Nagoya, Aichi 455-0003, Japan
                 </p>
               </div>
 
@@ -204,7 +207,7 @@ export default function Footer() {
 
               {/* CONTACT PAGE CTA */}
               <Link
-                href="/contact"
+                href="/en/contact"
                 prefetch={false}
                 className="group flex items-center justify-between rounded-[11px] bg-[#F0BD46] px-4 py-3 text-[#082F69] shadow-[0_8px_18px_rgba(0,0,0,0.14)] transition hover:-translate-y-[2px] hover:bg-[#F5C95F]"
               >
@@ -214,7 +217,7 @@ export default function Footer() {
                   </p>
 
                   <p className="mt-0.5 text-[13px] font-extrabold">
-                    お問い合わせ・詳しくはこちら
+                    Contact Us for More Information
                   </p>
                 </div>
 
@@ -234,7 +237,9 @@ export default function Footer() {
             © 2026 Nagoya International Foreign Language School. All Rights Reserved.
           </p>
 
-          <p>名古屋国際外語学院</p>
+          <p>
+            Nagoya International Foreign Language School
+          </p>
         </div>
       </div>
     </footer>

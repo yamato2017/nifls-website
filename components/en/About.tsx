@@ -4,40 +4,42 @@ import Link from "next/link";
 const points = [
   {
     type: "shield",
-    before: "開校以来、継続して",
-    highlight: "適正校クラスⅠ",
+    before: "Continuously designated as a",
+    highlight: "Class I Appropriate School",
+    after: "since opening",
   },
   {
     type: "train",
-    before: "地下鉄名港線「東海通」駅から",
-    highlight: "徒歩3分",
+    before: "From Tokai-dori Station on the Meiko Line",
+    highlight: "3-minute walk",
   },
   {
     type: "train",
-    before: "名古屋駅から",
-    highlight: "約20分",
+    before: "From Nagoya Station",
+    highlight: "approximately 20 minutes",
   },
   {
     type: "school",
-    before: "本校・千年校の",
-    highlight: "2校舎",
+    before: "",
+    highlight: "Two campuses",
+    after: "— Main School and Chitose School",
   },
   {
     type: "bed",
     before: "",
-    highlight: "学生寮",
-    after: "完備",
+    highlight: "Student dormitory",
+    after: "available",
   },
   {
     type: "food",
     before: "",
-    highlight: "カフェテリア",
-    after: "完備",
+    highlight: "Cafeteria",
+    after: "available",
   },
   {
     type: "support",
-    before: "進学から日本での生活まで",
-    highlight: "総合的にサポート",
+    before: "Comprehensive support for",
+    highlight: "further education and life in Japan",
   },
 ];
 
@@ -180,7 +182,6 @@ export default function About() {
 
       <div className="relative z-10 mx-auto max-w-[1540px]">
         <div className="grid items-center gap-5 lg:grid-cols-[44%_17%_39%]">
-
           {/* LEFT CONTENT */}
           <div>
             <div className="flex items-center gap-4">
@@ -197,14 +198,14 @@ export default function About() {
               className="mt-4 text-[48px] font-semibold tracking-[0.02em] text-[#0a3269]"
               style={{
                 fontFamily:
-                  '"Yu Mincho","Hiragino Mincho ProN","Noto Serif JP",serif',
+                  '"Georgia","Times New Roman","Noto Serif",serif',
               }}
             >
-              学校紹介
+              About Our School
             </h2>
 
             <p className="mt-5 text-[21px] font-bold tracking-[0.01em] text-[#183f69]">
-              学びやすさと安心を備えた日本語教育環境
+              A Supportive and Comfortable Environment for Learning Japanese
             </p>
 
             <div className="mt-3 h-[2px] w-14 bg-[#d8a638]" />
@@ -226,6 +227,7 @@ export default function About() {
 
                   <p className="text-[16px] font-semibold leading-[1.7] text-[#244967]">
                     {item.before}
+
                     {item.before && " "}
 
                     <span className="font-bold text-[#c78d1d]">
@@ -245,7 +247,6 @@ export default function About() {
 
           {/* CENTER ART */}
           <div className="relative hidden h-[610px] lg:block">
-
             {/* CURVED ART */}
             <div className="absolute left-1/2 top-[-35px] h-[700px] w-[300px] -translate-x-1/2 overflow-hidden">
               <div className="absolute left-[15px] top-0 h-[730px] w-[320px] rounded-[50%] border-[2px] border-[#d8aa3f]/70" />
@@ -275,11 +276,11 @@ export default function About() {
 
               <div>
                 <p className="text-[14px] font-bold text-[#173f69]">
-                  東海通駅
+                  Tokai-dori Station
                 </p>
 
                 <p className="mt-1 text-[15px] font-bold text-[#c78d1d]">
-                  徒歩3分
+                  3-Minute Walk
                 </p>
 
                 <div className="mt-2 h-[2px] w-10 bg-[#d7aa3e]" />
@@ -305,11 +306,11 @@ export default function About() {
 
               <div>
                 <p className="text-[14px] font-bold text-[#173f69]">
-                  学生寮
+                  Student Dormitory
                 </p>
 
                 <p className="mt-1 text-[15px] font-bold text-[#c78d1d]">
-                  完備
+                  Available
                 </p>
 
                 <div className="mt-2 h-[2px] w-10 bg-[#d7aa3e]" />
@@ -335,11 +336,11 @@ export default function About() {
 
               <div>
                 <p className="text-[14px] font-bold text-[#173f69]">
-                  カフェテリア
+                  Cafeteria
                 </p>
 
                 <p className="mt-1 text-[15px] font-bold text-[#c78d1d]">
-                  完備
+                  Available
                 </p>
 
                 <div className="mt-2 h-[2px] w-10 bg-[#d7aa3e]" />
@@ -349,17 +350,15 @@ export default function About() {
 
           {/* RIGHT PHOTO */}
           <div className="relative flex justify-start lg:pl-0">
-
             {/* BACK FRAME */}
             <div className="absolute left-[-14px] top-[-16px] h-[93%] w-[92%] rounded-[24px] border border-[#d9b35a]/45 bg-[#e2f4fd]" />
 
             {/* PHOTO CARD */}
             <div className="relative w-full max-w-[470px] overflow-hidden rounded-[22px] border border-white bg-white p-[8px] shadow-[0_20px_50px_rgba(20,78,118,0.16)]">
-
               <div className="relative aspect-[3/4] w-full overflow-hidden rounded-[15px] bg-[#eaf4fa]">
                 <Image
                   src="/schoolchitoseko.jpg"
-                  alt="名古屋国際外語学院 千年校"
+                  alt="Nagoya International Foreign Language School - Chitose School"
                   fill
                   sizes="(max-width: 1024px) 90vw, 470px"
                   className="object-contain object-center"
@@ -372,13 +371,13 @@ export default function About() {
                     NAGOYA
                   </p>
 
-                  <p className="mt-1 whitespace-nowrap text-[16px] font-bold text-[#0a376f]">
-                    名古屋国際外語学院
+                  <p className="mt-1 text-[15px] font-bold leading-[1.4] text-[#0a376f]">
+                    Nagoya International Foreign Language School
                   </p>
                 </div>
 
                 <span className="shrink-0 rounded-full border border-[#c9ddea] bg-[#f3f9fd] px-4 py-2 text-[12px] font-bold text-[#315a7d]">
-                  千年校
+                  Chitose School
                 </span>
               </div>
             </div>
@@ -388,11 +387,11 @@ export default function About() {
         {/* CTA */}
         <div className="mt-10 flex justify-center">
           <Link
-            href="/about"
+            href="/en/about"
             prefetch={false}
             className="group flex min-w-[330px] items-center justify-center gap-6 rounded-[8px] border border-[#d6a53a] bg-[#0a376f] px-10 py-[15px] text-[16px] font-bold text-white shadow-[0_8px_20px_rgba(10,55,111,0.16)] transition duration-300 hover:-translate-y-[2px] hover:bg-[#0d468b]"
           >
-            学校紹介を見る
+            Learn More About Our School
 
             <span className="text-[22px] text-[#e5b13f] transition duration-300 group-hover:translate-x-1">
               →

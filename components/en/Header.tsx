@@ -5,14 +5,13 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 const navItems = [
-  ["ホーム", "/"],
-  ["学校紹介", "/about"],
-  ["コース", "/courses"],
-  ["入学案内", "/admission"],
-  ["学費", "/tuition"],
-  ["学校生活", "/student-life"],
-  ["情報公開", "/information"],
-  ["資料ダウンロード", "/#documents"],
+  ["Home", "/en"],
+  ["About", "/en/about"],
+  ["Courses", "/en/courses"],
+  ["Admissions", "/en/admission"],
+  ["Tuition & Fees", "/en/tuition"],
+  ["Student Life", "/en/student-life"],
+  ["Downloads", "/en#documents"],
 ];
 
 const languageItems = [
@@ -58,39 +57,40 @@ export default function Header() {
       {/* =====================================================
           MAIN HEADER
       ===================================================== */}
-      <div className="mx-auto flex min-h-[88px] w-full max-w-[1920px] items-center gap-4 px-4 sm:min-h-[94px] sm:px-6 lg:px-7 min-[1500px]:min-h-[104px] min-[1700px]:px-9">
+      <div className="mx-auto flex min-h-[88px] w-full max-w-[1920px] items-center gap-4 px-4 sm:min-h-[94px] sm:px-6 lg:px-7 min-[1450px]:min-h-[104px] min-[1700px]:px-9">
         {/* =====================================================
             LOGO + SCHOOL NAME
         ===================================================== */}
         <Link
-          href="/"
+          href="/en"
           prefetch={false}
           onClick={() => setMenuOpen(false)}
-          aria-label="名古屋国際外語学院 ホーム"
-          className="group flex min-w-0 flex-1 items-center gap-3.5 min-[1500px]:w-[330px] min-[1500px]:flex-none min-[1650px]:w-[360px]"
+          aria-label="Nagoya International Foreign Language School Home"
+          className="group flex min-w-0 flex-1 items-center gap-3.5 min-[1450px]:w-[350px] min-[1450px]:flex-none min-[1650px]:w-[390px]"
         >
           {/* LOGO */}
-          <div className="relative flex h-[58px] w-[58px] shrink-0 items-center justify-center rounded-full bg-white shadow-[0_8px_22px_rgba(0,0,0,0.18)] transition duration-300 group-hover:-translate-y-[2px] group-hover:scale-[1.025] sm:h-[66px] sm:w-[66px] min-[1500px]:h-[74px] min-[1500px]:w-[74px]">
+          <div className="relative flex h-[58px] w-[58px] shrink-0 items-center justify-center rounded-full bg-white shadow-[0_8px_22px_rgba(0,0,0,0.18)] transition duration-300 group-hover:-translate-y-[2px] group-hover:scale-[1.025] sm:h-[66px] sm:w-[66px] min-[1450px]:h-[74px] min-[1450px]:w-[74px]">
             <Image
               src="/logo.jpg"
-              alt="名古屋国際外語学院"
+              alt="Nagoya International Foreign Language School logo"
               width={72}
               height={72}
               priority
-              className="h-[54px] w-[54px] rounded-full object-contain sm:h-[62px] sm:w-[62px] min-[1500px]:h-[70px] min-[1500px]:w-[70px]"
+              className="h-[54px] w-[54px] rounded-full object-contain sm:h-[62px] sm:w-[62px] min-[1450px]:h-[70px] min-[1450px]:w-[70px]"
             />
           </div>
 
-          {/* SCHOOL NAME - wording unchanged */}
+          {/* EXACTLY TWO LINES */}
           <div className="min-w-0">
-            <p className="whitespace-nowrap text-[17px] font-black leading-none tracking-[0.03em] text-white sm:text-[20px] min-[1500px]:text-[23px] min-[1650px]:text-[25px]">
-              名古屋国際外語学院
+            <p className="whitespace-nowrap text-[15px] font-black leading-[1.08] tracking-[-0.025em] text-white sm:text-[18px] min-[1450px]:text-[20px] min-[1650px]:text-[22px]">
+              Nagoya International
             </p>
 
-            <p className="mt-[7px] whitespace-nowrap text-[6px] font-bold tracking-[0.1em] text-[#65C9F6] sm:text-[7px] min-[1500px]:text-[8px]">
-              NAGOYA INTERNATIONAL FOREIGN LANGUAGE SCHOOL
+            <p className="mt-[3px] whitespace-nowrap text-[15px] font-black leading-[1.08] tracking-[-0.025em] text-white sm:text-[18px] min-[1450px]:text-[20px] min-[1650px]:text-[22px]">
+              Foreign Language School
             </p>
 
+            {/* MINI ACCENT LINE */}
             <div className="mt-2 flex h-[2px] w-[86px] overflow-hidden rounded-full opacity-90">
               <span className="flex-1 bg-[#65C9F6]" />
               <span className="w-[24px] bg-[#F0BD46]" />
@@ -101,7 +101,7 @@ export default function Header() {
         {/* =====================================================
             DESKTOP NAVIGATION
         ===================================================== */}
-        <nav className="ml-auto hidden h-[62px] items-center rounded-[16px] border border-[#4878AA] bg-[#0A376F]/80 p-[5px] shadow-[inset_0_1px_0_rgba(255,255,255,0.04),0_8px_22px_rgba(3,28,61,0.10)] min-[1500px]:flex">
+        <nav className="ml-auto hidden h-[62px] items-center rounded-[16px] border border-[#4878AA] bg-[#0A376F]/80 p-[5px] shadow-[inset_0_1px_0_rgba(255,255,255,0.04),0_8px_22px_rgba(3,28,61,0.10)] min-[1450px]:flex">
           {navItems.map(([label, href]) => (
             <Link
               key={label}
@@ -119,7 +119,7 @@ export default function Header() {
                 px-2.5
                 text-[12px]
                 font-extrabold
-                tracking-[0.01em]
+                tracking-[-0.01em]
                 text-white
                 transition-all
                 duration-300
@@ -130,14 +130,14 @@ export default function Header() {
                 hover:text-white
                 hover:shadow-[0_8px_18px_rgba(0,0,0,0.15)]
 
-                min-[1600px]:px-3
-                min-[1600px]:text-[12.5px]
+                min-[1550px]:px-3
+                min-[1550px]:text-[12.5px]
 
-                min-[1750px]:px-3.5
-                min-[1750px]:text-[13px]
+                min-[1700px]:px-3.5
+                min-[1700px]:text-[13px]
               "
             >
-              {/* HOVER ACCENT */}
+              {/* HOVER GOLD/CYAN TOP GLOW */}
               <span className="pointer-events-none absolute left-1/2 top-[3px] h-[2px] w-0 -translate-x-1/2 rounded-full bg-gradient-to-r from-[#F0BD46] to-[#65C9F6] transition-all duration-300 group-hover/nav:w-[55%]" />
 
               {label}
@@ -148,14 +148,14 @@ export default function Header() {
         {/* =====================================================
             DESKTOP RIGHT AREA
         ===================================================== */}
-        <div className="hidden shrink-0 items-center gap-2.5 min-[1500px]:flex">
+        <div className="hidden shrink-0 items-center gap-2.5 min-[1450px]:flex">
           {/* LANGUAGE */}
           <div ref={languageRef} className="relative">
             <button
               type="button"
               onClick={() => setLanguageOpen((prev) => !prev)}
               aria-expanded={languageOpen}
-              aria-label="言語を選択"
+              aria-label="Select language"
               className="
                 group
                 flex
@@ -186,7 +186,7 @@ export default function Header() {
             >
               <span className="mr-1.5 text-[#65C9F6]">◎</span>
 
-              日本語
+              English
 
               <span
                 className={`ml-1.5 text-[8px] transition-transform duration-300 ${
@@ -206,15 +206,15 @@ export default function Header() {
                     href={item.href}
                     prefetch={false}
                     onClick={() => setLanguageOpen(false)}
-                    className={`relative flex min-h-[43px] items-center rounded-[9px] px-4 text-[12px] font-bold transition-all duration-200 hover:translate-x-[2px] hover:bg-[#EDF8FC] ${
-                      item.label === "日本語"
+                    className={`group/lang relative flex min-h-[43px] items-center rounded-[9px] px-4 text-[12px] font-bold transition-all duration-200 hover:translate-x-[2px] hover:bg-[#EDF8FC] ${
+                      item.label === "English"
                         ? "bg-[#EFF9FC] text-[#0AAFCB]"
                         : "text-[#14395F]"
                     }`}
                   >
                     {item.label}
 
-                    {item.label === "日本語" && (
+                    {item.label === "English" && (
                       <span className="absolute right-3 h-2 w-2 rounded-full bg-[#19BDD5]" />
                     )}
                   </Link>
@@ -227,7 +227,7 @@ export default function Header() {
               APPLY
           ===================================================== */}
           <Link
-            href="/application"
+            href="/en/application"
             prefetch={false}
             className="
               group
@@ -260,14 +260,14 @@ export default function Header() {
               ✎
             </span>
 
-            <span>申込み</span>
+            <span>Apply</span>
           </Link>
 
           {/* =====================================================
               CONTACT
           ===================================================== */}
           <Link
-            href="/contact"
+            href="/en/contact"
             prefetch={false}
             className="
               group
@@ -300,7 +300,7 @@ export default function Header() {
               ✉
             </span>
 
-            <span>お問い合わせ</span>
+            <span>Contact</span>
           </Link>
         </div>
 
@@ -309,13 +309,13 @@ export default function Header() {
         ===================================================== */}
         <button
           type="button"
-          aria-label="メニューを開く"
+          aria-label="Open menu"
           aria-expanded={menuOpen}
           onClick={() => {
             setMenuOpen((prev) => !prev);
             setLanguageOpen(false);
           }}
-          className="flex h-[50px] w-[50px] shrink-0 flex-col items-center justify-center gap-[5px] rounded-[12px] border border-[#537EAE] bg-[#0B376F] shadow-[0_5px_14px_rgba(0,0,0,0.10)] transition hover:border-[#65C9F6] min-[1500px]:hidden"
+          className="flex h-[50px] w-[50px] shrink-0 flex-col items-center justify-center gap-[5px] rounded-[12px] border border-[#537EAE] bg-[#0B376F] shadow-[0_5px_14px_rgba(0,0,0,0.10)] transition hover:border-[#65C9F6] min-[1450px]:hidden"
         >
           <span
             className={`block h-[2px] w-[23px] rounded-full bg-white transition ${
@@ -341,7 +341,7 @@ export default function Header() {
           MOBILE / TABLET MENU
       ===================================================== */}
       {menuOpen && (
-        <div className="border-t border-white/10 bg-[#062B60] min-[1500px]:hidden">
+        <div className="border-t border-white/10 bg-[#062B60] min-[1450px]:hidden">
           <div className="mx-auto max-w-[1000px] px-4 py-5 sm:px-6">
             {/* NAVIGATION */}
             <nav className="grid gap-2.5 sm:grid-cols-2">
@@ -408,7 +408,7 @@ export default function Header() {
                     prefetch={false}
                     onClick={() => setMenuOpen(false)}
                     className={`flex min-h-[44px] items-center justify-center rounded-[10px] border px-2 text-[11px] font-bold transition-all duration-300 hover:-translate-y-[2px] ${
-                      item.label === "日本語"
+                      item.label === "English"
                         ? "border-[#65C9F6] bg-[#65C9F6] text-[#082F69] shadow-[0_6px_14px_rgba(101,201,246,0.18)]"
                         : "border-white/15 bg-white/[0.04] text-white hover:border-[#65C9F6]/60 hover:bg-white/[0.08]"
                     }`}
@@ -424,21 +424,21 @@ export default function Header() {
             ================================================= */}
             <div className="mt-4 grid grid-cols-2 gap-3">
               <Link
-                href="/application"
+                href="/en/application"
                 prefetch={false}
                 onClick={() => setMenuOpen(false)}
                 className="flex min-h-[50px] items-center justify-center gap-2 rounded-[11px] bg-[#EAB32F] px-3 text-[13px] font-black text-[#082F69] shadow-[0_7px_18px_rgba(0,0,0,0.12)] transition hover:-translate-y-[2px] hover:bg-[#F4C44F]"
               >
-                ✎ 申込み
+                ✎ Apply
               </Link>
 
               <Link
-                href="/contact"
+                href="/en/contact"
                 prefetch={false}
                 onClick={() => setMenuOpen(false)}
                 className="flex min-h-[50px] items-center justify-center gap-2 rounded-[11px] bg-[#65C9F6] px-3 text-[13px] font-black text-[#082F69] shadow-[0_7px_18px_rgba(0,0,0,0.12)] transition hover:-translate-y-[2px] hover:bg-[#81D8FA]"
               >
-                ✉ お問い合わせ
+                ✉ Contact
               </Link>
             </div>
           </div>

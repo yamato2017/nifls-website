@@ -3,15 +3,15 @@ import Link from "next/link";
 const newsItems = [
   {
     date: "2026.08.01",
-    category: "お知らせ",
-    title: "2027年4月生 募集中",
-    href: "/admission",
+    category: "NEWS",
+    title: "Applications Open for April 2027 Admission",
+    href: "/en/admission",
     pdf: false,
   },
   {
     date: "2026.08.01",
-    category: "お知らせ",
-    title: "長期休暇のご案内",
+    category: "NOTICE",
+    title: "Notice of School Holiday",
     href: "/chokikikan.pdf",
     pdf: true,
   },
@@ -53,7 +53,7 @@ export default function News() {
                   </div>
 
                   {/* TITLE */}
-                  <p className="mt-4 w-full whitespace-normal break-keep text-left text-[17px] font-bold leading-[1.65] text-[#113A68]">
+                  <p className="mt-4 w-full whitespace-normal text-left text-[17px] font-bold leading-[1.65] text-[#113A68]">
                     {item.title}
                   </p>
 
@@ -61,7 +61,7 @@ export default function News() {
                   <div className="mt-4 flex justify-end">
                     {item.pdf ? (
                       <span className="inline-flex items-center gap-2 rounded-[8px] border border-[#B9D8E9] bg-[#F3FAFE] px-5 py-2.5 text-[12px] font-bold text-[#087DB6]">
-                        PDFを見る
+                        View PDF
                         <span className="text-[14px]">↗</span>
                       </span>
                     ) : (
@@ -118,14 +118,14 @@ export default function News() {
                   </span>
 
                   {/* TITLE */}
-                  <p className="min-w-0 break-keep text-[15px] font-bold leading-[1.6] text-[#113A68] transition group-hover:text-[#0A69B5]">
+                  <p className="min-w-0 text-[15px] font-bold leading-[1.6] text-[#113A68] transition group-hover:text-[#0A69B5]">
                     {item.title}
                   </p>
 
                   {/* BUTTON */}
                   {item.pdf ? (
                     <span className="flex shrink-0 items-center gap-2 rounded-[7px] border border-[#B9D8E9] bg-[#F3FAFE] px-4 py-2 text-[11px] font-bold text-[#087DB6] transition duration-200 group-hover:border-[#19B9D3] group-hover:bg-[#EAF9FC]">
-                      PDFを見る
+                      View PDF
                       <span className="text-[13px]">↗</span>
                     </span>
                   ) : (

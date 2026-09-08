@@ -35,22 +35,22 @@ export default function SchoolBuildings() {
           <span className="h-px w-12 bg-[#D7A637]" />
 
           <h2
-            className="text-[25px] font-semibold tracking-[0.08em] text-[#092F69]"
+            className="text-[25px] font-semibold tracking-[0.04em] text-[#092F69]"
             style={{
               fontFamily:
-                '"Yu Mincho","Hiragino Mincho ProN","Noto Serif JP",serif',
+                '"Georgia","Times New Roman","Noto Serif",serif',
             }}
           >
-            校舎
+            Our School
           </h2>
 
           <span className="h-px w-12 bg-[#D7A637]" />
         </div>
 
         <div className="mx-auto grid max-w-[1100px] md:grid-cols-2">
-          {/* HONKO */}
+          {/* MAIN SCHOOL */}
           <Link
-            href="/contact#access"
+            href="/en/contact#access"
             prefetch={false}
             className="group flex items-center justify-center gap-6 border-b border-[#E6DDCA] px-6 py-6 transition duration-300 hover:bg-[#F6FBFE] md:border-b-0 md:border-r md:px-10"
           >
@@ -64,10 +64,10 @@ export default function SchoolBuildings() {
                   className="text-[25px] font-semibold text-[#092F69]"
                   style={{
                     fontFamily:
-                      '"Yu Mincho","Hiragino Mincho ProN","Noto Serif JP",serif',
+                      '"Georgia","Times New Roman","Noto Serif",serif',
                   }}
                 >
-                  本校
+                  Main School
                 </p>
 
                 <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#EEF5FA] text-[16px] font-bold text-[#D7A637] transition duration-300 group-hover:translate-x-1 group-hover:bg-[#07336E] group-hover:text-[#F0BD46]">
@@ -76,7 +76,9 @@ export default function SchoolBuildings() {
               </div>
 
               <p className="mt-2 text-[13px] font-medium leading-[1.7] text-[#455D73]">
-                〒455-0003 愛知県名古屋市港区辰巳町30-18
+                30-18 Tatsumi-cho, Minato-ku,
+                <br />
+                Nagoya, Aichi 455-0003, Japan
               </p>
 
               <p className="mt-2 text-[9px] font-bold tracking-[0.16em] text-[#B78319]">
@@ -85,9 +87,9 @@ export default function SchoolBuildings() {
             </div>
           </Link>
 
-          {/* CHITOSE */}
+          {/* CHITOSE SCHOOL */}
           <Link
-            href="/contact#access"
+            href="/en/contact#access"
             prefetch={false}
             className="group flex items-center justify-center gap-6 px-6 py-6 transition duration-300 hover:bg-[#F4FCFC] md:px-10"
           >
@@ -101,10 +103,10 @@ export default function SchoolBuildings() {
                   className="text-[25px] font-semibold text-[#092F69]"
                   style={{
                     fontFamily:
-                      '"Yu Mincho","Hiragino Mincho ProN","Noto Serif JP",serif',
+                      '"Georgia","Times New Roman","Noto Serif",serif',
                   }}
                 >
-                  千年校
+                  Chitose School
                 </p>
 
                 <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#EEF8F8] text-[16px] font-bold text-[#118E98] transition duration-300 group-hover:translate-x-1 group-hover:bg-[#118E98] group-hover:text-white">
@@ -113,7 +115,9 @@ export default function SchoolBuildings() {
               </div>
 
               <p className="mt-2 text-[13px] font-medium leading-[1.7] text-[#455D73]">
-                〒455-0003 愛知県名古屋市港区辰巳町1-45
+                1-45 Tatsumi-cho, Minato-ku,
+                <br />
+                Nagoya, Aichi 455-0003, Japan
               </p>
 
               <p className="mt-2 text-[9px] font-bold tracking-[0.16em] text-[#118E98]">

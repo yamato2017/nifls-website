@@ -1,59 +1,59 @@
 import Image from "next/image";
 import Link from "next/link";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import Header from "@/components/en/Header";
+import Footer from "@/components/en/Footer";
 
 const schoolProfile = [
-  ["会社名", "株式会社シージェー"],
-  ["学校名称", "名古屋国際外語学院"],
-  ["創立", "2011年6月"],
-  ["創立者", "宮里 優華"],
-  ["名誉理事長", "大山 昭文"],
-  ["顧問", "吉田 勉"],
+  ["Company", "CJ Co., Ltd."],
+  ["School Name", "Nagoya International Foreign Language School"],
+  ["Established", "June 2011"],
+  ["Founder", "宮里 優華"],
+  ["Honorary Chairman", "大山 昭文"],
+  ["Advisor", "吉田 勉"],
 ];
 
 const leadershipTeachers = [
   {
     name: "石川 春樹",
-    role: "副校長",
+    role: "Vice Principal",
     english: "VICE PRINCIPAL",
   },
   {
     name: "吉澤 成哉",
-    role: "副校長・専任講師",
+    role: "Vice Principal & Full-Time Teacher",
     english: "VICE PRINCIPAL & FULL-TIME TEACHER",
   },
   {
     name: "水野 洋子",
-    role: "教務主任",
-    english: "ACADEMIC DIRECTOR",
+    role: "Director of Academic Affairs",
+    english: "DIRECTOR OF ACADEMIC AFFAIRS",
   },
 ];
 
 const fullTimeTeachers = [
   {
     name: "井川 直子",
-    role: "専任講師",
+    role: "Full-Time Teacher",
   },
   {
     name: "小林 美穂",
-    role: "専任講師",
+    role: "Full-Time Teacher",
   },
   {
     name: "藤本 都",
-    role: "専任講師",
+    role: "Full-Time Teacher",
   },
   {
     name: "李 勝男",
-    role: "専任講師",
+    role: "Full-Time Teacher",
   },
   {
     name: "杉浦 由枝",
-    role: "専任講師",
+    role: "Full-Time Teacher",
   },
   {
     name: "大野 素",
-    role: "常勤講師",
+    role: "Full-Time Teacher",
   },
 ];
 
@@ -136,7 +136,7 @@ function LeadershipCard({
           <span className="h-px w-5 bg-[#E2A82A]" />
         </div>
 
-        <p className="mt-2 text-[11px] font-black tracking-[0.08em] text-[#587287]">
+        <p className="mt-2 text-[11px] font-black tracking-[0.04em] text-[#587287]">
           {role}
         </p>
 
@@ -176,9 +176,7 @@ function TeacherCard({
           <span className="h-px w-5 bg-[#E2A82A]" />
 
           <span className="text-[8px] font-black tracking-[0.17em] text-[#B98414]">
-            {role === "常勤講師"
-              ? "FULL-TIME TEACHER"
-              : "FULL-TIME TEACHER"}
+            FULL-TIME TEACHER
           </span>
 
           <span className="h-px w-5 bg-[#E2A82A]" />
@@ -194,7 +192,7 @@ function TeacherCard({
           {name}
         </p>
 
-        <p className="mt-1 text-[9px] font-bold tracking-[0.12em] text-[#8A9BA8]">
+        <p className="mt-1 text-[9px] font-bold tracking-[0.08em] text-[#8A9BA8]">
           {role}
         </p>
 
@@ -213,7 +211,7 @@ export default function AboutPage() {
         className="overflow-hidden text-[#07366F]"
         style={{
           fontFamily:
-            '"Noto Sans JP","Yu Gothic","YuGothic","Hiragino Kaku Gothic ProN",sans-serif',
+            '"Noto Sans","Arial","Helvetica","Noto Sans JP",sans-serif',
         }}
       >
         {/* =====================================================
@@ -225,7 +223,7 @@ export default function AboutPage() {
             <div className="absolute inset-y-0 right-0 w-[56%] sm:w-[59%] md:w-[61%] lg:w-[57%]">
               <Image
                 src="/hero.jpg"
-                alt="名古屋国際外語学院"
+                alt="Nagoya International Foreign Language School"
                 fill
                 priority
                 sizes="(max-width:1023px) 61vw, 57vw"
@@ -268,8 +266,8 @@ export default function AboutPage() {
                 </p>
               </div>
 
-              <h1 className="mt-4 whitespace-nowrap text-[31px] font-black leading-none tracking-[0.03em] text-[#07366F] min-[390px]:text-[34px] sm:text-[40px] md:text-[46px] lg:mt-5 lg:text-[58px] lg:tracking-[0.05em]">
-                学校紹介
+              <h1 className="mt-4 whitespace-nowrap text-[28px] font-black leading-none tracking-[0.01em] text-[#07366F] min-[390px]:text-[31px] sm:text-[38px] md:text-[44px] lg:mt-5 lg:text-[55px]">
+                About Our School
               </h1>
 
               <div className="mt-5 flex items-center gap-1.5 lg:gap-2">
@@ -317,7 +315,7 @@ export default function AboutPage() {
               </div>
 
               <h2 className="mt-2 text-[33px] font-black text-[#07366F]">
-                学院長メッセージ
+                Message from the Principal
               </h2>
             </div>
 
@@ -328,7 +326,7 @@ export default function AboutPage() {
                 <div className="relative min-h-[440px] overflow-hidden bg-[radial-gradient(circle_at_center,#FFFFFF_0%,#E6F3F8_100%)]">
                   <img
                     src="/principal.jpg"
-                    alt="宮里 優華"
+                    alt="Principal of Nagoya International Foreign Language School"
                     className="absolute inset-0 h-full w-full object-contain object-center"
                   />
 
@@ -344,7 +342,7 @@ export default function AboutPage() {
                     </p>
 
                     <p className="mt-1 text-[10px] font-bold text-white/80">
-                      名古屋国際外語学院
+                      Nagoya International Foreign Language School
                     </p>
                   </div>
                 </div>
@@ -358,29 +356,35 @@ export default function AboutPage() {
 
                   <div className="mt-5 space-y-5 text-[13px] font-medium leading-[2] text-[#405E75] sm:text-[14px]">
                     <p>
-                      本学院は、日本人と外国人に対する質の高い外国語教育を行い、
-                      将来より豊かな人生を送る一助となることを目的に開設されました。
+                      Our school was established with the aim of providing
+                      high-quality foreign language education to both Japanese
+                      and international students, helping them build richer and
+                      more fulfilling futures.
                     </p>
 
                     <p>
-                      大学や大学院、専門学校への進学に対応できるカリキュラムを編成しております。
-                      また、文化、習慣も含めた教育による国際交流を通じ、
-                      友好親善の一翼を担うことを目指しています。
-                      本学院の教育を通じて、若い世代の国際文化交流を促進し、
-                      外国の交流に努めたいと思っております。
+                      We offer a curriculum designed to prepare students for
+                      further education at universities, graduate schools, and
+                      vocational schools. Through education that also introduces
+                      Japanese culture and customs, we seek to promote
+                      international exchange and mutual understanding. We hope
+                      that the education provided at our school will encourage
+                      cultural exchange among younger generations and contribute
+                      to stronger international relationships.
                     </p>
 
                     <p>
-                      本学院は教育の質の向上に絶えず努め、
-                      将来新しい時代の価値観を創造できるよう、
-                      その基礎作りを目指して行く所存です。
+                      We remain committed to continuously improving the quality
+                      of our education and to providing students with a strong
+                      foundation that will enable them to create new values for
+                      the future.
                     </p>
                   </div>
 
                   <div className="mt-7 flex justify-end">
                     <div className="text-right">
                       <p className="text-[10px] font-bold text-[#718697]">
-                        名古屋国際外語学院
+                        Nagoya International Foreign Language School
                       </p>
 
                       <p className="mt-1 text-[22px] font-black tracking-[0.08em] text-[#07366F]">
@@ -397,183 +401,183 @@ export default function AboutPage() {
         </section>
 
         {/* =====================================================
-    SCHOOL PROFILE
-====================================================== */}
-<section className="relative overflow-hidden bg-[linear-gradient(180deg,#FFFFFF_0%,#F4FAFD_50%,#EAF6FC_100%)] px-5 py-11 sm:px-8">
-  <div className="pointer-events-none absolute -left-28 top-[120px] h-[340px] w-[340px] rounded-full border-[22px] border-[#FFFFFF]/70" />
+            SCHOOL PROFILE
+        ====================================================== */}
+        <section className="relative overflow-hidden bg-[linear-gradient(180deg,#FFFFFF_0%,#F4FAFD_50%,#EAF6FC_100%)] px-5 py-11 sm:px-8">
+          <div className="pointer-events-none absolute -left-28 top-[120px] h-[340px] w-[340px] rounded-full border-[22px] border-[#FFFFFF]/70" />
 
-  <div
-    className="pointer-events-none absolute right-[3%] top-[45px] h-[105px] w-[145px] opacity-20"
-    style={{
-      backgroundImage:
-        "radial-gradient(circle,#38A8D3 1.5px,transparent 1.5px)",
-      backgroundSize: "14px 14px",
-    }}
-  />
+          <div
+            className="pointer-events-none absolute right-[3%] top-[45px] h-[105px] w-[145px] opacity-20"
+            style={{
+              backgroundImage:
+                "radial-gradient(circle,#38A8D3 1.5px,transparent 1.5px)",
+              backgroundSize: "14px 14px",
+            }}
+          />
 
-  <div className="relative z-10 mx-auto max-w-[1320px]">
-    <div className="mb-7 text-center">
-      <div className="flex items-center justify-center gap-3">
-        <span className="h-px w-9 bg-[#D5A029]" />
+          <div className="relative z-10 mx-auto max-w-[1320px]">
+            <div className="mb-7 text-center">
+              <div className="flex items-center justify-center gap-3">
+                <span className="h-px w-9 bg-[#D5A029]" />
 
-        <p className="text-[10px] font-black tracking-[0.24em] text-[#B98110]">
-          SCHOOL PROFILE
-        </p>
-
-        <span className="h-px w-9 bg-[#D5A029]" />
-      </div>
-
-      <h2 className="mt-2 text-[33px] font-black text-[#07366F]">
-        学校概要
-      </h2>
-    </div>
-
-    <div className="relative">
-      <div className="absolute -bottom-3 left-8 right-8 top-3 rounded-[26px] bg-[#0C8FA5]/15" />
-      <div className="absolute -bottom-1 left-3 right-3 top-1 rounded-[26px] border border-[#D8A52E]/45" />
-
-      <div className="relative overflow-hidden rounded-[24px] border border-[#BED8E6] bg-white shadow-[0_20px_50px_rgba(7,54,111,0.12)]">
-        <div className="relative overflow-hidden bg-[linear-gradient(110deg,#062F62_0%,#0A4D86_60%,#0E7A98_100%)] px-7 py-6 text-white sm:px-9">
-          <div className="absolute bottom-0 left-0 h-[4px] w-full bg-gradient-to-r from-[#EFB62E] via-[#51C0E3] to-transparent" />
-
-          <p className="text-[9px] font-black tracking-[0.2em] text-[#65CCE9]">
-            NAGOYA INTERNATIONAL FOREIGN LANGUAGE SCHOOL
-          </p>
-
-          <div className="mt-1 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
-            <h3 className="text-[25px] font-black tracking-[0.04em]">
-              名古屋国際外語学院
-            </h3>
-
-            <span className="w-fit rounded-full border border-[#EFB62E]/65 bg-[#EFB62E]/10 px-4 py-1.5 text-[10px] font-black text-[#F2C64E]">
-              SCHOOL INFORMATION
-            </span>
-          </div>
-        </div>
-
-        <div className="grid sm:grid-cols-2">
-          {schoolProfile.map(([label, value], index) => (
-            <div
-              key={label}
-              className={`relative flex min-h-[76px] items-center gap-5 px-6 py-4 sm:px-8 ${
-                index < 4 ? "border-b border-[#DFEAF1]" : ""
-              } ${
-                index % 2 === 0
-                  ? "sm:border-r sm:border-[#DFEAF1]"
-                  : ""
-              } ${
-                index % 4 === 1 || index % 4 === 2
-                  ? "bg-[#F7FBFE]"
-                  : "bg-white"
-              }`}
-            >
-              <span className="absolute left-0 top-1/2 h-8 w-[3px] -translate-y-1/2 rounded-r-full bg-[#EFB62E]/70" />
-
-              <div className="w-[92px] shrink-0">
-                <p className="text-[10px] font-black tracking-[0.08em] text-[#778D9D]">
-                  {label}
+                <p className="text-[10px] font-black tracking-[0.24em] text-[#B98110]">
+                  SCHOOL PROFILE
                 </p>
+
+                <span className="h-px w-9 bg-[#D5A029]" />
               </div>
 
-              <div className="h-6 w-px bg-[#D5E4EC]" />
-
-              <p className="text-[14px] font-black text-[#07366F]">
-                {value}
-              </p>
-            </div>
-          ))}
-        </div>
-
-        {/* STAFF NUMBERS */}
-        <div className="grid border-t border-[#D8E6EE] sm:grid-cols-2 lg:grid-cols-4">
-          {/* FULL-TIME */}
-          <div className="bg-[#EDF8FC] px-6 py-5">
-            <p className="text-[9px] font-black tracking-[0.16em] text-[#0A9FC0]">
-              FULL-TIME
-            </p>
-
-            <div className="mt-2 flex items-end gap-2">
-              <span className="text-[34px] font-black text-[#07366F]">
-                8
-              </span>
-
-              <span className="pb-1 text-[12px] font-black">
-                名
-              </span>
+              <h2 className="mt-2 text-[33px] font-black text-[#07366F]">
+                School Profile
+              </h2>
             </div>
 
-            <p className="mt-1 text-[11px] font-black text-[#41637E]">
-              専任・常勤講師
-            </p>
+            <div className="relative">
+              <div className="absolute -bottom-3 left-8 right-8 top-3 rounded-[26px] bg-[#0C8FA5]/15" />
+              <div className="absolute -bottom-1 left-3 right-3 top-1 rounded-[26px] border border-[#D8A52E]/45" />
+
+              <div className="relative overflow-hidden rounded-[24px] border border-[#BED8E6] bg-white shadow-[0_20px_50px_rgba(7,54,111,0.12)]">
+                <div className="relative overflow-hidden bg-[linear-gradient(110deg,#062F62_0%,#0A4D86_60%,#0E7A98_100%)] px-7 py-6 text-white sm:px-9">
+                  <div className="absolute bottom-0 left-0 h-[4px] w-full bg-gradient-to-r from-[#EFB62E] via-[#51C0E3] to-transparent" />
+
+                  <p className="text-[9px] font-black tracking-[0.2em] text-[#65CCE9]">
+                    NAGOYA INTERNATIONAL FOREIGN LANGUAGE SCHOOL
+                  </p>
+
+                  <div className="mt-1 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+                    <h3 className="text-[25px] font-black tracking-[0.01em]">
+                      Nagoya International Foreign Language School
+                    </h3>
+
+                    <span className="w-fit rounded-full border border-[#EFB62E]/65 bg-[#EFB62E]/10 px-4 py-1.5 text-[10px] font-black text-[#F2C64E]">
+                      SCHOOL INFORMATION
+                    </span>
+                  </div>
+                </div>
+
+                <div className="grid sm:grid-cols-2">
+                  {schoolProfile.map(([label, value], index) => (
+                    <div
+                      key={label}
+                      className={`relative flex min-h-[76px] items-center gap-5 px-6 py-4 sm:px-8 ${
+                        index < 4 ? "border-b border-[#DFEAF1]" : ""
+                      } ${
+                        index % 2 === 0
+                          ? "sm:border-r sm:border-[#DFEAF1]"
+                          : ""
+                      } ${
+                        index % 4 === 1 || index % 4 === 2
+                          ? "bg-[#F7FBFE]"
+                          : "bg-white"
+                      }`}
+                    >
+                      <span className="absolute left-0 top-1/2 h-8 w-[3px] -translate-y-1/2 rounded-r-full bg-[#EFB62E]/70" />
+
+                      <div className="w-[110px] shrink-0">
+                        <p className="text-[10px] font-black tracking-[0.04em] text-[#778D9D]">
+                          {label}
+                        </p>
+                      </div>
+
+                      <div className="h-6 w-px bg-[#D5E4EC]" />
+
+                      <p className="text-[14px] font-black text-[#07366F]">
+                        {value}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* STAFF NUMBERS */}
+                <div className="grid border-t border-[#D8E6EE] sm:grid-cols-2 lg:grid-cols-4">
+                  {/* FULL-TIME */}
+                  <div className="bg-[#EDF8FC] px-6 py-5">
+                    <p className="text-[9px] font-black tracking-[0.16em] text-[#0A9FC0]">
+                      FULL-TIME
+                    </p>
+
+                    <div className="mt-2 flex items-end gap-2">
+                      <span className="text-[34px] font-black text-[#07366F]">
+                        8
+                      </span>
+
+                      <span className="pb-1 text-[12px] font-black">
+                        Teachers
+                      </span>
+                    </div>
+
+                    <p className="mt-1 text-[11px] font-black text-[#41637E]">
+                      Full-Time Teachers
+                    </p>
+                  </div>
+
+                  {/* PART-TIME */}
+                  <div className="border-t border-[#D8E6EE] bg-[#F7FBFE] px-6 py-5 sm:border-l sm:border-t-0 lg:border-l">
+                    <p className="text-[9px] font-black tracking-[0.16em] text-[#B98110]">
+                      PART-TIME
+                    </p>
+
+                    <div className="mt-2 flex items-end gap-2">
+                      <span className="text-[34px] font-black text-[#07366F]">
+                        16
+                      </span>
+
+                      <span className="pb-1 text-[12px] font-black">
+                        Teachers
+                      </span>
+                    </div>
+
+                    <p className="mt-1 text-[11px] font-black text-[#41637E]">
+                      Part-Time Teachers
+                    </p>
+                  </div>
+
+                  {/* OFFICE */}
+                  <div className="border-t border-[#D8E6EE] bg-[#ECFAFB] px-6 py-5 lg:border-l lg:border-t-0">
+                    <p className="text-[9px] font-black tracking-[0.16em] text-[#1199A7]">
+                      OFFICE
+                    </p>
+
+                    <div className="mt-2 flex items-end gap-2">
+                      <span className="text-[34px] font-black text-[#1199A7]">
+                        6
+                      </span>
+
+                      <span className="pb-1 text-[12px] font-black">
+                        Staff
+                      </span>
+                    </div>
+
+                    <p className="mt-1 text-[11px] font-black text-[#41637E]">
+                      Office Staff
+                    </p>
+                  </div>
+
+                  {/* CAFETERIA */}
+                  <div className="border-t border-[#D8E6EE] bg-[#FFF8EA] px-6 py-5 sm:border-l lg:border-t-0">
+                    <p className="text-[9px] font-black tracking-[0.16em] text-[#C68B16]">
+                      CAFETERIA
+                    </p>
+
+                    <div className="mt-2 flex items-end gap-2">
+                      <span className="text-[34px] font-black text-[#C68B16]">
+                        6
+                      </span>
+
+                      <span className="pb-1 text-[12px] font-black">
+                        Staff
+                      </span>
+                    </div>
+
+                    <p className="mt-1 text-[11px] font-black text-[#41637E]">
+                      Cafeteria Staff
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-
-          {/* PART-TIME */}
-          <div className="border-t border-[#D8E6EE] bg-[#F7FBFE] px-6 py-5 sm:border-l sm:border-t-0 lg:border-l">
-            <p className="text-[9px] font-black tracking-[0.16em] text-[#B98110]">
-              PART-TIME
-            </p>
-
-            <div className="mt-2 flex items-end gap-2">
-              <span className="text-[34px] font-black text-[#07366F]">
-                16
-              </span>
-
-              <span className="pb-1 text-[12px] font-black">
-                名
-              </span>
-            </div>
-
-            <p className="mt-1 text-[11px] font-black text-[#41637E]">
-              非常勤講師
-            </p>
-          </div>
-
-          {/* OFFICE */}
-          <div className="border-t border-[#D8E6EE] bg-[#ECFAFB] px-6 py-5 lg:border-l lg:border-t-0">
-            <p className="text-[9px] font-black tracking-[0.16em] text-[#1199A7]">
-              OFFICE
-            </p>
-
-            <div className="mt-2 flex items-end gap-2">
-              <span className="text-[34px] font-black text-[#1199A7]">
-                6
-              </span>
-
-              <span className="pb-1 text-[12px] font-black">
-                名
-              </span>
-            </div>
-
-            <p className="mt-1 text-[11px] font-black text-[#41637E]">
-              事務スタッフ
-            </p>
-          </div>
-
-          {/* CAFETERIA */}
-          <div className="border-t border-[#D8E6EE] bg-[#FFF8EA] px-6 py-5 sm:border-l lg:border-t-0">
-            <p className="text-[9px] font-black tracking-[0.16em] text-[#C68B16]">
-              CAFETERIA
-            </p>
-
-            <div className="mt-2 flex items-end gap-2">
-              <span className="text-[34px] font-black text-[#C68B16]">
-                6
-              </span>
-
-              <span className="pb-1 text-[12px] font-black">
-                名
-              </span>
-            </div>
-
-            <p className="mt-1 text-[11px] font-black text-[#41637E]">
-              食堂スタッフ
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+        </section>
 
         {/* =====================================================
             TEACHING TEAM
@@ -596,12 +600,13 @@ export default function AboutPage() {
               </div>
 
               <h2 className="mt-2 text-[31px] font-black text-[#07366F] sm:text-[35px]">
-                経験豊富な講師陣
+                Our Experienced Teaching Team
               </h2>
 
               <p className="mx-auto mt-3 max-w-[700px] text-[12px] font-medium leading-[1.9] text-[#61798B]">
-                日本語教育の専門知識と豊富な経験を持つ講師が、
-                一人ひとりの学習目標に寄り添い、丁寧に指導します。
+                Our experienced teachers provide careful and personalized
+                guidance while supporting each student&apos;s individual
+                learning goals.
               </p>
             </div>
 
@@ -615,7 +620,7 @@ export default function AboutPage() {
                 </p>
 
                 <p className="mt-1 text-[20px] font-black text-[#07366F]">
-                  副校長・教務主任
+                  School Leadership & Academic Affairs
                 </p>
               </div>
 
@@ -644,14 +649,14 @@ export default function AboutPage() {
                 </p>
 
                 <p className="mt-1 text-[20px] font-black text-[#07366F]">
-                  専任・常勤講師
+                  Full-Time Teaching Staff
                 </p>
               </div>
 
               <span className="h-px w-[75px] bg-gradient-to-l from-transparent to-[#E1A728]" />
             </div>
 
-            {/* FULL-TIME 6 — DESKTOP 3 + 3 */}
+            {/* FULL-TIME 6 */}
             <div className="mx-auto grid max-w-[1120px] gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {fullTimeTeachers.map((teacher) => (
                 <TeacherCard
@@ -684,17 +689,17 @@ export default function AboutPage() {
                         </span>
 
                         <span className="pb-1 text-[15px] font-black text-[#355A77]">
-                          名
+                          Teachers
                         </span>
                       </div>
 
                       <p className="mt-2 text-[15px] font-black text-[#07366F]">
-                        経験豊富な非常勤講師
+                        Experienced Part-Time Teachers
                       </p>
 
                       <p className="mt-2 text-[10.5px] font-medium leading-[1.8] text-[#718697]">
-                        豊富な指導経験を持つ講師陣が、
-                        質の高い日本語教育を提供します。
+                        Our experienced teaching staff provides high-quality
+                        Japanese language education.
                       </p>
                     </div>
                   </div>
@@ -719,17 +724,18 @@ export default function AboutPage() {
                         </span>
 
                         <span className="pb-1 text-[15px] font-black text-[#355A77]">
-                          名
+                          Staff
                         </span>
                       </div>
 
                       <p className="mt-2 text-[15px] font-black text-[#07366F]">
-                        事務スタッフ
+                        Office Staff
                       </p>
 
                       <p className="mt-2 text-[10.5px] font-medium leading-[1.8] text-[#718697]">
-                        学生生活や各種手続きなど、
-                        学習以外の面からも学生を支えます。
+                        Our office staff supports students with daily life,
+                        administrative procedures, and other matters beyond
+                        their studies.
                       </p>
                     </div>
                   </div>
@@ -756,22 +762,23 @@ export default function AboutPage() {
 
               <div className="sm:w-[270px]">
                 <p className="text-[15px] font-black text-[#B77C0A]">
-                  安心して学べる環境
+                  A Supportive Learning Environment
                 </p>
               </div>
 
               <div className="hidden h-10 w-px bg-[#E2D5A8] sm:block" />
 
               <p className="text-[10.5px] font-medium leading-[1.8] text-[#627889]">
-                専任・常勤講師・非常勤講師・事務スタッフが連携し、
-                学習面だけでなく学生生活まで総合的にサポートしています。
+                Full-time teachers, part-time teachers, and office staff work
+                together to provide comprehensive support for both students&apos;
+                studies and daily life in Japan.
               </p>
             </div>
           </div>
         </section>
 
         {/* =====================================================
-            CAMPUS
+            OUR SCHOOLS
         ====================================================== */}
         <section className="relative overflow-hidden bg-[linear-gradient(135deg,#E8F5FB_0%,#F7FCFF_48%,#E5F4FA_100%)] px-5 py-11 sm:px-8">
           <div className="relative z-10 mx-auto max-w-[1450px]">
@@ -780,26 +787,26 @@ export default function AboutPage() {
                 <span className="h-px w-9 bg-[#D5A029]" />
 
                 <p className="text-[10px] font-black tracking-[0.24em] text-[#B98110]">
-                  CAMPUS
+                  OUR SCHOOLS
                 </p>
 
                 <span className="h-px w-9 bg-[#D5A029]" />
               </div>
 
               <h2 className="mt-2 text-[33px] font-black text-[#07366F]">
-                校舎紹介
+                School Buildings
               </h2>
             </div>
 
             <div className="grid gap-6 lg:grid-cols-2">
-              {/* HONKO */}
+              {/* MAIN SCHOOL */}
               <div className="relative overflow-hidden rounded-[24px] border border-[#BFD9E6] bg-white shadow-[0_18px_42px_rgba(7,54,111,0.11)]">
                 <div className="grid min-h-[360px] sm:grid-cols-[47%_53%]">
                   <div className="relative min-h-[340px] p-4">
                     <div className="relative h-full w-full overflow-hidden rounded-[17px] border border-[#C7DFEA] bg-white">
                       <Image
                         src="/schoolhonko.jpg"
-                        alt="名古屋国際外語学院 本校"
+                        alt="Nagoya International Foreign Language School - Main School"
                         fill
                         className="object-contain object-center"
                       />
@@ -813,20 +820,20 @@ export default function AboutPage() {
                       </p>
 
                       <h3 className="mt-2 text-[25px] font-black">
-                        本校
+                        Main School
                       </h3>
 
                       <p className="mt-5 text-[12px] font-bold leading-[1.9] text-[#506D82]">
-                        〒455-0003
+                        30-18 Tatsumi-cho, Minato-ku,
                         <br />
-                        愛知県名古屋市港区辰巳町30-18
+                        Nagoya, Aichi 455-0003, Japan
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* CHITOSE */}
+              {/* CHITOSE SCHOOL */}
               <div className="relative overflow-hidden rounded-[24px] border border-[#BFD9E6] bg-white shadow-[0_18px_42px_rgba(7,54,111,0.11)]">
                 <div className="grid min-h-[360px] sm:grid-cols-[53%_47%]">
                   <div className="flex items-center p-7">
@@ -836,13 +843,13 @@ export default function AboutPage() {
                       </p>
 
                       <h3 className="mt-2 text-[25px] font-black">
-                        千年校
+                        Chitose School
                       </h3>
 
                       <p className="mt-5 text-[12px] font-bold leading-[1.9] text-[#506D82]">
-                        〒455-0003
+                        1-45 Tatsumi-cho, Minato-ku,
                         <br />
-                        愛知県名古屋市港区辰巳町1-45
+                        Nagoya, Aichi 455-0003, Japan
                       </p>
                     </div>
                   </div>
@@ -851,7 +858,7 @@ export default function AboutPage() {
                     <div className="relative h-full w-full overflow-hidden rounded-[17px] border border-[#C9E3E5] bg-white">
                       <Image
                         src="/schoolchitoseko.jpg"
-                        alt="名古屋国際外語学院 千年校"
+                        alt="Nagoya International Foreign Language School - Chitose School"
                         fill
                         className="object-contain object-center"
                       />
@@ -874,25 +881,25 @@ export default function AboutPage() {
               </p>
 
               <p className="mt-1 text-[19px] font-black">
-                名古屋国際外語学院で学びませんか?
+                Start Your Journey at NIFLS
               </p>
             </div>
 
             <div className="flex gap-3">
               <Link
-                href="/admission"
+                href="/en/admission"
                 prefetch={false}
                 className="rounded-[10px] border border-white/20 bg-white/10 px-5 py-3 text-[13px] font-black transition hover:bg-white/15"
               >
-                入学案内を見る
+                View Admissions
               </Link>
 
               <Link
-                href="/contact"
+                href="/en/contact"
                 prefetch={false}
                 className="rounded-[10px] bg-[#EFB62E] px-5 py-3 text-[13px] font-black text-[#07366F] transition hover:bg-[#F5C752]"
               >
-                お問い合わせ →
+                Contact Us →
               </Link>
             </div>
           </div>

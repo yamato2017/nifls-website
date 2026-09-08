@@ -4,27 +4,27 @@ const fees = [
   {
     entry: "APRIL ENTRY",
     month: "04",
-    course: "進学2年コース",
-    label: "2年間総額",
+    course: "2-Year Course",
+    label: "Total for 2 Years",
     total: "¥1,776,500",
     detail: null,
   },
   {
     entry: "JULY ENTRY",
     month: "07",
-    course: "進学1年9ヶ月コース",
-    label: "総額",
+    course: "1-Year 9-Month Course",
+    label: "Total",
     total: "¥1,578,500",
     detail: [
-      ["1年目", "¥929,500"],
-      ["2年目", "¥649,000"],
+      ["Year 1", "¥929,500"],
+      ["Year 2", "¥649,000"],
     ],
   },
   {
     entry: "OCTOBER ENTRY",
     month: "10",
-    course: "進学1年6ヶ月コース",
-    label: "総額",
+    course: "1-Year 6-Month Course",
+    label: "Total",
     total: "¥1,353,000",
     detail: null,
   },
@@ -75,20 +75,20 @@ export default function Tuition() {
             <span className="h-px w-9 bg-[#d6a32d]" />
 
             <p className="text-[12px] font-bold tracking-[0.26em] text-[#c58d18]">
-              SCHOOL FEE
+              SCHOOL FEES
             </p>
 
             <span className="h-px w-9 bg-[#d6a32d]" />
           </div>
 
           <h2
-            className="mt-3 text-[40px] font-semibold tracking-[0.08em] text-[#07366f] sm:text-[44px]"
+            className="mt-3 text-[40px] font-semibold tracking-[0.04em] text-[#07366f] sm:text-[44px]"
             style={{
               fontFamily:
-                '"Yu Mincho","Hiragino Mincho ProN","Noto Serif JP",serif',
+                '"Georgia","Times New Roman","Noto Serif",serif',
             }}
           >
-            学費について
+            Tuition & Fees
           </h2>
 
           <div className="mx-auto mt-3 h-[2px] w-10 bg-[#d7a32d]" />
@@ -99,7 +99,7 @@ export default function Tuition() {
           {fees.map((fee, index) => (
             <Link
               key={fee.entry}
-              href="/tuition"
+              href="/en/tuition"
               prefetch={false}
               className="group relative flex min-h-[270px] flex-col overflow-hidden rounded-[22px] border border-[#d5e6f1] bg-white shadow-[0_12px_30px_rgba(21,76,116,0.08)] transition duration-300 hover:-translate-y-1 hover:border-[#d6aa3e] hover:shadow-[0_18px_38px_rgba(21,76,116,0.14)]"
             >
@@ -136,10 +136,10 @@ export default function Tuition() {
                     </p>
 
                     <h3
-                      className="mt-1 text-[20px] font-bold tracking-[0.03em] text-[#07366f] lg:text-[22px]"
+                      className="mt-1 text-[20px] font-bold tracking-[0.01em] text-[#07366f] lg:text-[22px]"
                       style={{
                         fontFamily:
-                          '"Yu Mincho","Hiragino Mincho ProN","Noto Serif JP",serif',
+                          '"Georgia","Times New Roman","Noto Serif",serif',
                       }}
                     >
                       {fee.course}
@@ -205,7 +205,7 @@ export default function Tuition() {
         {/* MAIN CTA */}
         <div className="mt-7 flex justify-center">
           <Link
-            href="/tuition"
+            href="/en/tuition"
             prefetch={false}
             className="group inline-flex min-w-[280px] items-center justify-between gap-8 rounded-[12px] bg-[#07366f] px-6 py-3.5 text-white shadow-[0_9px_22px_rgba(7,54,111,0.18)] transition duration-300 hover:-translate-y-[2px] hover:bg-[#0a4589]"
           >
@@ -214,8 +214,8 @@ export default function Tuition() {
                 MORE INFORMATION
               </p>
 
-              <p className="mt-0.5 text-[14px] font-bold tracking-[0.06em]">
-                学費の詳細はこちら
+              <p className="mt-0.5 text-[14px] font-bold tracking-[0.02em]">
+                View Tuition Details
               </p>
             </div>
 

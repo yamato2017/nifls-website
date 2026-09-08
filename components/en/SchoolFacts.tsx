@@ -1,47 +1,47 @@
 const facts = [
   {
-    label: "創立",
+    label: "Established",
     value: "2011",
-    unit: "年6月",
+    unit: "June",
     type: "building",
     accent: "#2F78E6",
     soft: "#EEF5FF",
   },
   {
-    label: "定員",
+    label: "Student Capacity",
     value: "280",
-    unit: "名",
+    unit: "Students",
     type: "people",
     accent: "#5869F2",
     soft: "#F0F2FF",
   },
   {
-    label: "教員",
+    label: "Teachers",
     value: "24",
-    unit: "名",
+    unit: "Teachers",
     type: "teacher",
     accent: "#8B4FE8",
     soft: "#F6F0FF",
   },
   {
-    label: "職員",
+    label: "Staff",
     value: "6",
-    unit: "名",
+    unit: "Staff Members",
     type: "staff",
     accent: "#1AA7B7",
     soft: "#ECFAFB",
   },
   {
-    label: "開校",
+    label: "School Opened",
     value: "2012",
-    unit: "年4月",
+    unit: "April",
     type: "calendar",
     accent: "#E6A11A",
     soft: "#FFF8E9",
   },
   {
-    label: "適正校",
-    value: "クラスⅠ",
+    label: "Appropriate School",
+    value: "Class I",
     unit: "",
     type: "shield",
     accent: "#C99618",
@@ -206,36 +206,36 @@ export default function SchoolFacts() {
             </div>
 
             {/* LABEL */}
-            <p className="relative mt-4 text-center text-[17px] font-black tracking-[0.03em] text-[#082F69]">
+            <p className="relative mt-4 min-h-[42px] text-center text-[15px] font-black leading-[1.35] tracking-[0.01em] text-[#082F69]">
               {item.label}
             </p>
 
             {/* DIVIDER */}
             <div
-              className="relative mx-auto mt-4 h-px w-[78%]"
+              className="relative mx-auto mt-3 h-px w-[78%]"
               style={{
                 backgroundColor: `${item.accent}20`,
               }}
             />
 
             {/* VALUE */}
-            <div className="relative mt-5 flex min-h-[58px] flex-col items-center justify-center">
+            <div className="relative mt-4 flex min-h-[58px] flex-col items-center justify-center">
               <span
                 className={`whitespace-nowrap font-semibold leading-none text-[#092F69] ${
-                  item.label === "適正校"
-                    ? "text-[31px] sm:text-[34px]"
+                  item.label === "Appropriate School"
+                    ? "text-[29px] sm:text-[32px]"
                     : "text-[38px] sm:text-[42px]"
                 }`}
                 style={{
                   fontFamily:
-                    '"Georgia","Yu Mincho","Hiragino Mincho ProN",serif',
+                    '"Georgia","Times New Roman","Noto Serif",serif',
                 }}
               >
                 {item.value}
               </span>
 
               {item.unit && (
-                <span className="mt-2 text-[12px] font-black text-[#667F92]">
+                <span className="mt-2 text-center text-[11px] font-black text-[#667F92]">
                   {item.unit}
                 </span>
               )}

@@ -657,7 +657,7 @@ export default function TuitionPage() {
 
                     <div className="mt-2">
   <p className="text-[12px] font-semibold text-[#61798B]">
-    朝食・昼食・夕食
+    朝食・昼食・夕食 (お弁当）)
   </p>
 
   <p className="mt-2 text-[11px] font-semibold leading-[1.6] text-[#7A8C99]">
@@ -676,45 +676,266 @@ export default function TuitionPage() {
           </div>
         </section>
 
-        {/* INFORMATION */}
-        <section className="bg-[#EEF7FC] px-5 py-9 sm:px-8 lg:px-10">
-          <div className="mx-auto grid max-w-[1200px] gap-5 md:grid-cols-[1fr_auto] md:items-center">
-            <div>
-              <p className="text-[10px] font-bold tracking-[0.18em] text-[#C58D18]">
-                INFORMATION
-              </p>
+        {/* =====================================================
+    SCHOLARSHIP & INFORMATION
+===================================================== */}
+<section className="relative overflow-hidden bg-[linear-gradient(110deg,#F8FCFF_0%,#EEF8FD_48%,#F7FBFE_100%)] px-5 py-10 sm:px-8 lg:px-10 lg:py-12">
+  {/* BACKGROUND DECORATION */}
+  <div className="pointer-events-none absolute -left-[120px] -top-[150px] h-[520px] w-[520px] rounded-full border-[2px] border-[#E6B83D]/60" />
+  <div className="pointer-events-none absolute -left-[80px] -top-[110px] h-[520px] w-[520px] rounded-full border-[22px] border-[#DDF3FC]/80" />
 
-              <p className="mt-2 text-[14px] font-bold text-[#07366F]">
-                学費・出願条件の詳細は募集要項をご確認ください。
-              </p>
+  <div
+    className="pointer-events-none absolute right-[2%] top-[30px] h-[120px] w-[160px] opacity-25"
+    style={{
+      backgroundImage:
+        "radial-gradient(circle,#3DB4DF 1.5px,transparent 1.5px)",
+      backgroundSize: "14px 14px",
+    }}
+  />
 
-              <p className="mt-1 text-[11px] leading-[1.7] text-[#6A8192]">
-                費用や納入時期についてご不明な点がございましたら、
-                お気軽にお問い合わせください。
-              </p>
-            </div>
+  <div className="relative z-10 mx-auto max-w-[1320px]">
+    <div className="grid gap-9 lg:grid-cols-[1.08fr_0.92fr] lg:gap-10">
 
-            <div className="flex flex-wrap gap-3">
-              <a
-                href="/boshu.pdf"
-                download
-                className="rounded-[11px] bg-[#082F69] px-5 py-3 text-[13px] font-bold text-white shadow-[0_7px_17px_rgba(7,54,111,0.13)] transition hover:-translate-y-[2px] hover:bg-[#0B4585]"
-              >
-                募集要項をダウンロード
-              </a>
+      {/* =====================================================
+          LEFT : SCHOLARSHIP & AWARDS
+      ====================================================== */}
+      <div className="relative lg:pr-10">
+        {/* vertical divider desktop */}
+        <div className="absolute -right-[1px] top-2 hidden h-[92%] w-px bg-[#8FB8D2] lg:block">
+          <span className="absolute left-0 top-[36%] h-[85px] w-[2px] bg-[#F0BD46]" />
+        </div>
 
-              <a
-                href="/contact"
-                className="rounded-[11px] bg-[#F0BD46] px-5 py-3 text-[13px] font-extrabold text-[#082F69] shadow-[0_7px_17px_rgba(0,0,0,0.10)] transition hover:-translate-y-[2px] hover:bg-[#F5C95F]"
-              >
-                お問い合わせ →
-              </a>
-            </div>
+        {/* TITLE */}
+        <div className="flex items-start gap-4">
+          {/* CAP ICON */}
+          <div className="flex h-[72px] w-[72px] shrink-0 items-center justify-center rounded-full border-[2px] border-[#F0BD46] bg-[#07366F] shadow-[0_8px_20px_rgba(7,54,111,0.18)] sm:h-[82px] sm:w-[82px]">
+            <svg
+              viewBox="0 0 64 64"
+              className="h-10 w-10 text-[#F0BD46]"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M7 23 32 12l25 11-25 11L7 23Z" />
+              <path d="M17 29v13c8 7 22 7 30 0V29" />
+              <path d="M57 23v16" />
+              <circle cx="57" cy="42" r="2" fill="currentColor" />
+            </svg>
           </div>
-        </section>
-      </main>
 
-      <Footer />
-    </>
-  );
+          <div className="min-w-0 pt-1">
+            <div className="flex items-center gap-3">
+              <p className="text-[10px] font-black tracking-[0.2em] text-[#C58D18] sm:text-[11px]">
+                SCHOLARSHIP & AWARDS
+              </p>
+
+              <span className="hidden h-px w-16 bg-[#D9A728] sm:block" />
+            </div>
+
+            <h2 className="mt-2 text-[23px] font-black leading-[1.35] text-[#07366F] sm:text-[28px]">
+              学院独自の奨学金・表彰制度
+            </h2>
+
+            <p className="mt-2 text-[11px] leading-[1.8] text-[#71879A] sm:text-[12px]">
+              努力する学生を応援し、
+              <br className="sm:hidden" />
+              学びと成長をサポートします。
+            </p>
+          </div>
+        </div>
+
+        {/* GOLD / CYAN LINE */}
+        <div className="ml-[88px] mt-5 flex sm:ml-[98px]">
+          <span className="h-[3px] w-[72px] bg-[#F0BD46]" />
+          <span className="h-[3px] w-[72px] bg-[#42BDE4]" />
+        </div>
+
+        {/* AWARD CARDS */}
+        <div className="mt-8 grid gap-4 sm:grid-cols-3">
+
+          {/* SCHOLARSHIP */}
+          <div className="group relative rounded-[18px] border border-[#CBE3EF] bg-white px-5 pb-5 pt-10 text-center shadow-[0_10px_28px_rgba(7,54,111,0.08)] transition hover:-translate-y-1 hover:shadow-[0_15px_32px_rgba(7,54,111,0.13)]">
+            <div className="absolute left-1/2 top-0 flex h-[58px] w-[58px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-[2px] border-[#F0BD46] bg-[#07366F] shadow-[0_6px_15px_rgba(7,54,111,0.18)]">
+              <span className="text-[26px] font-light text-[#F0BD46]">
+                ¥
+              </span>
+            </div>
+
+            <h3 className="text-[16px] font-black text-[#07366F]">
+              奨学金制度
+            </h3>
+
+            <p className="mt-2 text-[11px] leading-[1.7] text-[#73899B]">
+              学び続ける意欲を
+              <br />
+              支援します。
+            </p>
+
+            <span className="mx-auto mt-4 block h-[2px] w-12 bg-[#F0BD46]" />
+          </div>
+
+          {/* PERFECT ATTENDANCE */}
+          <div className="group relative mt-7 rounded-[18px] border border-[#CBE3EF] bg-white px-5 pb-5 pt-10 text-center shadow-[0_10px_28px_rgba(7,54,111,0.08)] transition hover:-translate-y-1 hover:shadow-[0_15px_32px_rgba(7,54,111,0.13)] sm:mt-0">
+            <div className="absolute left-1/2 top-0 flex h-[58px] w-[58px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-[2px] border-[#F0BD46] bg-[#07366F] shadow-[0_6px_15px_rgba(7,54,111,0.18)]">
+              <svg
+                viewBox="0 0 48 48"
+                className="h-7 w-7 text-[#F0BD46]"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.6"
+                strokeLinecap="round"
+              >
+                <circle cx="18" cy="17" r="5" />
+                <circle cx="31" cy="18" r="4" />
+                <path d="M8 35c1-7 5-11 10-11s9 4 10 11" />
+                <path d="M27 27c6 0 10 3 11 8" />
+              </svg>
+            </div>
+
+            <h3 className="text-[16px] font-black text-[#07366F]">
+              皆勤賞
+            </h3>
+
+            <p className="mt-2 text-[11px] leading-[1.7] text-[#73899B]">
+              日々の努力を
+              <br />
+              評価します。
+            </p>
+
+            <span className="mx-auto mt-4 block h-[2px] w-12 bg-[#F0BD46]" />
+          </div>
+
+          {/* EXCELLENCE */}
+          <div className="group relative mt-7 rounded-[18px] border border-[#CBE3EF] bg-white px-5 pb-5 pt-10 text-center shadow-[0_10px_28px_rgba(7,54,111,0.08)] transition hover:-translate-y-1 hover:shadow-[0_15px_32px_rgba(7,54,111,0.13)] sm:mt-0">
+            <div className="absolute left-1/2 top-0 flex h-[58px] w-[58px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-[2px] border-[#F0BD46] bg-[#07366F] shadow-[0_6px_15px_rgba(7,54,111,0.18)]">
+              <svg
+                viewBox="0 0 48 48"
+                className="h-7 w-7 text-[#F0BD46]"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.6"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M16 8h16v6c0 8-3 13-8 16-5-3-8-8-8-16V8Z" />
+                <path d="M16 12H9c0 7 3 11 9 12" />
+                <path d="M32 12h7c0 7-3 11-9 12" />
+                <path d="M24 30v7" />
+                <path d="M17 40h14" />
+              </svg>
+            </div>
+
+            <h3 className="text-[16px] font-black text-[#07366F]">
+              優秀賞
+            </h3>
+
+            <p className="mt-2 text-[11px] leading-[1.7] text-[#73899B]">
+              優れた成績の
+              <br />
+              学生を表彰します。
+            </p>
+
+            <span className="mx-auto mt-4 block h-[2px] w-12 bg-[#F0BD46]" />
+          </div>
+        </div>
+      </div>
+
+      {/* =====================================================
+          RIGHT : INFORMATION
+      ====================================================== */}
+      <div className="relative flex flex-col justify-center lg:pl-4">
+        <div>
+          <div className="flex items-center gap-3">
+            <p className="text-[10px] font-black tracking-[0.22em] text-[#14A6D0] sm:text-[11px]">
+              INFORMATION
+            </p>
+
+            <span className="h-px w-14 bg-[#F0BD46]" />
+          </div>
+
+          <h2 className="mt-3 text-[23px] font-black leading-[1.45] text-[#07366F] sm:text-[27px]">
+            学費・出願条件の詳細は
+            <br />
+            募集要項をご確認ください。
+          </h2>
+
+          <p className="mt-4 max-w-[500px] text-[11px] leading-[1.9] text-[#71879A] sm:text-[12px]">
+            費用や納入時期についてご不明な点がございましたら、
+            <br className="hidden sm:block" />
+            お気軽にお問い合わせください。
+          </p>
+        </div>
+
+        {/* BUTTONS */}
+        <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+          {/* DOWNLOAD */}
+          <a
+            href="/boshu.pdf"
+            download
+            className="group flex min-h-[58px] flex-1 items-center justify-between rounded-[15px] border border-[#0E91C4] bg-[linear-gradient(135deg,#07366F_0%,#0751A0_100%)] px-5 text-white shadow-[0_10px_24px_rgba(7,54,111,0.16)] transition hover:-translate-y-[2px]"
+          >
+            <div className="flex items-center gap-3">
+              <svg
+                viewBox="0 0 24 24"
+                className="h-6 w-6"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.8"
+              >
+                <path d="M6 2h8l4 4v16H6V2Z" />
+                <path d="M14 2v5h5" />
+                <path d="M9 13h6M9 17h6" />
+              </svg>
+
+              <span className="text-[12px] font-black sm:text-[13px]">
+                募集要項をダウンロード
+              </span>
+            </div>
+
+            <span className="text-[20px] transition group-hover:translate-y-1">
+              ↓
+            </span>
+          </a>
+
+          {/* CONTACT */}
+          <a
+            href="/contact"
+            className="group flex min-h-[58px] items-center justify-between gap-5 rounded-[15px] bg-[linear-gradient(135deg,#F0B936_0%,#F6CA54_100%)] px-5 text-[#07366F] shadow-[0_10px_24px_rgba(192,137,20,0.16)] transition hover:-translate-y-[2px]"
+          >
+            <div className="flex items-center gap-3">
+              <svg
+                viewBox="0 0 24 24"
+                className="h-6 w-6"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.8"
+              >
+                <rect x="3" y="5" width="18" height="14" rx="2" />
+                <path d="m4 7 8 6 8-6" />
+              </svg>
+
+              <span className="whitespace-nowrap text-[13px] font-black">
+                お問い合わせ
+              </span>
+            </div>
+
+            <span className="text-[18px] transition group-hover:translate-x-1">
+              →
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {/* BOTTOM ACCENT */}
+  <div className="absolute bottom-0 left-0 h-[3px] w-full bg-gradient-to-r from-[#F0BD46] via-[#65C9F6] to-[#F0BD46]" />
+</section>
+</main>
+
+<Footer />
+</>
+);
 }
