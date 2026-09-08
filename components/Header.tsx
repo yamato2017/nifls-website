@@ -58,7 +58,33 @@ export default function Header() {
       {/* =====================================================
           MAIN HEADER
       ===================================================== */}
-      <div className="mx-auto flex min-h-[88px] w-full max-w-[1920px] items-center gap-4 px-4 sm:min-h-[94px] sm:px-6 lg:px-7 min-[1500px]:min-h-[104px] min-[1700px]:px-9">
+      <div
+        className="
+          mx-auto
+          flex
+          min-h-[88px]
+          w-full
+          max-w-[1920px]
+          items-center
+          gap-3
+          px-4
+
+          sm:min-h-[94px]
+          sm:px-6
+
+          min-[1280px]:min-h-[94px]
+          min-[1280px]:gap-2
+          min-[1280px]:px-4
+
+          min-[1450px]:min-h-[100px]
+          min-[1450px]:gap-3
+          min-[1450px]:px-5
+
+          min-[1650px]:min-h-[104px]
+          min-[1650px]:gap-4
+          min-[1650px]:px-8
+        "
+      >
         {/* =====================================================
             LOGO + SCHOOL NAME
         ===================================================== */}
@@ -67,27 +93,125 @@ export default function Header() {
           prefetch={false}
           onClick={() => setMenuOpen(false)}
           aria-label="名古屋国際外語学院 ホーム"
-          className="group flex min-w-0 flex-1 items-center gap-3.5 min-[1500px]:w-[330px] min-[1500px]:flex-none min-[1650px]:w-[360px]"
+          className="
+            group
+            flex
+            min-w-0
+            flex-1
+            items-center
+            gap-3.5
+
+            min-[1280px]:w-[245px]
+            min-[1280px]:flex-none
+            min-[1280px]:gap-2.5
+
+            min-[1400px]:w-[265px]
+
+            min-[1500px]:w-[285px]
+            min-[1500px]:gap-3
+
+            min-[1650px]:w-[330px]
+            min-[1650px]:gap-3.5
+          "
         >
           {/* LOGO */}
-          <div className="relative flex h-[58px] w-[58px] shrink-0 items-center justify-center rounded-full bg-white shadow-[0_8px_22px_rgba(0,0,0,0.18)] transition duration-300 group-hover:-translate-y-[2px] group-hover:scale-[1.025] sm:h-[66px] sm:w-[66px] min-[1500px]:h-[74px] min-[1500px]:w-[74px]">
+          <div
+            className="
+              relative
+              flex
+              h-[58px]
+              w-[58px]
+              shrink-0
+              items-center
+              justify-center
+              rounded-full
+              bg-white
+              shadow-[0_8px_22px_rgba(0,0,0,0.18)]
+              transition
+              duration-300
+
+              group-hover:-translate-y-[2px]
+              group-hover:scale-[1.025]
+
+              sm:h-[66px]
+              sm:w-[66px]
+
+              min-[1280px]:h-[58px]
+              min-[1280px]:w-[58px]
+
+              min-[1450px]:h-[64px]
+              min-[1450px]:w-[64px]
+
+              min-[1650px]:h-[74px]
+              min-[1650px]:w-[74px]
+            "
+          >
             <Image
               src="/logo.jpg"
               alt="名古屋国際外語学院"
               width={72}
               height={72}
               priority
-              className="h-[54px] w-[54px] rounded-full object-contain sm:h-[62px] sm:w-[62px] min-[1500px]:h-[70px] min-[1500px]:w-[70px]"
+              className="
+                h-[54px]
+                w-[54px]
+                rounded-full
+                object-contain
+
+                sm:h-[62px]
+                sm:w-[62px]
+
+                min-[1280px]:h-[54px]
+                min-[1280px]:w-[54px]
+
+                min-[1450px]:h-[60px]
+                min-[1450px]:w-[60px]
+
+                min-[1650px]:h-[70px]
+                min-[1650px]:w-[70px]
+              "
             />
           </div>
 
-          {/* SCHOOL NAME - wording unchanged */}
+          {/* SCHOOL NAME */}
           <div className="min-w-0">
-            <p className="whitespace-nowrap text-[17px] font-black leading-none tracking-[0.03em] text-white sm:text-[20px] min-[1500px]:text-[23px] min-[1650px]:text-[25px]">
+            <p
+              className="
+                whitespace-nowrap
+                text-[17px]
+                font-black
+                leading-none
+                tracking-[0.03em]
+                text-white
+
+                sm:text-[20px]
+
+                min-[1280px]:text-[17px]
+                min-[1400px]:text-[18px]
+                min-[1500px]:text-[20px]
+                min-[1650px]:text-[23px]
+              "
+            >
               名古屋国際外語学院
             </p>
 
-            <p className="mt-[7px] whitespace-nowrap text-[6px] font-bold tracking-[0.1em] text-[#65C9F6] sm:text-[7px] min-[1500px]:text-[8px]">
+            <p
+              className="
+                mt-[7px]
+                whitespace-nowrap
+                text-[6px]
+                font-bold
+                tracking-[0.1em]
+                text-[#65C9F6]
+
+                sm:text-[7px]
+
+                min-[1280px]:text-[5.5px]
+                min-[1400px]:text-[6px]
+                min-[1500px]:text-[6.5px]
+                min-[1650px]:text-[8px]
+              "
+            >
               NAGOYA INTERNATIONAL FOREIGN LANGUAGE SCHOOL
             </p>
 
@@ -101,7 +225,27 @@ export default function Header() {
         {/* =====================================================
             DESKTOP NAVIGATION
         ===================================================== */}
-        <nav className="ml-auto hidden h-[62px] items-center rounded-[16px] border border-[#4878AA] bg-[#0A376F]/80 p-[5px] shadow-[inset_0_1px_0_rgba(255,255,255,0.04),0_8px_22px_rgba(3,28,61,0.10)] min-[1500px]:flex">
+        <nav
+          className="
+            ml-auto
+            hidden
+            h-[56px]
+            items-center
+            rounded-[15px]
+            border
+            border-[#4878AA]
+            bg-[#0A376F]/80
+            p-[4px]
+            shadow-[inset_0_1px_0_rgba(255,255,255,0.04),0_8px_22px_rgba(3,28,61,0.10)]
+
+            min-[1280px]:flex
+
+            min-[1450px]:h-[60px]
+            min-[1450px]:p-[5px]
+
+            min-[1650px]:h-[62px]
+          "
+        >
           {navItems.map(([label, href]) => (
             <Link
               key={label}
@@ -111,15 +255,15 @@ export default function Header() {
                 group/nav
                 relative
                 flex
-                h-[50px]
+                h-[46px]
                 items-center
                 justify-center
                 whitespace-nowrap
-                rounded-[11px]
-                px-2.5
-                text-[12px]
+                rounded-[10px]
+                px-[6px]
+                text-[10.5px]
                 font-extrabold
-                tracking-[0.01em]
+                tracking-[-0.01em]
                 text-white
                 transition-all
                 duration-300
@@ -130,14 +274,20 @@ export default function Header() {
                 hover:text-white
                 hover:shadow-[0_8px_18px_rgba(0,0,0,0.15)]
 
-                min-[1600px]:px-3
-                min-[1600px]:text-[12.5px]
+                min-[1360px]:px-[7px]
+                min-[1360px]:text-[11px]
 
-                min-[1750px]:px-3.5
-                min-[1750px]:text-[13px]
+                min-[1450px]:h-[50px]
+                min-[1450px]:px-2
+                min-[1450px]:text-[11.5px]
+
+                min-[1550px]:px-2.5
+                min-[1550px]:text-[12px]
+
+                min-[1700px]:px-3
+                min-[1700px]:text-[12.5px]
               "
             >
-              {/* HOVER ACCENT */}
               <span className="pointer-events-none absolute left-1/2 top-[3px] h-[2px] w-0 -translate-x-1/2 rounded-full bg-gradient-to-r from-[#F0BD46] to-[#65C9F6] transition-all duration-300 group-hover/nav:w-[55%]" />
 
               {label}
@@ -148,7 +298,20 @@ export default function Header() {
         {/* =====================================================
             DESKTOP RIGHT AREA
         ===================================================== */}
-        <div className="hidden shrink-0 items-center gap-2.5 min-[1500px]:flex">
+        <div
+          className="
+            hidden
+            shrink-0
+            items-center
+            gap-1.5
+
+            min-[1280px]:flex
+
+            min-[1450px]:gap-2
+
+            min-[1650px]:gap-2.5
+          "
+        >
           {/* LANGUAGE */}
           <div ref={languageRef} className="relative">
             <button
@@ -159,16 +322,16 @@ export default function Header() {
               className="
                 group
                 flex
-                h-[50px]
+                h-[46px]
                 items-center
                 justify-center
                 whitespace-nowrap
-                rounded-[11px]
+                rounded-[10px]
                 border
                 border-[#4D7CAE]
                 bg-[#0B376F]
-                px-3
-                text-[12px]
+                px-2
+                text-[10.5px]
                 font-extrabold
                 text-white
                 shadow-[0_5px_14px_rgba(0,0,0,0.08)]
@@ -180,16 +343,20 @@ export default function Header() {
                 hover:bg-[#10427D]
                 hover:shadow-[0_9px_20px_rgba(0,0,0,0.16)]
 
-                min-[1650px]:px-4
-                min-[1650px]:text-[13px]
+                min-[1450px]:h-[50px]
+                min-[1450px]:px-2.5
+                min-[1450px]:text-[11.5px]
+
+                min-[1650px]:px-3.5
+                min-[1650px]:text-[12.5px]
               "
             >
-              <span className="mr-1.5 text-[#65C9F6]">◎</span>
+              <span className="mr-1 text-[#65C9F6]">◎</span>
 
               日本語
 
               <span
-                className={`ml-1.5 text-[8px] transition-transform duration-300 ${
+                className={`ml-1 text-[7px] transition-transform duration-300 ${
                   languageOpen ? "rotate-180" : ""
                 }`}
               >
@@ -197,9 +364,8 @@ export default function Header() {
               </span>
             </button>
 
-            {/* LANGUAGE DROPDOWN */}
             {languageOpen && (
-              <div className="absolute right-0 top-[59px] z-[100] w-[165px] overflow-hidden rounded-[14px] border border-[#C8DBE7] bg-white p-2 text-[#082F69] shadow-[0_18px_42px_rgba(0,0,0,0.22)]">
+              <div className="absolute right-0 top-[55px] z-[100] w-[165px] overflow-hidden rounded-[14px] border border-[#C8DBE7] bg-white p-2 text-[#082F69] shadow-[0_18px_42px_rgba(0,0,0,0.22)]">
                 {languageItems.map((item) => (
                   <Link
                     key={item.label}
@@ -223,24 +389,22 @@ export default function Header() {
             )}
           </div>
 
-          {/* =====================================================
-              APPLY
-          ===================================================== */}
+          {/* APPLY */}
           <Link
             href="/application"
             prefetch={false}
             className="
               group
               flex
-              h-[50px]
+              h-[46px]
               items-center
               justify-center
-              gap-2
+              gap-1
               whitespace-nowrap
-              rounded-[11px]
+              rounded-[10px]
               bg-[#EAB32F]
-              px-3.5
-              text-[12px]
+              px-2
+              text-[10.5px]
               font-black
               text-[#082F69]
               shadow-[0_7px_18px_rgba(0,0,0,0.12)]
@@ -252,8 +416,13 @@ export default function Header() {
               hover:bg-[#F4C44F]
               hover:shadow-[0_12px_25px_rgba(226,169,35,0.28)]
 
-              min-[1650px]:px-4
-              min-[1650px]:text-[13px]
+              min-[1450px]:h-[50px]
+              min-[1450px]:px-2.5
+              min-[1450px]:text-[11.5px]
+
+              min-[1650px]:gap-2
+              min-[1650px]:px-3.5
+              min-[1650px]:text-[12.5px]
             "
           >
             <span className="transition-transform duration-300 group-hover:-rotate-[8deg]">
@@ -263,24 +432,22 @@ export default function Header() {
             <span>申込み</span>
           </Link>
 
-          {/* =====================================================
-              CONTACT
-          ===================================================== */}
+          {/* CONTACT */}
           <Link
             href="/contact"
             prefetch={false}
             className="
               group
               flex
-              h-[50px]
+              h-[46px]
               items-center
               justify-center
-              gap-2
+              gap-1
               whitespace-nowrap
-              rounded-[11px]
+              rounded-[10px]
               bg-[#65C9F6]
-              px-3.5
-              text-[12px]
+              px-2
+              text-[10.5px]
               font-black
               text-[#082F69]
               shadow-[0_7px_18px_rgba(0,0,0,0.12)]
@@ -292,8 +459,13 @@ export default function Header() {
               hover:bg-[#81D8FA]
               hover:shadow-[0_12px_25px_rgba(101,201,246,0.28)]
 
-              min-[1650px]:px-4
-              min-[1650px]:text-[13px]
+              min-[1450px]:h-[50px]
+              min-[1450px]:px-2.5
+              min-[1450px]:text-[11.5px]
+
+              min-[1650px]:gap-2
+              min-[1650px]:px-3.5
+              min-[1650px]:text-[12.5px]
             "
           >
             <span className="transition-transform duration-300 group-hover:scale-110">
@@ -315,7 +487,7 @@ export default function Header() {
             setMenuOpen((prev) => !prev);
             setLanguageOpen(false);
           }}
-          className="flex h-[50px] w-[50px] shrink-0 flex-col items-center justify-center gap-[5px] rounded-[12px] border border-[#537EAE] bg-[#0B376F] shadow-[0_5px_14px_rgba(0,0,0,0.10)] transition hover:border-[#65C9F6] min-[1500px]:hidden"
+          className="flex h-[50px] w-[50px] shrink-0 flex-col items-center justify-center gap-[5px] rounded-[12px] border border-[#537EAE] bg-[#0B376F] shadow-[0_5px_14px_rgba(0,0,0,0.10)] transition hover:border-[#65C9F6] min-[1280px]:hidden"
         >
           <span
             className={`block h-[2px] w-[23px] rounded-full bg-white transition ${
@@ -341,9 +513,8 @@ export default function Header() {
           MOBILE / TABLET MENU
       ===================================================== */}
       {menuOpen && (
-        <div className="border-t border-white/10 bg-[#062B60] min-[1500px]:hidden">
+        <div className="border-t border-white/10 bg-[#062B60] min-[1280px]:hidden">
           <div className="mx-auto max-w-[1000px] px-4 py-5 sm:px-6">
-            {/* NAVIGATION */}
             <nav className="grid gap-2.5 sm:grid-cols-2">
               {navItems.map(([label, href], index) => (
                 <Link
@@ -379,7 +550,7 @@ export default function Header() {
 
                   <span className="flex items-center gap-3">
                     <span className="text-[9px] font-black text-[#65C9F6]">
-                      0{index + 1}
+                      {String(index + 1).padStart(2, "0")}
                     </span>
 
                     {label}
@@ -392,9 +563,7 @@ export default function Header() {
               ))}
             </nav>
 
-            {/* =================================================
-                LANGUAGE
-            ================================================= */}
+            {/* LANGUAGE */}
             <div className="mt-4 rounded-[14px] border border-white/10 bg-white/[0.035] p-4">
               <p className="text-[9px] font-black tracking-[0.22em] text-[#65C9F6]">
                 LANGUAGE
@@ -419,9 +588,7 @@ export default function Header() {
               </div>
             </div>
 
-            {/* =================================================
-                CTA
-            ================================================= */}
+            {/* CTA */}
             <div className="mt-4 grid grid-cols-2 gap-3">
               <Link
                 href="/application"
@@ -450,7 +617,6 @@ export default function Header() {
       ===================================================== */}
       <div className="relative h-[4px] w-full overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-[#F0BD46] via-[#65C9F6] via-60% to-[#F0BD46]" />
-
         <div className="absolute left-[24%] top-0 h-full w-[130px] bg-white/30 blur-[8px]" />
       </div>
     </header>

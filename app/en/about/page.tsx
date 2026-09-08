@@ -7,24 +7,24 @@ const schoolProfile = [
   ["Company", "CJ Co., Ltd."],
   ["School Name", "Nagoya International Foreign Language School"],
   ["Established", "June 2011"],
-  ["Founder", "宮里 優華"],
-  ["Honorary Chairman", "大山 昭文"],
-  ["Advisor", "吉田 勉"],
+  ["Founder", "Yuka Miyazato"],
+  ["Honorary Chairman", "Shobun Ohyama"],
+  ["Advisor", "Tsutomu Yoshida"],
 ];
 
 const leadershipTeachers = [
   {
-    name: "石川 春樹",
+    name: "Haruki Ishikawa",
     role: "Vice Principal",
     english: "VICE PRINCIPAL",
   },
   {
-    name: "吉澤 成哉",
+    name: "Shigeya Yoshisawa",
     role: "Vice Principal & Full-Time Teacher",
     english: "VICE PRINCIPAL & FULL-TIME TEACHER",
   },
   {
-    name: "水野 洋子",
+    name: "Yoko Mizuno",
     role: "Director of Academic Affairs",
     english: "DIRECTOR OF ACADEMIC AFFAIRS",
   },
@@ -32,23 +32,23 @@ const leadershipTeachers = [
 
 const fullTimeTeachers = [
   {
-    name: "井川 直子",
+    name: "Naoko Igawa",
     role: "Full-Time Teacher",
   },
   {
-    name: "小林 美穂",
+    name: "Miho Kobayashi",
     role: "Full-Time Teacher",
   },
   {
-    name: "藤本 都",
+    name: "Miyako Fujimoto",
     role: "Full-Time Teacher",
   },
   {
-    name: "李 勝男",
+    name: "Shonan Ri",
     role: "Full-Time Teacher",
   },
   {
-    name: "杉浦 由枝",
+    name: "Yoshie Sugiura",
     role: "Full-Time Teacher",
   },
   {
