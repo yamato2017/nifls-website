@@ -2,8 +2,8 @@ const documents = [
   {
     no: "01",
     en: "SCHOOL GUIDE",
-    title: "学校案内",
-    sub: "学校情報・学校紹介パンフレット",
+    title: "School Guide",
+    sub: "School Information Brochure",
     type: "PDF",
     file: "/ppt26jp.pdf",
     accent: "blue",
@@ -11,8 +11,8 @@ const documents = [
   {
     no: "02",
     en: "ADMISSION GUIDE",
-    title: "募集要項",
-    sub: "出願資格・入学に関するご案内",
+    title: "Application Guidelines",
+    sub: "Application Eligibility and Admission Information",
     type: "PDF",
     file: "/boshu.pdf",
     accent: "blue",
@@ -20,8 +20,8 @@ const documents = [
   {
     no: "03",
     en: "PAYMENT GUIDE",
-    title: "1年目学費納入スケジュール",
-    sub: "在留資格認定証明書交付後の納入費用",
+    title: "First-Year Payment Schedule",
+    sub: "Payments Due After Issuance of the Certificate of Eligibility",
     type: "PDF",
     file: "/gakuhijp.pdf",
     accent: "blue",
@@ -29,8 +29,8 @@ const documents = [
   {
     no: "04",
     en: "APPLICATION FORM",
-    title: "入学願書",
-    sub: "Excel形式の出願書類",
+    title: "Application Form",
+    sub: "Excel File for Application",
     type: "EXCEL",
     file: "/gansho.xlsx",
     accent: "green",
@@ -126,8 +126,14 @@ export default function Documents() {
             <span className="h-px w-10 bg-[#d6a22e]" />
           </div>
 
-          <h2 className="mt-2 text-[34px] font-black tracking-[0.06em] text-[#07366f] sm:text-[38px]">
-            資料ダウンロード
+          <h2
+            className="mt-2 text-[38px] font-semibold tracking-[0.04em] text-[#07366f]"
+            style={{
+              fontFamily:
+                '"Georgia","Times New Roman","Noto Serif",serif',
+            }}
+          >
+            Download Documents
           </h2>
 
           <div className="mx-auto mt-3 h-[2px] w-10 bg-[#d6a22e]" />
@@ -186,17 +192,23 @@ export default function Documents() {
                       </span>
                     </div>
 
-                    <h3 className="mt-2 text-[21px] font-black tracking-[0.03em] text-[#07366f] sm:text-[22px]">
+                    <h3
+                      className="mt-2 text-[22px] font-bold tracking-[0.02em] text-[#07366f]"
+                      style={{
+                        fontFamily:
+                          '"Georgia","Times New Roman","Noto Serif",serif',
+                      }}
+                    >
                       {doc.title}
                     </h3>
 
-                    <p className="mt-1 text-[12px] font-medium leading-[1.7] text-[#667d90]">
+                    <p className="mt-1 text-[12px] font-medium leading-[1.6] text-[#667d90]">
                       {doc.sub}
                     </p>
 
                     <div className="mt-3 flex items-center justify-between border-t border-dashed border-[#d7e3ec] pt-3">
                       <span className="text-[11px] font-bold tracking-[0.06em] text-[#174b78]">
-                        ダウンロード
+                        Download
                       </span>
 
                       <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#07366f] text-[#efb83a] shadow-[0_6px_14px_rgba(7,54,111,0.16)] transition duration-300 group-hover:translate-y-1 group-hover:bg-[#0a4588]">
@@ -215,7 +227,7 @@ export default function Documents() {
 
         {/* NOTE */}
         <p className="mt-5 text-center text-[11px] font-medium tracking-[0.02em] text-[#70879a]">
-          各資料をクリックするとダウンロードできます。
+          Click a document to start the download.
         </p>
       </div>
     </section>
