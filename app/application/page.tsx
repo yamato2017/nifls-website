@@ -277,77 +277,149 @@ export default function ApplicationPage() {
 
       <main className="overflow-hidden bg-[#F3F8FB] text-[#082F69]">
         {/* HERO */}
-        <section className="relative overflow-hidden bg-[#071F43]">
-          <div
-            className="absolute inset-0 opacity-[0.06]"
-            style={{
-              backgroundImage:
-                "linear-gradient(rgba(255,255,255,.7) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.7) 1px,transparent 1px)",
-              backgroundSize: "52px 52px",
-            }}
-          />
+<section className="relative overflow-hidden bg-[#071F43]">
+  <div
+    className="absolute inset-0 opacity-[0.06]"
+    style={{
+      backgroundImage:
+        "linear-gradient(rgba(255,255,255,.7) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.7) 1px,transparent 1px)",
+      backgroundSize: "52px 52px",
+    }}
+  />
 
-          <div className="absolute right-[-100px] top-[-120px] h-[360px] w-[360px] rounded-full border border-[#2BC8DF]/15" />
-          <div className="absolute right-[3%] top-[-35px] h-[220px] w-[220px] rounded-full border border-[#E4AA21]/15" />
+  <div className="absolute right-[-100px] top-[-120px] h-[360px] w-[360px] rounded-full border border-[#2BC8DF]/15" />
+  <div className="absolute right-[3%] top-[-35px] h-[220px] w-[220px] rounded-full border border-[#E4AA21]/15" />
 
-          <div className="relative mx-auto max-w-[1500px] px-5 py-12 sm:px-8 lg:px-12 lg:py-14">
-            <div className="max-w-[900px]">
-              <div className="flex items-center gap-3">
-                <span className="h-[2px] w-9 shrink-0 bg-[#2CC7DF]" />
+  <div className="relative mx-auto max-w-[1180px] px-5 py-11 sm:px-8 sm:py-12 lg:py-14">
+    <div className="max-w-[900px]">
+      <div className="flex items-center gap-3">
+        <span className="h-[2px] w-9 shrink-0 bg-[#2CC7DF]" />
 
-                <span className="whitespace-nowrap text-[9px] font-black tracking-[0.24em] text-[#50D9EA] sm:text-[10px] sm:tracking-[0.3em]">
-                  INTERVIEW PRE-APPLICATION
-                </span>
-              </div>
+        <span className="whitespace-nowrap text-[9px] font-black tracking-[0.24em] text-[#50D9EA] sm:text-[10px] sm:tracking-[0.3em]">
+          INTERVIEW PRE-APPLICATION
+        </span>
+      </div>
 
-              <h1 className="mt-5 whitespace-nowrap text-[31px] font-black leading-[1.15] tracking-[-0.035em] text-white min-[380px]:text-[33px] min-[420px]:text-[35px] sm:text-[42px] md:text-[48px] lg:text-[54px] lg:tracking-[-0.02em]">
-                面接事前申込みフォーム
-              </h1>
+      <h1 className="mt-5 whitespace-nowrap text-[31px] font-black leading-[1.15] tracking-[-0.035em] text-white min-[380px]:text-[33px] min-[420px]:text-[35px] sm:text-[42px] md:text-[48px] lg:text-[54px] lg:tracking-[-0.02em]">
+        面接事前申込みフォーム
+      </h1>
 
-              <p className="mt-5 max-w-[700px] text-[12.5px] font-medium leading-[2] text-white/65">
-                名古屋国際外語学院の入学面接を希望する方は、
-                以下のフォームに必要事項をご入力ください。
-              </p>
+      <p className="mt-5 max-w-[760px] text-[13px] font-medium leading-[2] text-white/70 sm:text-[14px]">
+        名古屋国際外語学院の入学面接を希望する方は、
+        以下のフォームに必要事項をご入力ください。
+      </p>
 
-              <div className="mt-6 flex h-[3px] w-[110px]">
-                <span className="flex-1 bg-[#24C5DC]" />
-                <span className="w-[32px] bg-[#E4AA22]" />
-              </div>
-            </div>
-          </div>
-        </section>
-
+      <div className="mt-6 flex h-[3px] w-[110px] overflow-hidden rounded-full">
+        <span className="flex-1 bg-[#24C5DC]" />
+        <span className="w-[32px] bg-[#E4AA22]" />
+      </div>
+    </div>
+  </div>
+</section>
         {/* NOTICE */}
-        <section className="relative z-20 -mt-[1px] bg-white">
-          <div className="mx-auto max-w-[1500px] px-5 py-7 sm:px-8 lg:px-12">
-            <div className="grid overflow-hidden rounded-[18px] border border-[#D9E5EC] bg-[#F8FBFD] lg:grid-cols-[250px_1fr]">
-              <div className="flex items-center bg-[#082F69] px-6 py-5">
-                <div>
-                  <p className="text-[9px] font-black tracking-[0.22em] text-[#48D8E9]">
-                    IMPORTANT
-                  </p>
+<section className="bg-white">
+  <div className="mx-auto max-w-[1180px] px-5 py-9 sm:px-8 sm:py-10">
+    <div
+      className="
+        overflow-hidden
+        rounded-[20px]
+        border
+        border-[#D7E3EA]
+        bg-[#F8FBFD]
+        shadow-[0_8px_24px_rgba(8,47,105,0.05)]
 
-                  <p className="mt-1 text-[16px] font-black text-white">
-                    お申込みの前に
-                  </p>
-                </div>
-              </div>
+        md:grid
+        md:min-h-[205px]
+        md:grid-cols-[31%_69%]
+      "
+    >
+      {/* LEFT */}
+      <div
+        className="
+          flex
+          items-center
+          bg-[#123A76]
+          px-7
+          py-7
+          text-white
 
-              <div className="grid gap-2 px-5 py-5 text-[10.5px] font-medium leading-[1.75] text-[#607485] sm:px-6">
-                <p>● お申込み前に、募集要項をよくご確認ください。</p>
+          sm:px-9
+          md:px-9
+          md:py-8
+        "
+      >
+        <div>
+          <p className="text-[11px] font-black tracking-[0.22em] text-[#55DCEB] sm:text-[12px]">
+            IMPORTANT
+          </p>
 
-                <p>
-                  ● この申込みは面接前の事前申込みであり、
-                  入学許可・合格を意味するものではありません。
-                </p>
+          <h2 className="mt-2 text-[21px] font-black leading-[1.5] text-white sm:text-[23px]">
+            お申込みの前に
+          </h2>
+        </div>
+      </div>
 
-                <p>● このフォームでは書類のアップロードは行いません。</p>
+      {/* RIGHT */}
+      <div
+        className="
+          flex
+          items-center
+          bg-[#F8FBFD]
+          px-6
+          py-7
 
-                <p>● 必要書類については学校からメールでご案内します。</p>
-              </div>
-            </div>
-          </div>
-        </section>
+          sm:px-8
+          md:px-9
+          md:py-8
+          lg:px-10
+        "
+      >
+        <ul className="w-full space-y-3.5 text-[13px] font-medium leading-[1.9] text-[#526C7E] sm:text-[14px] lg:text-[15px]">
+          <li className="flex items-start gap-3">
+            <span className="mt-[11px] h-[5px] w-[5px] shrink-0 rounded-full bg-[#60798C]" />
+
+            <span>
+              お申込み前に、
+              <a
+                href="/boshu.pdf"
+                download
+                className="mx-1 font-black text-[#087AB5] underline decoration-[2px] underline-offset-[4px] transition hover:text-[#D99C14]"
+              >
+                募集要項
+              </a>
+              をよくご確認ください。
+            </span>
+          </li>
+
+          <li className="flex items-start gap-3">
+            <span className="mt-[11px] h-[5px] w-[5px] shrink-0 rounded-full bg-[#60798C]" />
+
+            <span>
+              この申込みは面接前の事前申込みであり、
+              入学許可・合格を意味するものではありません。
+            </span>
+          </li>
+
+          <li className="flex items-start gap-3">
+            <span className="mt-[11px] h-[5px] w-[5px] shrink-0 rounded-full bg-[#60798C]" />
+
+            <span>
+              このフォームでは書類のアップロードは行いません。
+            </span>
+          </li>
+
+          <li className="flex items-start gap-3">
+            <span className="mt-[11px] h-[5px] w-[5px] shrink-0 rounded-full bg-[#60798C]" />
+
+            <span>
+              必要書類については学校からメールでご案内します。
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
         {/* FORM */}
         <section className="pb-14 pt-3 lg:pb-20">
@@ -798,10 +870,9 @@ export default function ApplicationPage() {
                       className={selectClass}
                     >
                       <option value="">選択してください</option>
-                      <option>4月入学</option>
-                      <option>7月入学</option>
-                      <option>10月入学</option>
-                      <option>1月入学</option>
+<option>4月入学</option>
+<option>7月入学</option>
+<option>10月入学</option>
                     </select>
                   </Field>
 

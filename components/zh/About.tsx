@@ -4,42 +4,40 @@ import Link from "next/link";
 const points = [
   {
     type: "shield",
-    before: "Continuously designated as a",
-    highlight: "Class I Appropriate School",
-    after: "since opening",
+    before: "自开校以来，持续被认定为",
+    highlight: "适正校Class I",
   },
   {
     type: "train",
-    before: "From Tokai-dori Station on the Meiko Line",
-    highlight: "3-minute walk",
+    before: "从地铁名港线“东海通”站",
+    highlight: "步行3分钟",
   },
   {
     type: "train",
-    before: "From Nagoya Station",
-    highlight: "approximately 20 minutes",
+    before: "从名古屋站出发",
+    highlight: "约20分钟",
   },
   {
     type: "school",
-    before: "",
-    highlight: "Two school buildings",
-    after: "— Main School and Chitose School",
+    before: "本校与千年校",
+    highlight: "两处校舍",
   },
   {
     type: "bed",
     before: "",
-    highlight: "Student dormitory",
-    after: "available",
+    highlight: "学生宿舍",
+    after: "设施完善",
   },
   {
     type: "food",
     before: "",
-    highlight: "Cafeteria",
-    after: "available",
+    highlight: "学生餐厅",
+    after: "设施完善",
   },
   {
     type: "support",
-    before: "Comprehensive support for",
-    highlight: "further education and life in Japan",
+    before: "从升学指导到在日生活",
+    highlight: "提供全方位支持",
   },
 ];
 
@@ -198,14 +196,14 @@ export default function About() {
               className="mt-4 text-[48px] font-semibold tracking-[0.02em] text-[#0a3269]"
               style={{
                 fontFamily:
-                  '"Georgia","Times New Roman","Noto Serif",serif',
+                  '"Noto Serif SC","Songti SC","SimSun","Yu Mincho",serif',
               }}
             >
-              About Our School
+              学校介绍
             </h2>
 
             <p className="mt-5 text-[21px] font-bold tracking-[0.01em] text-[#183f69]">
-              A Supportive and Comfortable Environment for Learning Japanese
+              安心舒适的日语学习环境
             </p>
 
             <div className="mt-3 h-[2px] w-14 bg-[#d8a638]" />
@@ -227,7 +225,6 @@ export default function About() {
 
                   <p className="text-[16px] font-semibold leading-[1.7] text-[#244967]">
                     {item.before}
-
                     {item.before && " "}
 
                     <span className="font-bold text-[#c78d1d]">
@@ -276,11 +273,11 @@ export default function About() {
 
               <div>
                 <p className="text-[14px] font-bold text-[#173f69]">
-                  Tokai-dori Station
+                  东海通站
                 </p>
 
                 <p className="mt-1 text-[15px] font-bold text-[#c78d1d]">
-                  3-Minute Walk
+                  步行3分钟
                 </p>
 
                 <div className="mt-2 h-[2px] w-10 bg-[#d7aa3e]" />
@@ -306,11 +303,11 @@ export default function About() {
 
               <div>
                 <p className="text-[14px] font-bold text-[#173f69]">
-                  Student Dormitory
+                  学生宿舍
                 </p>
 
                 <p className="mt-1 text-[15px] font-bold text-[#c78d1d]">
-                  Available
+                  设施完善
                 </p>
 
                 <div className="mt-2 h-[2px] w-10 bg-[#d7aa3e]" />
@@ -336,11 +333,11 @@ export default function About() {
 
               <div>
                 <p className="text-[14px] font-bold text-[#173f69]">
-                  Cafeteria
+                  学生餐厅
                 </p>
 
                 <p className="mt-1 text-[15px] font-bold text-[#c78d1d]">
-                  Available
+                  设施完善
                 </p>
 
                 <div className="mt-2 h-[2px] w-10 bg-[#d7aa3e]" />
@@ -358,7 +355,7 @@ export default function About() {
               <div className="relative aspect-[3/4] w-full overflow-hidden rounded-[15px] bg-[#eaf4fa]">
                 <Image
                   src="/schoolchitoseko.jpg"
-                  alt="Nagoya International Foreign Language School - Chitose School"
+                  alt="名古屋国际外语学院 千年校"
                   fill
                   sizes="(max-width: 1024px) 90vw, 470px"
                   className="object-contain object-center"
@@ -371,13 +368,13 @@ export default function About() {
                     NAGOYA
                   </p>
 
-                  <p className="mt-1 text-[15px] font-bold leading-[1.4] text-[#0a376f]">
-                    Nagoya International Foreign Language School
+                  <p className="mt-1 whitespace-nowrap text-[16px] font-bold text-[#0a376f]">
+                    名古屋国际外语学院
                   </p>
                 </div>
 
                 <span className="shrink-0 rounded-full border border-[#c9ddea] bg-[#f3f9fd] px-4 py-2 text-[12px] font-bold text-[#315a7d]">
-                  Chitose School
+                  千年校
                 </span>
               </div>
             </div>
@@ -387,11 +384,11 @@ export default function About() {
         {/* CTA */}
         <div className="mt-10 flex justify-center">
           <Link
-            href="/en/about"
+            href="/zh/about"
             prefetch={false}
             className="group flex min-w-[330px] items-center justify-center gap-6 rounded-[8px] border border-[#d6a53a] bg-[#0a376f] px-10 py-[15px] text-[16px] font-bold text-white shadow-[0_8px_20px_rgba(10,55,111,0.16)] transition duration-300 hover:-translate-y-[2px] hover:bg-[#0d468b]"
           >
-            Learn More About Our School
+            查看学校介绍
 
             <span className="text-[22px] text-[#e5b13f] transition duration-300 group-hover:translate-x-1">
               →

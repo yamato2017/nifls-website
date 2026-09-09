@@ -24,3 +24,18 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* =========================================================
+   CHINESE SITE FONT FIX — /zh ONLY
+========================================================= */
+
+.zh-site,
+.zh-site * {
+  font-family:
+    "Microsoft YaHei",
+    "PingFang SC",
+    "Noto Sans SC",
+    "Source Han Sans SC",
+    Arial,
+    sans-serif !important;
+}

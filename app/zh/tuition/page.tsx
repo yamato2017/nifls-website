@@ -1,0 +1,814 @@
+import Image from "next/image";
+import Link from "next/link";
+import Header from "@/components/zh/Header";
+import Footer from "@/components/zh/Footer";
+
+const aprilRows = [
+  ["选考费", "¥25,000", "¥0"],
+  ["入学金", "¥50,000", "¥0"],
+  ["学费", "¥720,000", "¥720,000"],
+  ["杂费", "¥50,000", "¥50,000"],
+  ["消费税（10%）", "¥84,500", "¥77,000"],
+];
+
+const julyRows = [
+  ["选考费", "¥25,000", "¥0"],
+  ["入学金", "¥50,000", "¥0"],
+  ["学费", "¥720,000", "¥540,000"],
+  ["杂费", "¥50,000", "¥37,500"],
+  ["消费税（10%）", "¥84,500", "¥71,500"],
+];
+
+const octoberRows = [
+  ["选考费", "¥25,000", "¥0"],
+  ["入学金", "¥50,000", "¥0"],
+  ["学费", "¥720,000", "¥360,000"],
+  ["杂费", "¥50,000", "¥25,000"],
+  ["消费税（10%）", "¥84,500", "¥38,500"],
+];
+
+const courses = [
+  {
+    no: "01",
+    month: "4月入学",
+    en: "APRIL ENTRY",
+    course: "升学2年课程",
+    duration: "2年",
+    firstLabel: "第1学年",
+    secondLabel: "第2学年",
+    first: "¥929,500",
+    second: "¥847,000",
+    total: "¥1,776,500",
+    totalLabel: "2年总额",
+    rows: aprilRows,
+    accent: "#082F69",
+    soft: "#EEF5FB",
+  },
+  {
+    no: "02",
+    month: "7月入学",
+    en: "JULY ENTRY",
+    course: "升学1年9个月课程",
+    duration: "1年9个月",
+    firstLabel: "第1学年",
+    secondLabel: "第2学年",
+    first: "¥929,500",
+    second: "¥649,000",
+    total: "¥1,578,500",
+    totalLabel: "1年9个月总额",
+    rows: julyRows,
+    accent: "#1297A8",
+    soft: "#ECF9FB",
+  },
+  {
+    no: "03",
+    month: "10月入学",
+    en: "OCTOBER ENTRY",
+    course: "升学1年6个月课程",
+    duration: "1年6个月",
+    firstLabel: "第1学年",
+    secondLabel: "第2学年（半年）",
+    first: "¥929,500",
+    second: "¥423,500",
+    total: "¥1,353,000",
+    totalLabel: "1年6个月总额",
+    rows: octoberRows,
+    accent: "#C58C18",
+    soft: "#FFF8E9",
+  },
+];
+
+const dormitoryFees = [
+  {
+    room: "单人间",
+    price: "¥57,000",
+  },
+  {
+    room: "双人间",
+    price: "¥47,000",
+  },
+  {
+    room: "3～4人间",
+    price: "¥42,000",
+  },
+  {
+    room: "5人间",
+    price: "¥37,000",
+  },
+];
+
+function MealIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="h-6 w-6"
+    >
+      <path d="M6 3v8" />
+      <path d="M3.5 3v5a2.5 2.5 0 0 0 5 0V3" />
+      <path d="M6 11v10" />
+      <path d="M17 3c-2 2-3 5-3 8h5V3" />
+      <path d="M17 11v10" />
+    </svg>
+  );
+}
+
+export default function TuitionPage() {
+  return (
+    <>
+      <Header />
+
+      <main className="min-h-screen bg-[#F7FBFE] text-[#082F69]">
+        {/* =====================================================
+            HERO
+        ====================================================== */}
+        <section className="relative overflow-hidden bg-[#EEF7FC]">
+          <div
+            className="
+              relative mx-auto
+              h-[270px]
+              max-w-[1760px]
+              overflow-hidden
+              sm:h-[295px]
+              md:h-[320px]
+              lg:h-[370px]
+            "
+          >
+            <Image
+              src="/bunka2.jpg"
+              alt="名古屋国际外语学院 校园生活"
+              fill
+              priority
+              sizes="100vw"
+              className="
+                object-cover
+                object-[62%_50%]
+                sm:object-[60%_50%]
+                md:object-[58%_50%]
+                lg:object-center
+              "
+            />
+
+            <div
+              className="
+                absolute inset-0
+                bg-[linear-gradient(90deg,rgba(248,252,255,1)_0%,rgba(248,252,255,0.98)_36%,rgba(243,250,254,0.90)_51%,rgba(238,248,253,0.46)_66%,rgba(238,248,253,0.05)_82%)]
+                sm:bg-[linear-gradient(90deg,rgba(248,252,255,1)_0%,rgba(248,252,255,0.97)_34%,rgba(243,250,254,0.84)_50%,rgba(238,248,253,0.35)_68%,rgba(238,248,253,0)_86%)]
+                lg:bg-[linear-gradient(90deg,rgba(248,252,255,0.98)_0%,rgba(247,252,255,0.96)_27%,rgba(241,249,254,0.78)_45%,rgba(239,248,253,0.28)_68%,rgba(239,248,253,0)_100%)]
+              "
+            />
+
+            <div
+              className="
+                pointer-events-none
+                absolute
+                -left-[120px]
+                -top-[175px]
+                h-[300px]
+                w-[300px]
+                rounded-full
+                border-[18px]
+                border-white/40
+                sm:-left-[110px]
+                sm:-top-[170px]
+                sm:h-[320px]
+                sm:w-[320px]
+                lg:-left-[100px]
+                lg:-top-[150px]
+                lg:h-[330px]
+                lg:w-[330px]
+                lg:border-[22px]
+              "
+            />
+
+            <div
+              className="
+                pointer-events-none
+                absolute
+                left-[37%]
+                top-[28px]
+                h-[72px]
+                w-[95px]
+                opacity-20
+                sm:left-[38%]
+                sm:h-[85px]
+                sm:w-[115px]
+                lg:left-[39%]
+                lg:top-[35px]
+                lg:h-[105px]
+                lg:w-[145px]
+              "
+              style={{
+                backgroundImage:
+                  "radial-gradient(circle,#D6A22E 1.4px,transparent 1.4px)",
+                backgroundSize: "13px 13px",
+              }}
+            />
+
+            <div
+              className="
+                relative z-10
+                flex h-full
+                items-center
+                px-5
+                sm:px-8
+                md:px-10
+                lg:px-[6%]
+              "
+            >
+              <div className="max-w-[620px]">
+                <div className="flex items-center gap-3 lg:gap-4">
+                  <span className="h-px w-8 bg-[#D6A22E] sm:w-9 lg:w-10" />
+
+                  <p className="whitespace-nowrap text-[9px] font-black tracking-[0.24em] text-[#C58B18] sm:text-[10px] lg:text-[12px] lg:tracking-[0.28em]">
+                    TUITION & FEES
+                  </p>
+                </div>
+
+                <h1 className="mt-4 whitespace-nowrap text-[34px] font-semibold leading-[1.15] tracking-[0.015em] text-[#07366F] min-[390px]:text-[36px] sm:text-[42px] md:text-[47px] lg:text-[52px] lg:tracking-[0.06em]">
+                  学费说明
+                </h1>
+
+                <div className="mt-5 flex items-center gap-2">
+                  <span className="h-[3px] w-[42px] rounded-full bg-[#07366F] sm:w-[48px]" />
+                  <span className="h-[3px] w-[20px] rounded-full bg-[#65C9F6]" />
+                  <span className="h-[3px] w-[10px] rounded-full bg-[#F0BD46]" />
+                </div>
+              </div>
+            </div>
+
+            <div className="absolute bottom-0 left-0 z-20 h-[5px] w-full bg-gradient-to-r from-[#F0BD46] via-[#65C9F6] to-[#082F69]" />
+          </div>
+        </section>
+
+        {/* =====================================================
+            SCHOOL FEES
+        ====================================================== */}
+        <section className="relative overflow-hidden bg-[linear-gradient(180deg,#F8FCFF_0%,#EEF7FC_55%,#F8FCFF_100%)] px-5 py-12 sm:px-8 lg:px-10">
+          <div className="pointer-events-none absolute -right-32 top-[-145px] h-[410px] w-[410px] rounded-full border border-[#D8AA36]/25" />
+
+          <div className="pointer-events-none absolute left-[-45px] top-[110px] select-none text-[105px] font-bold tracking-[0.04em] text-[#E8F2F8]">
+            SCHOOL FEES
+          </div>
+
+          <div className="relative z-10 mx-auto max-w-[1500px]">
+            <div className="mb-9 text-center">
+              <div className="flex items-center justify-center gap-4">
+                <span className="h-px w-9 bg-[#D6A22E]" />
+
+                <p className="text-[11px] font-bold tracking-[0.24em] text-[#C58D18]">
+                  SCHOOL FEES
+                </p>
+
+                <span className="h-px w-9 bg-[#D6A22E]" />
+              </div>
+
+              <h2 className="mt-2 text-[38px] font-semibold tracking-[0.08em] text-[#07366F]">
+                学费
+              </h2>
+
+              <p className="mt-2 text-[13px] font-semibold text-[#627A8D]">
+                可从3个入学时期中选择
+              </p>
+
+              <div className="mx-auto mt-3 h-[2px] w-10 bg-[#D6A22E]" />
+            </div>
+
+            <div className="grid gap-5 xl:grid-cols-3">
+              {courses.map((course) => (
+                <article
+                  key={course.month}
+                  className="group relative overflow-hidden rounded-[22px] border border-[#CBDDE8] bg-white shadow-[0_15px_36px_rgba(20,76,112,0.10)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_21px_44px_rgba(20,76,112,0.15)]"
+                >
+                  <div
+                    className="h-[5px] w-full"
+                    style={{ backgroundColor: course.accent }}
+                  />
+
+                  <div
+                    className="relative overflow-hidden px-6 pb-5 pt-6"
+                    style={{
+                      background: `linear-gradient(135deg,#FFFFFF 0%,${course.soft} 100%)`,
+                    }}
+                  >
+                    <span className="pointer-events-none absolute right-3 top-[-5px] text-[78px] font-bold leading-none text-[#E8F2F7]">
+                      {course.no}
+                    </span>
+
+                    <div className="relative z-10">
+                      <div className="flex items-start justify-between gap-3">
+                        <div>
+                          <p
+                            className="text-[10px] font-bold tracking-[0.18em]"
+                            style={{ color: course.accent }}
+                          >
+                            {course.en}
+                          </p>
+
+                          <span
+                            className="mt-2 inline-flex rounded-full px-3.5 py-1.5 text-[11px] font-bold text-white"
+                            style={{
+                              backgroundColor: course.accent,
+                            }}
+                          >
+                            {course.month}
+                          </span>
+                        </div>
+
+                        <div className="rounded-[12px] border border-[#D3E2EB] bg-white px-3 py-2 text-center shadow-sm">
+                          <p className="text-[9px] font-bold text-[#748797]">
+                            学习期间
+                          </p>
+
+                          <p
+                            className="mt-0.5 text-[14px] font-bold"
+                            style={{ color: course.accent }}
+                          >
+                            {course.duration}
+                          </p>
+                        </div>
+                      </div>
+
+                      <h3 className="mt-4 text-[25px] font-semibold tracking-[0.03em] text-[#07366F]">
+                        {course.course}
+                      </h3>
+
+                      <div className="mt-3 flex items-center gap-3">
+                        <span
+                          className="h-[3px] w-9 rounded-full"
+                          style={{ backgroundColor: course.accent }}
+                        />
+
+                        <span className="h-px flex-1 bg-[#DCE7EE]" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="px-5 pb-5 pt-1">
+                    <div className="overflow-hidden rounded-[14px] border border-[#D8E6EE] bg-white">
+                      <div
+                        className="grid grid-cols-[1.08fr_1fr_1fr] px-4 py-3 text-[10px] font-bold"
+                        style={{ backgroundColor: course.soft }}
+                      >
+                        <span>项目</span>
+
+                        <span className="text-center">
+                          {course.firstLabel}
+                        </span>
+
+                        <span className="text-center">
+                          {course.secondLabel}
+                        </span>
+                      </div>
+
+                      {course.rows.map(([label, first, second]) => (
+                        <div
+                          key={label}
+                          className="grid grid-cols-[1.08fr_1fr_1fr] items-center border-t border-[#E3EDF2] px-4 py-3 text-[11px]"
+                        >
+                          <span className="font-bold text-[#244964]">
+                            {label}
+                          </span>
+
+                          <span className="text-center font-semibold text-[#173F69]">
+                            {first}
+                          </span>
+
+                          <span className="text-center font-semibold text-[#173F69]">
+                            {second}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="mt-3 grid grid-cols-2 gap-3">
+                      <div
+                        className="rounded-[13px] px-4 py-3 text-center"
+                        style={{ backgroundColor: course.soft }}
+                      >
+                        <p className="text-[9px] font-bold text-[#6D8394]">
+                          {course.firstLabel}合计
+                        </p>
+
+                        <p
+                          className="mt-1 text-[19px] font-extrabold"
+                          style={{ color: course.accent }}
+                        >
+                          {course.first}
+                        </p>
+                      </div>
+
+                      <div
+                        className="rounded-[13px] px-4 py-3 text-center"
+                        style={{ backgroundColor: course.soft }}
+                      >
+                        <p className="text-[9px] font-bold text-[#6D8394]">
+                          {course.secondLabel}合计
+                        </p>
+
+                        <p
+                          className="mt-1 text-[19px] font-extrabold"
+                          style={{ color: course.accent }}
+                        >
+                          {course.second}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    className="flex items-center justify-between gap-4 px-6 py-4 text-white"
+                    style={{ backgroundColor: course.accent }}
+                  >
+                    <div>
+                      <p className="text-[9px] font-bold tracking-[0.14em] text-white/70">
+                        TOTAL SCHOOL FEE
+                      </p>
+
+                      <p className="mt-0.5 text-[11px] font-bold">
+                        {course.totalLabel}
+                      </p>
+                    </div>
+
+                    <p className="text-[27px] font-extrabold text-[#F7C64B]">
+                      {course.total}
+                    </p>
+                  </div>
+                </article>
+              ))}
+            </div>
+
+            {/* IMPORTANT NOTICE */}
+            <div className="relative mt-7 overflow-hidden rounded-[18px] border-2 border-[#F0BD46] bg-[#082F69] shadow-[0_15px_34px_rgba(7,54,111,0.20)]">
+              <div className="absolute left-0 top-0 h-full w-[7px] bg-[#F0BD46]" />
+
+              <div className="relative px-6 py-5 sm:px-7 sm:py-6">
+                <div className="flex flex-wrap items-center gap-2.5 sm:gap-3">
+                  <div className="relative flex h-[34px] w-[34px] shrink-0 items-center justify-center sm:h-[38px] sm:w-[38px]">
+                    <span className="absolute inset-0 animate-ping rounded-full bg-[#F0BD46]/25" />
+
+                    <span className="relative flex h-full w-full items-center justify-center rounded-full bg-[#F0BD46] text-[18px] font-black leading-none text-[#082F69] shadow-[0_5px_14px_rgba(0,0,0,0.18)] sm:text-[20px]">
+                      !
+                    </span>
+                  </div>
+
+                  <span className="rounded-full bg-[#D9423A] px-3.5 py-[7px] text-[10px] font-extrabold leading-none tracking-[0.08em] text-white sm:text-[11px]">
+                    重要
+                  </span>
+
+                  <p className="text-[8px] font-bold tracking-[0.13em] text-[#65C9F6] min-[390px]:text-[9px] sm:text-[10px] sm:tracking-[0.17em]">
+                    IMPORTANT PAYMENT INFORMATION
+                  </p>
+                </div>
+
+                <p className="mt-4 text-[17px] font-bold leading-[1.75] text-white sm:text-[19px] md:text-[21px]">
+                  学费及学生宿舍费用仅接受
+                  <span className="mx-1 text-[#F0BD46]">
+                    按学年一次性缴纳
+                  </span>
+                  。
+                </p>
+
+                <p className="mt-1.5 text-[11px] font-semibold leading-[1.7] text-[#D8E7F4] sm:text-[12px]">
+                  不接受按月支付或分期付款。
+                </p>
+              </div>
+            </div>
+
+            {/* DORMITORY FEE */}
+            <div className="mt-7 overflow-hidden rounded-[22px] border border-[#416C99] bg-[#082F69] shadow-[0_16px_36px_rgba(7,54,111,0.18)]">
+              <div className="h-[4px] w-full bg-gradient-to-r from-[#F0BD46] via-[#65C9F6] to-[#F0BD46]" />
+
+              <div className="grid lg:grid-cols-[270px_1fr]">
+                <div className="flex flex-col justify-center border-b border-white/10 px-7 py-7 lg:border-b-0 lg:border-r">
+                  <p className="text-[10px] font-bold tracking-[0.16em] text-[#65C9F6]">
+                    INITIAL FEE
+                  </p>
+
+                  <p className="mt-2 text-[17px] font-bold text-white">
+                    入住费
+                  </p>
+
+                  <p className="mt-2 text-[35px] font-extrabold text-[#F0BD46]">
+                    ¥60,000
+                  </p>
+
+                  <p className="mt-1 text-[10px] text-[#B8CDDF]">
+                    仅首次入住时收取
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-2 md:grid-cols-4">
+                  {dormitoryFees.map((item, index) => (
+                    <div
+                      key={item.room}
+                      className={`flex flex-col justify-center px-5 py-7 text-center ${
+                        index !== dormitoryFees.length - 1
+                          ? "border-r border-white/10"
+                          : ""
+                      }`}
+                    >
+                      <p className="text-[12px] font-bold text-[#DCE9F4]">
+                        {item.room}
+                      </p>
+
+                      <p className="mt-3 text-[24px] font-extrabold text-[#F0BD46]">
+                        {item.price}
+                      </p>
+
+                      <p className="mt-1 text-[10px] font-semibold text-[#B8CDDF]">
+                        / 月
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* MEALS INCLUDED */}
+              <div className="border-t border-white/10 bg-[#0A396D] px-5 py-5">
+                <div className="mx-auto flex max-w-[900px] flex-col items-center justify-center gap-4 rounded-[16px] border border-[#F0BD46]/70 bg-[#FFF9E9] px-5 py-4 text-[#082F69] shadow-[0_8px_20px_rgba(0,0,0,0.12)] sm:flex-row">
+                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#F0BD46] text-[#082F69]">
+                    <MealIcon />
+                  </span>
+
+                  <div className="text-center sm:text-left">
+                    <p className="text-[10px] font-bold tracking-[0.15em] text-[#C58D18]">
+                      MEALS INCLUDED
+                    </p>
+
+                    <p className="mt-1 text-[16px] font-extrabold sm:text-[18px]">
+                      宿舍费中包含每日3餐的餐费。
+                    </p>
+
+                    <div className="mt-2">
+                      <p className="text-[12px] font-semibold text-[#61798B]">
+                        早餐、午餐、晚餐（便当）
+                      </p>
+
+                      <p className="mt-2 text-[11px] font-semibold leading-[1.6] text-[#7A8C99]">
+                        ※ 仅在学院有课程的日期提供餐食。
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <p className="mt-3 text-center text-[11px] font-medium tracking-[0.03em] text-[#708697]">
+              ※ 水电燃气等费用不包含在宿舍费中。
+            </p>
+          </div>
+        </section>
+
+        {/* =====================================================
+            SCHOLARSHIP & INFORMATION
+        ====================================================== */}
+        <section className="relative overflow-hidden bg-[linear-gradient(110deg,#F8FCFF_0%,#EEF8FD_48%,#F7FBFE_100%)] px-5 py-10 sm:px-8 lg:px-10 lg:py-12">
+          <div className="pointer-events-none absolute -left-[120px] -top-[150px] h-[520px] w-[520px] rounded-full border-[2px] border-[#E6B83D]/60" />
+          <div className="pointer-events-none absolute -left-[80px] -top-[110px] h-[520px] w-[520px] rounded-full border-[22px] border-[#DDF3FC]/80" />
+
+          <div
+            className="pointer-events-none absolute right-[2%] top-[30px] h-[120px] w-[160px] opacity-25"
+            style={{
+              backgroundImage:
+                "radial-gradient(circle,#3DB4DF 1.5px,transparent 1.5px)",
+              backgroundSize: "14px 14px",
+            }}
+          />
+
+          <div className="relative z-10 mx-auto max-w-[1320px]">
+            <div className="grid gap-9 lg:grid-cols-[1.08fr_0.92fr] lg:gap-10">
+              {/* LEFT */}
+              <div className="relative lg:pr-10">
+                <div className="absolute -right-[1px] top-2 hidden h-[92%] w-px bg-[#8FB8D2] lg:block">
+                  <span className="absolute left-0 top-[36%] h-[85px] w-[2px] bg-[#F0BD46]" />
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="flex h-[72px] w-[72px] shrink-0 items-center justify-center rounded-full border-[2px] border-[#F0BD46] bg-[#07366F] shadow-[0_8px_20px_rgba(7,54,111,0.18)] sm:h-[82px] sm:w-[82px]">
+                    <svg
+                      viewBox="0 0 64 64"
+                      className="h-10 w-10 text-[#F0BD46]"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="3"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M7 23 32 12l25 11-25 11L7 23Z" />
+                      <path d="M17 29v13c8 7 22 7 30 0V29" />
+                      <path d="M57 23v16" />
+                      <circle cx="57" cy="42" r="2" fill="currentColor" />
+                    </svg>
+                  </div>
+
+                  <div className="min-w-0 pt-1">
+                    <div className="flex items-center gap-3">
+                      <p className="text-[10px] font-black tracking-[0.2em] text-[#C58D18] sm:text-[11px]">
+                        SCHOLARSHIP & AWARDS
+                      </p>
+
+                      <span className="hidden h-px w-16 bg-[#D9A728] sm:block" />
+                    </div>
+
+                    <h2 className="mt-2 text-[23px] font-black leading-[1.35] text-[#07366F] sm:text-[28px]">
+                      早餐、午餐、晚餐（便当）
+                    </h2>
+
+                    <p className="mt-2 text-[11px] leading-[1.8] text-[#71879A] sm:text-[12px]">
+                      支持认真努力的学生，
+                      <br className="sm:hidden" />
+                      助力每一位学生的学习与成长。
+                    </p>
+                  </div>
+                </div>
+
+                <div className="ml-[88px] mt-5 flex sm:ml-[98px]">
+                  <span className="h-[3px] w-[72px] bg-[#F0BD46]" />
+                  <span className="h-[3px] w-[72px] bg-[#42BDE4]" />
+                </div>
+
+                <div className="mt-8 grid gap-4 sm:grid-cols-3">
+                  {/* SCHOLARSHIP */}
+                  <div className="group relative rounded-[18px] border border-[#CBE3EF] bg-white px-5 pb-5 pt-10 text-center shadow-[0_10px_28px_rgba(7,54,111,0.08)] transition hover:-translate-y-1 hover:shadow-[0_15px_32px_rgba(7,54,111,0.13)]">
+                    <div className="absolute left-1/2 top-0 flex h-[58px] w-[58px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-[2px] border-[#F0BD46] bg-[#07366F] shadow-[0_6px_15px_rgba(7,54,111,0.18)]">
+                      <span className="text-[26px] font-light text-[#F0BD46]">
+                        ¥
+                      </span>
+                    </div>
+
+                    <h3 className="text-[16px] font-black text-[#07366F]">
+                      奖学金制度
+                    </h3>
+
+                    <p className="mt-2 text-[11px] leading-[1.7] text-[#73899B]">
+                      支持学生
+                      <br />
+                      持续努力学习。
+                    </p>
+
+                    <span className="mx-auto mt-4 block h-[2px] w-12 bg-[#F0BD46]" />
+                  </div>
+
+                  {/* PERFECT ATTENDANCE */}
+                  <div className="group relative mt-7 rounded-[18px] border border-[#CBE3EF] bg-white px-5 pb-5 pt-10 text-center shadow-[0_10px_28px_rgba(7,54,111,0.08)] transition hover:-translate-y-1 hover:shadow-[0_15px_32px_rgba(7,54,111,0.13)] sm:mt-0">
+                    <div className="absolute left-1/2 top-0 flex h-[58px] w-[58px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-[2px] border-[#F0BD46] bg-[#07366F] shadow-[0_6px_15px_rgba(7,54,111,0.18)]">
+                      <svg
+                        viewBox="0 0 48 48"
+                        className="h-7 w-7 text-[#F0BD46]"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.6"
+                        strokeLinecap="round"
+                      >
+                        <circle cx="18" cy="17" r="5" />
+                        <circle cx="31" cy="18" r="4" />
+                        <path d="M8 35c1-7 5-11 10-11s9 4 10 11" />
+                        <path d="M27 27c6 0 10 3 11 8" />
+                      </svg>
+                    </div>
+
+                    <h3 className="text-[16px] font-black text-[#07366F]">
+                      全勤奖
+                    </h3>
+
+                    <p className="mt-2 text-[11px] leading-[1.7] text-[#73899B]">
+                      表彰学生
+                      <br />
+                      日常坚持与努力。
+                    </p>
+
+                    <span className="mx-auto mt-4 block h-[2px] w-12 bg-[#F0BD46]" />
+                  </div>
+
+                  {/* EXCELLENCE */}
+                  <div className="group relative mt-7 rounded-[18px] border border-[#CBE3EF] bg-white px-5 pb-5 pt-10 text-center shadow-[0_10px_28px_rgba(7,54,111,0.08)] transition hover:-translate-y-1 hover:shadow-[0_15px_32px_rgba(7,54,111,0.13)] sm:mt-0">
+                    <div className="absolute left-1/2 top-0 flex h-[58px] w-[58px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-[2px] border-[#F0BD46] bg-[#07366F] shadow-[0_6px_15px_rgba(7,54,111,0.18)]">
+                      <svg
+                        viewBox="0 0 48 48"
+                        className="h-7 w-7 text-[#F0BD46]"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.6"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <path d="M16 8h16v6c0 8-3 13-8 16-5-3-8-8-8-16V8Z" />
+                        <path d="M16 12H9c0 7 3 11 9 12" />
+                        <path d="M32 12h7c0 7-3 11-9 12" />
+                        <path d="M24 30v7" />
+                        <path d="M17 40h14" />
+                      </svg>
+                    </div>
+
+                    <h3 className="text-[16px] font-black text-[#07366F]">
+                      优秀奖
+                    </h3>
+
+                    <p className="mt-2 text-[11px] leading-[1.7] text-[#73899B]">
+                      表彰学习成绩
+                      <br />
+                      优秀的学生。
+                    </p>
+
+                    <span className="mx-auto mt-4 block h-[2px] w-12 bg-[#F0BD46]" />
+                  </div>
+                </div>
+              </div>
+
+              {/* RIGHT */}
+              <div className="relative flex flex-col justify-center lg:pl-4">
+                <div>
+                  <div className="flex items-center gap-3">
+                    <p className="text-[10px] font-black tracking-[0.22em] text-[#14A6D0] sm:text-[11px]">
+                      INFORMATION
+                    </p>
+
+                    <span className="h-px w-14 bg-[#F0BD46]" />
+                  </div>
+
+                  <h2 className="mt-3 text-[23px] font-black leading-[1.45] text-[#07366F] sm:text-[27px]">
+                    关于学费及申请条件的详细信息，
+                    <br />
+                    请查看招生简章。
+                  </h2>
+
+                  <p className="mt-4 max-w-[500px] text-[11px] leading-[1.9] text-[#71879A] sm:text-[12px]">
+                    如对费用或缴费时间有任何疑问，
+                    <br className="hidden sm:block" />
+                    欢迎随时联系我们。
+                  </p>
+                </div>
+
+                <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+                  <a
+                    href="/boshu.pdf"
+                    download
+                    className="group flex min-h-[58px] flex-1 items-center justify-between rounded-[15px] border border-[#0E91C4] bg-[linear-gradient(135deg,#07366F_0%,#0751A0_100%)] px-5 text-white shadow-[0_10px_24px_rgba(7,54,111,0.16)] transition hover:-translate-y-[2px]"
+                  >
+                    <div className="flex items-center gap-3">
+                      <svg
+                        viewBox="0 0 24 24"
+                        className="h-6 w-6"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.8"
+                      >
+                        <path d="M6 2h8l4 4v16H6V2Z" />
+                        <path d="M14 2v5h5" />
+                        <path d="M9 13h6M9 17h6" />
+                      </svg>
+
+                      <span className="text-[12px] font-black sm:text-[13px]">
+                        下载招生简章
+                      </span>
+                    </div>
+
+                    <span className="text-[20px] transition group-hover:translate-y-1">
+                      ↓
+                    </span>
+                  </a>
+
+                  <Link
+                    href="/zh/contact"
+                    prefetch={false}
+                    className="group flex min-h-[58px] items-center justify-between gap-5 rounded-[15px] bg-[linear-gradient(135deg,#F0B936_0%,#F6CA54_100%)] px-5 text-[#07366F] shadow-[0_10px_24px_rgba(192,137,20,0.16)] transition hover:-translate-y-[2px]"
+                  >
+                    <div className="flex items-center gap-3">
+                      <svg
+                        viewBox="0 0 24 24"
+                        className="h-6 w-6"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.8"
+                      >
+                        <rect x="3" y="5" width="18" height="14" rx="2" />
+                        <path d="m4 7 8 6 8-6" />
+                      </svg>
+
+                      <span className="whitespace-nowrap text-[13px] font-black">
+                        联系我们
+                      </span>
+                    </div>
+
+                    <span className="text-[18px] transition group-hover:translate-x-1">
+                      →
+                    </span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="absolute bottom-0 left-0 h-[3px] w-full bg-gradient-to-r from-[#F0BD46] via-[#65C9F6] to-[#F0BD46]" />
+        </section>
+      </main>
+
+      <Footer />
+    </>
+  );
+}
