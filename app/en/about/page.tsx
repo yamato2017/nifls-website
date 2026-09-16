@@ -52,7 +52,7 @@ const fullTimeTeachers = [
     role: "Full-Time Teacher",
   },
   {
-    name: "大野 素",
+    name: "Take Ei",
     role: "Full-Time Teacher",
   },
 ];

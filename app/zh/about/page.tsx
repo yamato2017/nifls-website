@@ -52,7 +52,7 @@ const fullTimeTeachers = [
     role: "专任讲师",
   },
   {
-    name: "大野 素",
+    name: "武 頴",
     role: "全职讲师",
   },
 ];
