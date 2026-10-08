@@ -30,6 +30,7 @@ const leadershipTeachers = [
   },
 ];
 
+
 const fullTimeTeachers = [
   {
     name: "井川 直子",
@@ -43,8 +44,6 @@ const fullTimeTeachers = [
     name: "藤本 都",
     role: "专任讲师",
   },
-  {
-    
   {
     name: "李 勝男",
     role: "专任讲师",
@@ -62,6 +61,7 @@ const fullTimeTeachers = [
     role: "专任讲师",
   },
 ];
+
 
 function TeacherMark() {
   return (
