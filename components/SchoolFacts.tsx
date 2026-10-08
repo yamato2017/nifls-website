@@ -25,7 +25,7 @@ const facts = [
   },
   {
     label: "職員",
-    value: "6",
+    value: "7",
     unit: "名",
     type: "staff",
     accent: "#1AA7B7",

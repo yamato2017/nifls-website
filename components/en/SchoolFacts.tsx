@@ -25,7 +25,7 @@ const facts = [
   },
   {
     label: "Staff",
-    value: "6",
+    value: "7",
     unit: "Staff Members",
     type: "staff",
     accent: "#1AA7B7",

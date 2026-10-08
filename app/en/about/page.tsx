@@ -55,6 +55,10 @@ const fullTimeTeachers = [
     name: "WU YING",
     role: "Full-Time Teacher",
   },
+  {
+    name: "Yasuko Mori",
+    role: "Full-Time Teacher",
+  },
 ];
 
 function TeacherMark() {
@@ -498,7 +502,7 @@ export default function AboutPage() {
 
                     <div className="mt-2 flex items-end gap-2">
                       <span className="text-[34px] font-black text-[#07366F]">
-                        8
+                        9
                       </span>
 
                       <span className="pb-1 text-[12px] font-black">
@@ -656,16 +660,27 @@ export default function AboutPage() {
               <span className="h-px w-[75px] bg-gradient-to-l from-transparent to-[#E1A728]" />
             </div>
 
-            {/* FULL-TIME 6 */}
-            <div className="mx-auto grid max-w-[1120px] gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {fullTimeTeachers.map((teacher) => (
-                <TeacherCard
-                  key={teacher.name}
-                  name={teacher.name}
-                  role={teacher.role}
-                />
-              ))}
-            </div>
+            
+{/* FULL-TIME TEACHERS — LAST CARD CENTERED */}
+<div className="mx-auto grid max-w-[1120px] gap-4 sm:grid-cols-2 lg:grid-cols-3">
+  {fullTimeTeachers.map((teacher, index) => (
+    <div
+      key={teacher.name}
+      className={
+        index === fullTimeTeachers.length - 1 &&
+        fullTimeTeachers.length % 3 === 1
+          ? "sm:col-span-2 sm:mx-auto sm:w-full sm:max-w-[552px] lg:col-span-1 lg:col-start-2 lg:mx-0 lg:max-w-none"
+          : ""
+      }
+    >
+      <TeacherCard
+        name={teacher.name}
+        role={teacher.role}
+      />
+    </div>
+  ))}
+</div>
+
 
             {/* SUPPORT NUMBERS */}
             <div className="mt-8 overflow-hidden rounded-[23px] border border-[#CCE0E9] bg-white shadow-[0_14px_34px_rgba(7,54,111,.07)]">
@@ -678,104 +693,164 @@ export default function AboutPage() {
                       <StaffIcon type="teacher" />
                     </div>
 
-                    <div className="min-w-0">
-                      <p className="text-[9px] font-black tracking-[0.2em] text-[#0A95BC]">
-                        EXPERIENCED PART-TIME TEACHERS
-                      </p>
+                    
+<div className="min-w-0">
+  <p className="text-[9px] font-black tracking-[0.2em] text-[#0A95BC]">
+    EXPERIENCED PART-TIME TEACHERS
+  </p>
 
-                      <div className="mt-1 flex items-end gap-2">
-                        <span className="text-[50px] font-semibold leading-none text-[#07366F]">
-                          16
-                        </span>
+  <div className="mt-1 flex items-end gap-2">
+    <span className="text-[50px] font-semibold leading-none text-[#07366F]">
+      16
+    </span>
+    <span className="pb-1 text-[15px] font-black text-[#355A77]">
+      Teachers
+    </span>
+  </div>
 
-                        <span className="pb-1 text-[15px] font-black text-[#355A77]">
-                          Teachers
-                        </span>
-                      </div>
+  <p className="mt-2 text-[15px] font-black text-[#07366F]">
+    Experienced Part-Time Teachers
+  </p>
 
-                      <p className="mt-2 text-[15px] font-black text-[#07366F]">
-                        Experienced Part-Time Teachers
-                      </p>
+  <p className="mt-2 text-[10.5px] font-medium leading-[1.8] text-[#718697]">
+    Our experienced teaching staff provides high-quality
+    Japanese language education.
+  </p>
+</div>
+</div>
+</div>
 
-                      <p className="mt-2 text-[10.5px] font-medium leading-[1.8] text-[#718697]">
-                        Our experienced teaching staff provides high-quality
-                        Japanese language education.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+{/* OFFICE SUPPORT — 7 STAFF */}
+<div className="relative overflow-hidden bg-[linear-gradient(120deg,#F0FBFB_0%,#FFFFFF_100%)] px-6 py-7">
+  <div className="absolute -right-10 -top-10 h-[150px] w-[150px] rounded-full bg-[#DDF5F5]/60" />
 
-                <div className="relative overflow-hidden bg-[linear-gradient(120deg,#F0FBFB_0%,#FFFFFF_100%)] px-6 py-7">
-                  <div className="absolute -right-10 -top-10 h-[150px] w-[150px] rounded-full bg-[#DDF5F5]/60" />
+  <div className="relative flex flex-col gap-6">
+    {/* TOTAL */}
+    <div className="flex items-center gap-6">
+      <div className="flex h-[82px] w-[82px] shrink-0 items-center justify-center rounded-full border border-[#C2E5E8] bg-white text-[#1199A7] shadow-[0_8px_20px_rgba(17,153,167,.08)]">
+        <StaffIcon type="office" />
+      </div>
 
-                  <div className="relative flex items-center gap-6">
-                    <div className="flex h-[82px] w-[82px] shrink-0 items-center justify-center rounded-full border border-[#C2E5E8] bg-white text-[#1199A7] shadow-[0_8px_20px_rgba(17,153,167,.08)]">
-                      <StaffIcon type="office" />
-                    </div>
+      <div className="min-w-0">
+        <p className="text-[9px] font-black tracking-[0.2em] text-[#1199A7]">
+          OFFICE SUPPORT
+        </p>
 
-                    <div className="min-w-0">
-                      <p className="text-[9px] font-black tracking-[0.2em] text-[#1199A7]">
-                        OFFICE SUPPORT
-                      </p>
+        <div className="mt-1 flex items-end gap-2">
+          <span className="text-[50px] font-semibold leading-none text-[#1199A7]">
+            7
+          </span>
+          <span className="pb-1 text-[15px] font-black text-[#355A77]">
+            Staff
+          </span>
+        </div>
 
-                      <div className="mt-1 flex items-end gap-2">
-                        <span className="text-[50px] font-semibold leading-none text-[#1199A7]">
-                          6
-                        </span>
+        <p className="mt-2 text-[15px] font-black text-[#07366F]">
+          Office Staff
+        </p>
+      </div>
+    </div>
 
-                        <span className="pb-1 text-[15px] font-black text-[#355A77]">
-                          Staff
-                        </span>
-                      </div>
+    {/* DIRECTOR + OTHER STAFF */}
+    <div className="grid gap-4 border-t border-[#CDE7EE] pt-5 xl:grid-cols-2">
+      {/* ADMINISTRATIVE DIRECTOR */}
+      <div className="flex items-center gap-4 rounded-[18px] border border-[#F0E1B6] bg-[linear-gradient(120deg,#FFF9ED_0%,#FFFFFF_100%)] p-4">
+        <div className="h-[90px] w-[90px] shrink-0 overflow-hidden rounded-full border-[3px] border-white bg-[#EAF4FA] shadow-[0_8px_20px_rgba(7,54,111,.12)]">
+          <img
+            src="/yasutaka.jpg"
+            alt="Administrative Director Yasutaka Miyazato"
+            className="h-full w-full object-cover object-top"
+          />
+        </div>
 
-                      <p className="mt-2 text-[15px] font-black text-[#07366F]">
-                        Office Staff
-                      </p>
+        <div className="min-w-0">
+          <p className="text-[13px] font-black text-[#B98414]">
+            Administrative Director
+          </p>
 
-                      <p className="mt-2 text-[10.5px] font-medium leading-[1.8] text-[#718697]">
-                        Our office staff supports students with daily life,
-                        administrative procedures, and other matters beyond
-                        their studies.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <p className="mt-1 text-[8px] font-black tracking-[0.08em] text-[#B98414]">
+            OFFICE ADMINISTRATION
+          </p>
 
-            {/* SUPPORT MESSAGE */}
-            <div className="mt-5 flex flex-col gap-4 rounded-[18px] border border-[#ECD99B] bg-[linear-gradient(90deg,#FFF9EA_0%,#FFFFFF_50%,#F6FBFE_100%)] px-6 py-5 sm:flex-row sm:items-center">
-              <div className="flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-full border border-[#E9CC72] bg-white text-[#D79A10]">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.8"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="h-6 w-6"
-                >
-                  <path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6l7-3Z" />
-                  <path d="m9 12 2 2 4-4" />
-                </svg>
-              </div>
+          <p className="mt-2 text-[21px] font-black text-[#07366F]">
+            Yasutaka Miyazato
+          </p>
 
-              <div className="sm:w-[270px]">
-                <p className="text-[15px] font-black text-[#B77C0A]">
-                  A Supportive Learning Environment
-                </p>
-              </div>
+          <div className="mt-2 h-[3px] w-10 rounded-full bg-[#EFB62E]" />
+        </div>
+      </div>
 
-              <div className="hidden h-10 w-px bg-[#E2D5A8] sm:block" />
+      {/* OTHER OFFICE STAFF */}
+      <div className="flex items-center gap-4 rounded-[18px] border border-[#D5EAF0] bg-white/80 p-4">
+        <div className="flex h-[72px] w-[72px] shrink-0 items-center justify-center rounded-full border border-[#C2E5E8] bg-[#F0FBFB] text-[#1199A7]">
+          <StaffIcon type="office" />
+        </div>
 
-              <p className="text-[10.5px] font-medium leading-[1.8] text-[#627889]">
-                Full-time teachers, part-time teachers, and office staff work
-                together to provide comprehensive support for both students&apos;
-                studies and daily life in Japan.
-              </p>
-            </div>
+        <div className="min-w-0">
+          <p className="text-[8px] font-black tracking-[0.15em] text-[#1199A7]">
+            OTHER OFFICE STAFF
+          </p>
+
+          <div className="mt-1 flex items-end gap-2">
+            <span className="text-[38px] font-semibold leading-none text-[#1199A7]">
+              6
+            </span>
+            <span className="pb-1 text-[13px] font-black text-[#355A77]">
+              Staff
+            </span>
           </div>
-        </section>
+
+          <p className="mt-1 text-[13px] font-black text-[#07366F]">
+            Other Office Staff
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <p className="text-[10.5px] font-medium leading-[1.8] text-[#718697]">
+      Our Administrative Director and six other office staff members
+      work together to support students with daily life and
+      administrative procedures.
+    </p>
+  </div>
+</div>
+</div>
+</div>
+
+{/* SUPPORT MESSAGE */}
+<div className="mt-5 flex flex-col gap-4 rounded-[18px] border border-[#ECD99B] bg-[linear-gradient(90deg,#FFF9EA_0%,#FFFFFF_50%,#F6FBFE_100%)] px-6 py-5 sm:flex-row sm:items-center">
+  <div className="flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-full border border-[#E9CC72] bg-white text-[#D79A10]">
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="h-6 w-6"
+    >
+      <path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6l7-3Z" />
+      <path d="m9 12 2 2 4-4" />
+    </svg>
+  </div>
+
+  <div className="sm:w-[270px]">
+    <p className="text-[15px] font-black text-[#B77C0A]">
+      A Supportive Learning Environment
+    </p>
+  </div>
+
+  <div className="hidden h-10 w-px bg-[#E2D5A8] sm:block" />
+
+  <p className="text-[10.5px] font-medium leading-[1.8] text-[#627889]">
+    Full-time teachers, part-time teachers, and office staff work
+    together to provide comprehensive support for both students&apos;
+    studies and daily life in Japan.
+  </p>
+</div>
+</div>
+</section>
+
 
         {/* =====================================================
             OUR SCHOOLS
