@@ -521,11 +521,76 @@ export default function InformationPage() {
               </span>
             </div>
 
-            <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-              {featured2026.map((doc, index) => (
-                <FeaturedCard key={doc.title} doc={doc} index={index} />
-              ))}
-            </div>
+            
+{/* SCHOOL REGULATIONS — FEATURED PDF */}
+<a
+  href="/gakushoku.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="学則のPDFを見る"
+  className="group relative mb-6 block overflow-hidden rounded-[22px] border border-[#D8E4EE] bg-white shadow-[0_12px_35px_rgba(8,38,74,.07)] transition-all duration-300 hover:-translate-y-1 hover:border-[#B5D9E8] hover:shadow-[0_20px_48px_rgba(8,38,74,.12)]"
+>
+  <div className="absolute inset-x-0 top-0 h-[4px] bg-gradient-to-r from-[#D49B1B] via-[#F3CB69] to-[#0DB9D1]" />
+
+  <div className="pointer-events-none absolute -right-16 -top-24 h-64 w-64 rounded-full bg-[#E8F5FC]/70 blur-2xl" />
+
+  <div className="relative flex flex-col gap-5 px-6 py-6 sm:flex-row sm:items-center sm:justify-between sm:px-8 sm:py-7">
+    <div className="flex items-center gap-5">
+      <div className="relative flex h-[76px] w-[76px] shrink-0 items-center justify-center rounded-[19px] border border-[#E9D7AA] bg-gradient-to-br from-[#FFF9E9] to-[#FFF0C9] text-[#B88616]">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="h-9 w-9"
+        >
+          <path d="M4 5.5C7 4 10 4 12 6v14c-2-2-5-2-8-.5z" />
+          <path d="M20 5.5C17 4 14 4 12 6v14c2-2 5-2 8-.5z" />
+          <path d="M7 9h2M7 12h2M15 9h2M15 12h2" />
+        </svg>
+
+        <span className="absolute -bottom-2 -right-2 rounded-[7px] bg-[#082B57] px-2 py-1 text-[8px] font-black text-white">
+          PDF
+        </span>
+      </div>
+
+      <div className="min-w-0">
+        <div className="mb-2 flex flex-wrap items-center gap-2">
+          <span className="rounded-full bg-[#FFF2D6] px-3 py-1 text-[9px] font-black text-[#A97910]">
+            重要公開資料
+          </span>
+
+          <span className="text-[9px] font-black tracking-[0.15em] text-[#8A9BAC]">
+            OFFICIAL DOCUMENT
+          </span>
+        </div>
+
+        <h3 className="text-[26px] font-black text-[#08264B] sm:text-[31px]">
+          学則
+        </h3>
+
+        <p className="mt-1 text-[10px] font-bold tracking-[0.17em] text-[#71899C]">
+          SCHOOL REGULATIONS
+        </p>
+      </div>
+    </div>
+
+    <span className="flex w-full shrink-0 items-center justify-center gap-3 rounded-[12px] bg-[#082B57] px-6 py-4 text-[12px] font-black text-white transition-colors duration-300 group-hover:bg-[#0A94B8] sm:w-auto">
+      PDFを見る
+      <ExternalIcon />
+    </span>
+  </div>
+</a>
+
+{/* EXISTING 2026 DOCUMENTS — KEEP ALL FOUR */}
+<div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+  {featured2026.map((doc, index) => (
+    <FeaturedCard key={doc.title} doc={doc} index={index} />
+  ))}
+</div>
+
           </div>
         </section>
 
