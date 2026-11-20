@@ -1,169 +1,208 @@
-import Link from "next/link";
 
-const newsItems = [
+type NewsItem = {
+  date: string;
+  category: "Important" | "Admissions" | "School Events";
+  title: string;
+  href?: string;
+  action?: "pdf" | "photos";
+  isNew?: boolean;
+};
+
+const newsItems: NewsItem[] = [
   {
     date: "2026.08.01",
-    category: "NEWS",
-    title: "Applications Open for April 2027 Admission",
-    href: "/en/admission",
-    pdf: false,
+    category: "Important",
+    title: "Notice of Long-Term School Holidays",
+    href: "/chokikikan.pdf",
+    action: "pdf",
   },
   {
-    date: "2026.08.01",
-    category: "NOTICE",
-    title: "Notice of School Holiday",
-    href: "/chokikikan.pdf",
-    pdf: true,
+    date: "2026.11.20",
+    category: "Admissions",
+    title:
+      "We Are Accepting Preliminary Consultations for April 2028 Admission Applications",
+    isNew: true,
+  },
+  {
+    date: "2026.11.20",
+    category: "Admissions",
+    title:
+      "Applications for Certificates of Eligibility for April 2027 Admission Have Been Successfully Submitted",
+  },
+  {
+    date: "2026.10.13",
+    category: "School Events",
+    title: "We Held a Sports Festival",
+    href: "https://www.facebook.com/media/set/?set=a.1702560451447283&type=3",
+    action: "photos",
+  },
+  {
+    date: "2026.07.16",
+    category: "School Events",
+    title: "We Held a BBQ Event",
+    href: "https://www.facebook.com/media/set/?set=a.1622945279408801&type=3",
+    action: "photos",
+  },
+  {
+    date: "2026.05.20",
+    category: "School Events",
+    title: "We Held the Entrance Ceremony for April 2026 Students",
+    href: "https://www.facebook.com/media/set/?set=a.1573882340981762&type=3",
+    action: "photos",
   },
 ];
 
+function ArrowUpRightIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="h-3.5 w-3.5"
+      aria-hidden="true"
+    >
+      <path d="M7 17 17 7M8 7h9v9" />
+    </svg>
+  );
+}
+
 export default function News() {
   return (
-    <section className="bg-[#EFF6FB] px-5 pb-7">
-      <div className="mx-auto max-w-[1700px] overflow-hidden rounded-[12px] border border-[#9AB6D1] bg-white shadow-[0_5px_16px_rgba(28,72,110,0.06)]">
-        <div className="grid md:grid-cols-[145px_1fr]">
-          {/* NEWS TITLE */}
-          <div className="relative flex items-center justify-center overflow-hidden bg-[#07336E] px-6 py-6 text-[16px] font-semibold tracking-[0.08em] text-white md:items-start md:pt-[22px]">
-            <div className="absolute -bottom-10 -left-10 h-24 w-24 rounded-full border border-white/10" />
-            <div className="absolute -right-8 top-[-25px] h-20 w-20 rounded-full border border-[#E4B53C]/15" />
+    <section
+      id="news"
+      className="relative bg-[#F4F8FC] px-5 py-7 sm:px-8 lg:px-12 lg:py-9"
+    >
+      <div className="mx-auto max-w-[1500px]">
+        {/* SECTION HEADING */}
+        <div className="mb-4 flex items-end justify-between gap-4">
+          <div>
+            <div className="flex items-center gap-2.5">
+              <span className="h-[2px] w-7 bg-[#EFB62E]" />
 
-            <span className="relative z-10 mr-2 text-[#E4B53C]">
-              ◇
-            </span>
+              <span className="text-[9px] font-black tracking-[0.25em] text-[#0B72B2]">
+                NEWS & UPDATES
+              </span>
+            </div>
 
-            <span className="relative z-10">
-              NEWS
-            </span>
+            <h2 className="mt-1.5 text-[25px] font-black tracking-[0.04em] text-[#07366F] sm:text-[29px]">
+              Latest News
+            </h2>
           </div>
 
-          {/* MOBILE NEWS */}
-          <div className="block px-5 md:hidden">
-            {newsItems.map((item, index) => {
-              const content = (
-                <>
-                  {/* DATE + CATEGORY */}
-                  <div className="flex items-center justify-between gap-4">
-                    <span className="text-[13px] font-medium text-[#284E72]">
-                      {item.date}
-                    </span>
+          <div className="hidden items-center gap-1.5 pb-1 sm:flex">
+            <span className="h-[3px] w-10 rounded-full bg-[#07366F]" />
+            <span className="h-[3px] w-5 rounded-full bg-[#18BBD6]" />
+            <span className="h-[3px] w-3 rounded-full bg-[#EFB62E]" />
+          </div>
+        </div>
 
-                    <span className="shrink-0 rounded-[6px] bg-[#0D55A8] px-4 py-2 text-[11px] font-bold text-white">
-                      {item.category}
-                    </span>
-                  </div>
-
-                  {/* TITLE */}
-                  <p className="mt-4 w-full whitespace-normal text-left text-[17px] font-bold leading-[1.65] text-[#113A68]">
-                    {item.title}
-                  </p>
-
-                  {/* BUTTON */}
-                  <div className="mt-4 flex justify-end">
-                    {item.pdf ? (
-                      <span className="inline-flex items-center gap-2 rounded-[8px] border border-[#B9D8E9] bg-[#F3FAFE] px-5 py-2.5 text-[12px] font-bold text-[#087DB6]">
-                        View PDF
-                        <span className="text-[14px]">↗</span>
-                      </span>
-                    ) : (
-                      <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#F1F7FB] text-[18px] font-bold text-[#6D91AA] transition group-hover:translate-x-1 group-hover:bg-[#E4F5FA] group-hover:text-[#0A9FC1]">
-                        →
-                      </span>
-                    )}
-                  </div>
-                </>
-              );
-
-              const className = `group block py-5 ${
-                index !== newsItems.length - 1
-                  ? "border-b border-[#DCE7EF]"
-                  : ""
-              }`;
-
-              return item.pdf ? (
-                <a
-                  key={`mobile-${item.date}-${item.title}`}
-                  href={item.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className={className}
-                >
-                  {content}
-                </a>
-              ) : (
-                <Link
-                  key={`mobile-${item.date}-${item.title}`}
-                  href={item.href}
-                  prefetch={false}
-                  className={className}
-                >
-                  {content}
-                </Link>
-              );
-            })}
+        {/* NEWS PANEL */}
+        <div className="overflow-hidden rounded-[15px] border border-[#D5E2EF] bg-white shadow-[0_7px_22px_rgba(7,54,111,.06)]">
+          {/* TOP ACCENT */}
+          <div className="flex h-[4px] w-full">
+            <span className="w-[78%] bg-[#07366F]" />
+            <span className="w-[16%] bg-[#18BBD6]" />
+            <span className="flex-1 bg-[#EFB62E]" />
           </div>
 
-          {/* TABLET / DESKTOP NEWS */}
-          <div className="hidden px-6 md:block">
-            {newsItems.map((item, index) => {
-              const content = (
-                <>
-                  {/* DATE */}
-                  <span className="shrink-0 text-[13px] font-medium text-[#284E72]">
+          {newsItems.map((item, index) => {
+            const rowClass = [
+              "group relative flex flex-col gap-2.5 px-4 py-3.5",
+              "transition-colors duration-200",
+              "sm:px-6",
+              "lg:grid lg:min-h-[62px]",
+              "lg:grid-cols-[112px_110px_minmax(0,1fr)_105px]",
+              "lg:items-center lg:gap-4 lg:py-2.5",
+              index === 0
+                ? "bg-[#F0F5FC] hover:bg-[#E9F2FC]"
+                : "hover:bg-[#F5F9FD]",
+              index !== newsItems.length - 1
+                ? "border-b border-[#E5ECF3]"
+                : "",
+            ].join(" ");
+
+            const content = (
+              <>
+                {index === 0 && (
+                  <span className="absolute inset-y-0 left-0 w-[3px] bg-[#EFB62E]" />
+                )}
+
+                {/* DATE + CATEGORY */}
+                <div className="flex items-center gap-3 lg:contents">
+                  <span className="shrink-0 text-[11px] font-bold tabular-nums text-[#55718D]">
                     {item.date}
                   </span>
 
-                  {/* CATEGORY */}
-                  <span className="rounded-[5px] bg-[#0D55A8] px-2 py-1.5 text-center text-[11px] font-bold text-white">
+                  <span
+                    className={`inline-flex w-fit min-w-[82px] shrink-0 items-center justify-center rounded-[6px] px-2.5 py-1 text-[10px] font-black ${
+                      item.category === "Important"
+                        ? "bg-[#FFF0BD] text-[#976000]"
+                        : item.category === "Admissions"
+                          ? "bg-[#E7F1FC] text-[#075DA2]"
+                          : "bg-[#E7F6F2] text-[#087C68]"
+                    }`}
+                  >
+                    {item.category === "Important" && (
+                      <span className="mr-1.5 h-[5px] w-[5px] rounded-full bg-[#DFA21E]" />
+                    )}
                     {item.category}
                   </span>
+                </div>
 
-                  {/* TITLE */}
-                  <p className="min-w-0 text-[15px] font-bold leading-[1.6] text-[#113A68] transition group-hover:text-[#0A69B5]">
-                    {item.title}
-                  </p>
-
-                  {/* BUTTON */}
-                  {item.pdf ? (
-                    <span className="flex shrink-0 items-center gap-2 rounded-[7px] border border-[#B9D8E9] bg-[#F3FAFE] px-4 py-2 text-[11px] font-bold text-[#087DB6] transition duration-200 group-hover:border-[#19B9D3] group-hover:bg-[#EAF9FC]">
-                      View PDF
-                      <span className="text-[13px]">↗</span>
-                    </span>
-                  ) : (
-                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#F1F7FB] text-[17px] font-bold text-[#6D91AA] transition duration-200 group-hover:translate-x-1 group-hover:bg-[#E4F5FA] group-hover:text-[#0A9FC1]">
-                      →
+                {/* TITLE */}
+                <div className="flex min-w-0 items-start gap-2.5 lg:items-center">
+                  {item.isNew && (
+                    <span className="mt-0.5 shrink-0 rounded-[4px] bg-[#E93558] px-1.5 py-0.5 text-[9px] font-black text-white lg:mt-0">
+                      NEW
                     </span>
                   )}
-                </>
-              );
 
-              const className = `group grid min-h-[82px] grid-cols-[125px_90px_minmax(0,1fr)_auto] items-center gap-5 py-3 transition ${
-                index !== newsItems.length - 1
-                  ? "border-b border-[#DCE7EF]"
-                  : ""
-              }`;
+                  <p className="min-w-0 text-[12px] font-bold leading-[1.65] text-[#113A68] transition-colors group-hover:text-[#087AB8] sm:text-[13px]">
+                    {item.title}
+                  </p>
+                </div>
 
-              return item.pdf ? (
-                <a
-                  key={`desktop-${item.date}-${item.title}`}
-                  href={item.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className={className}
-                >
-                  {content}
-                </a>
-              ) : (
-                <Link
-                  key={`desktop-${item.date}-${item.title}`}
-                  href={item.href}
-                  prefetch={false}
-                  className={className}
-                >
-                  {content}
-                </Link>
-              );
-            })}
-          </div>
+                {/* ACTION */}
+                <div className="flex justify-end">
+                  {item.action === "pdf" ? (
+                    <span className="inline-flex items-center gap-1.5 rounded-[7px] border border-[#BCD3EA] bg-white px-3 py-1.5 text-[10px] font-black text-[#075DA2] transition-colors group-hover:border-[#0C8EBF] group-hover:bg-[#EAF6FD]">
+                      View PDF
+                      <ArrowUpRightIcon />
+                    </span>
+                  ) : item.action === "photos" ? (
+                    <span className="inline-flex items-center gap-1 text-[10px] font-black text-[#087DB7] transition-colors group-hover:text-[#07366F]">
+                      View Photos
+                      <ArrowUpRightIcon />
+                    </span>
+                  ) : (
+                    <span className="hidden lg:block" />
+                  )}
+                </div>
+              </>
+            );
+
+            return item.href ? (
+              <a
+                key={`${item.date}-${item.title}`}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={rowClass}
+              >
+                {content}
+              </a>
+            ) : (
+              <div
+                key={`${item.date}-${item.title}`}
+                className={rowClass}
+              >
+                {content}
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
